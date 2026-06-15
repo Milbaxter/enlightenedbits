@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Enlightened Bits — European AI Company in Helsinki</title>
-<meta name="description" content="Enlightened Bits is a European AI company based in Helsinki, Finland. We build AI for real use cases with a focus on local AI hardware — keeping your data private, in Europe, and under your control.">
+<title>Enlightened Bits — Local AI, installed for you. Helsinki.</title>
+<meta name="description" content="Local AI first — nothing in the cloud, everything on your own computers. We come to you and install an inference-focused AI computer for a flat $5,000, so you run capable models on your own hardware and stop paying per-token API fees.">
 <link rel="canonical" href="https://enlightenedbits.com/">
 <meta name="robots" content="index, follow, max-image-preview:large">
 <meta name="author" content="Enlightened Bits">
@@ -12,13 +12,13 @@
 <!-- Open Graph -->
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Enlightened Bits">
-<meta property="og:title" content="Enlightened Bits — European AI Company in Helsinki">
-<meta property="og:description" content="A European AI company in Helsinki building AI for real use cases, with a focus on local AI hardware. Your data stays in Europe, under your control.">
+<meta property="og:title" content="Local AI, installed for you — Enlightened Bits, Helsinki">
+<meta property="og:description" content="Local AI first. Nothing in the cloud, everything on your own computers. We install an inference-focused AI box at your office for a flat $5,000 — own your compute, stop paying for API tokens.">
 <meta property="og:url" content="https://enlightenedbits.com/">
 <meta property="og:locale" content="en_GB">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Enlightened Bits — European AI Company in Helsinki">
-<meta name="twitter:description" content="European AI, built in Helsinki. Real use cases, local AI hardware, data sovereignty by design.">
+<meta name="twitter:title" content="Local AI, installed for you — Enlightened Bits">
+<meta name="twitter:description" content="Local AI first. We install an inference-focused AI computer on your own hardware for a flat $5,000. Own your compute, keep your data.">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%230b0d10'/><circle cx='50' cy='50' r='22' fill='none' stroke='%237cc4ff' stroke-width='8'/></svg>">
 <!-- Structured data: Organization -->
 <script type="application/ld+json">
@@ -27,17 +27,30 @@
   "@type":"Organization",
   "name":"Enlightened Bits",
   "url":"https://enlightenedbits.com",
-  "description":"Enlightened Bits is a European AI company based in Helsinki, Finland, building AI for real use cases with a focus on local AI hardware and data sovereignty.",
+  "description":"Enlightened Bits is a European AI company based in Helsinki, Finland. We install local, on-premise AI computers so organisations run capable models on their own hardware instead of paying for cloud API tokens.",
   "foundingDate":"2026",
   "foundingLocation":{"@type":"Place","name":"Helsinki, Finland"},
   "address":{"@type":"PostalAddress","addressLocality":"Helsinki","addressCountry":"FI"},
   "areaServed":"Europe",
-  "knowsAbout":["Artificial Intelligence","Local AI hardware","On-premise AI","Data sovereignty","Machine learning"]
+  "knowsAbout":["Local AI","On-premise AI","AI inference hardware","Data sovereignty","Self-hosted large language models"]
 }
 </script>
 <!-- Structured data: WebSite -->
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"WebSite","name":"Enlightened Bits","url":"https://enlightenedbits.com"}
+</script>
+<!-- Structured data: Service / Offer -->
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"Service",
+  "name":"Local AI computer installation",
+  "serviceType":"On-premise AI inference setup",
+  "provider":{"@type":"Organization","name":"Enlightened Bits","url":"https://enlightenedbits.com"},
+  "areaServed":"Europe",
+  "description":"We come to you and install an inference-focused AI computer, configured to run capable AI models locally on your own hardware — so you stop paying per-token API fees to cloud providers.",
+  "offers":{"@type":"Offer","price":"5000","priceCurrency":"USD","description":"Flat fee: on-site installation and setup of a local AI inference computer."}
+}
 </script>
 <!-- Structured data: FAQ -->
 <script type="application/ld+json">
@@ -45,9 +58,10 @@
   "@context":"https://schema.org",
   "@type":"FAQPage",
   "mainEntity":[
-    {"@type":"Question","name":"What is Enlightened Bits?","acceptedAnswer":{"@type":"Answer","text":"Enlightened Bits is a European AI company based in Helsinki, Finland. We build practical AI systems for real use cases, with a focus on local AI hardware so that data stays private and within Europe."}},
-    {"@type":"Question","name":"Where is Enlightened Bits based?","acceptedAnswer":{"@type":"Answer","text":"Enlightened Bits is based in Helsinki, Finland, and works with organisations across Europe."}},
-    {"@type":"Question","name":"What does Enlightened Bits do?","acceptedAnswer":{"@type":"Answer","text":"Enlightened Bits builds AI for real, well-defined use cases — focusing on local and on-premise AI hardware so that sensitive data never has to leave your control or Europe."}}
+    {"@type":"Question","name":"What does Enlightened Bits offer?","acceptedAnswer":{"@type":"Answer","text":"For a flat $5,000, we come to you and install an inference-focused AI computer, set up to run capable AI models locally on your own hardware. You own the machine and the compute, and you stop paying per-token API fees to cloud providers."}},
+    {"@type":"Question","name":"Why run AI locally instead of in the cloud?","acceptedAnswer":{"@type":"Answer","text":"Running AI on your own computers means your data never leaves your control, there are no per-token API bills, and you are not dependent on a foreign cloud provider. You get full freedom over your models and your data."}},
+    {"@type":"Question","name":"What hardware do you install?","acceptedAnswer":{"@type":"Answer","text":"Our recommended setup is a Strix Halo box (AMD Ryzen AI Max+ 395) with a large pool of unified memory, which lets it run sizeable AI models locally. We configure it end to end so it is ready to use."}},
+    {"@type":"Question","name":"Where is Enlightened Bits based?","acceptedAnswer":{"@type":"Answer","text":"Enlightened Bits is based in Helsinki, Finland, and works with organisations across Europe."}}
   ]
 }
 </script>
@@ -72,6 +86,21 @@
   .point{display:flex;gap:13px;align-items:flex-start;font-size:16px;color:#cdd4db}
   .point svg{flex:none;margin-top:4px;color:var(--accent)}
   .point strong{color:#fff;font-weight:600}
+  /* Offer card */
+  .offer{border:1px solid var(--line);border-radius:16px;padding:clamp(22px,4vw,34px);margin:36px 0 8px;
+    background:linear-gradient(180deg,rgba(124,196,255,.06),transparent 70%)}
+  .offer .price{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;margin-bottom:6px}
+  .offer .amount{font-size:clamp(34px,7vw,48px);font-weight:720;letter-spacing:-.02em;color:#fff;line-height:1}
+  .offer .amount .grad{background:linear-gradient(90deg,#fff,var(--accent));-webkit-background-clip:text;background-clip:text;color:transparent}
+  .offer .flat{font-size:14px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);font-weight:600}
+  .offer .sub{color:var(--muted);font-size:16px;margin-bottom:22px;max-width:60ch}
+  .incl{display:grid;gap:13px;margin:0}
+  .incl .point{font-size:15.5px}
+  /* CTA */
+  .cta{display:inline-flex;align-items:center;gap:9px;margin-top:26px;background:var(--accent);color:#06121f;
+    font-weight:650;font-size:16px;text-decoration:none;padding:13px 22px;border-radius:999px;
+    transition:transform .12s ease,box-shadow .12s ease;box-shadow:0 6px 24px rgba(124,196,255,.22)}
+  .cta:hover{transform:translateY(-1px);box-shadow:0 10px 30px rgba(124,196,255,.32)}
   .faq{margin-top:8px}
   .faq h3{font-size:17px;color:#fff;margin:24px 0 6px;font-weight:600}
   .meta{border-top:1px solid var(--line);margin-top:56px;padding-top:24px;display:flex;flex-wrap:wrap;gap:8px 28px;align-items:center;color:var(--muted);font-size:15px}
@@ -81,37 +110,50 @@
 </head>
 <body>
   <main class="wrap">
-    <span class="badge"><span class="dot"></span>Working with our first partners</span>
-    <h1>Enlightened Bits<br><span class="grad">European AI, built in Helsinki.</span></h1>
-    <p class="tagline">Hardware based AI.</p>
-    <p class="lede">Enlightened Bits is a European AI company based in Helsinki. We build AI for real use cases — not demos — with a focus on local AI hardware, so your data stays where it belongs: in Europe, and under your control.</p>
+    <span class="badge"><span class="dot"></span>Now booking installations across Europe</span>
+    <h1>Local AI first.<br><span class="grad">Nothing in the cloud.</span></h1>
+    <p class="tagline">Your models · your hardware · full freedom</p>
+    <p class="lede">Enlightened Bits puts capable AI on the computers you already own. No cloud, no per-token bills, no handing your data to someone else's servers — everything runs on your own hardware, under your control.</p>
 
-    <h2>What we do</h2>
-    <p>Enlightened Bits builds practical artificial intelligence for organisations that want results, not slideware. We start from one well-defined problem, ship something that does useful work, and grow from there. No oversized projects, no dependence on a black box you don't control.</p>
-
-    <div class="points">
-      <div class="point"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg><span><strong>Real use cases.</strong> We begin with the actual work — a clear input, a clear output — and automate the parts that are slow and repetitive.</span></div>
-      <div class="point"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M9 9h6v6H9z"/></svg><span><strong>Local AI hardware.</strong> Models that run on your own machines and on-premise hardware — sensitive data never has to leave your control.</span></div>
-      <div class="point"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 010 20M12 2a15 15 0 000 20"/></svg><span><strong>European by default.</strong> Built in Helsinki, under European law — privacy, security and data sovereignty by design.</span></div>
+    <h2>The offer</h2>
+    <div class="offer">
+      <div class="price">
+        <span class="amount"><span class="grad">$5,000</span></span>
+        <span class="flat">flat · all in</span>
+      </div>
+      <p class="sub">We come to you and install your own inference-focused AI computer — fully set up and ready to work. Stop renting intelligence from cloud providers one token at a time. Own the machine, own the compute.</p>
+      <div class="incl">
+        <div class="point"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg><span><strong>On-site setup.</strong> We arrive, install the hardware, and configure everything end to end so it runs out of the box.</span></div>
+        <div class="point"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M9 9h6v6H9z"/></svg><span><strong>Our pick: a Strix Halo box.</strong> AMD Ryzen AI Max+ 395 with a large unified-memory pool — enough to run sizeable models locally on a quiet machine that sits on your desk.</span></div>
+        <div class="point"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg><span><strong>No more API tokens.</strong> Run inference on your own compute instead of paying a provider per request. The cost is the box, not a meter that never stops.</span></div>
+        <div class="point"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg><span><strong>Your data stays home.</strong> Nothing leaves the building. Private by construction, not by policy.</span></div>
+      </div>
+      <a class="cta" href="mailto:maximilian.rehn@gmail.com?subject=Local%20AI%20install%20%E2%80%94%20Enlightened%20Bits">Book an install →</a>
     </div>
 
+    <h2>Earn from idle time</h2>
+    <p>Your AI box doesn't have to sit idle when you're not using it. When it's free, you can rent out its spare inference capacity on a peer-to-peer compute marketplace such as <a href="https://vast.ai" style="color:var(--accent)">Vast.ai</a> — turning downtime into income that offsets the hardware. We'll help you set it up. <span style="color:var(--muted)">(Marketplace availability depends on your hardware and current demand.)</span></p>
+
     <h2>Why local AI</h2>
-    <p>For regulated and privacy-sensitive work — law, finance, healthcare, the public sector — sending data to a foreign cloud is often a non-starter. Enlightened Bits specialises in running capable AI models on local and European hardware, so you get the productivity of modern AI without handing your most sensitive information to someone else's servers.</p>
+    <p>For regulated and privacy-sensitive work — law, finance, healthcare, the public sector — sending data to a foreign cloud is often a non-starter. Local AI gives you the productivity of modern models with none of the exposure: your information never leaves your control, you're not locked into a provider's pricing, and there's no black box you depend on. Just full freedom over your own compute.</p>
 
     <h2>About Enlightened Bits</h2>
-    <p>Enlightened Bits is an independent AI company founded in 2026 and based in Helsinki, Finland. We work with organisations across Europe that want AI applied carefully and practically to the problems that actually matter to them.</p>
+    <p>Enlightened Bits is an independent AI company founded in 2026 and based in Helsinki, Finland. We believe AI should run on your hardware, in your hands — built in Europe, under European law, with privacy and data sovereignty by design. We work with organisations across Europe who want capable AI without giving up control of their data.</p>
 
     <div class="faq">
-      <h3>What is Enlightened Bits?</h3>
-      <p>Enlightened Bits is a European AI company in Helsinki that builds practical AI for real use cases, with a focus on local AI hardware and data privacy.</p>
-      <h3>Where is Enlightened Bits based?</h3>
+      <h3>What does the $5,000 cover?</h3>
+      <p>We come to you and install a complete, inference-focused AI computer — hardware plus full setup — configured to run capable AI models locally and ready to use when we leave.</p>
+      <h3>What hardware do you recommend?</h3>
+      <p>A Strix Halo box (AMD Ryzen AI Max+ 395) with a large unified-memory pool, which lets a compact, quiet machine run sizeable models entirely on-premise.</p>
+      <h3>Where are you based?</h3>
       <p>In Helsinki, Finland, working with clients across Europe.</p>
     </div>
 
     <div class="meta">
       <span class="loc"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 1118 0z"/><circle cx="12" cy="10" r="3"/></svg>Helsinki, Finland · Europe</span>
+      <a href="mailto:maximilian.rehn@gmail.com" style="color:var(--accent);text-decoration:none">maximilian.rehn@gmail.com</a>
     </div>
   </main>
-  <footer>© 2026 Enlightened Bits — European AI company based in Helsinki, Finland. All rights reserved.</footer>
+  <footer>© 2026 Enlightened Bits — Local AI, installed on your own hardware. Helsinki, Finland. All rights reserved.</footer>
 </body>
 </html>
