@@ -30,7 +30,7 @@ jobs:
 
       - name: Deploy via rsync
         run: |
-          rsync -av --delete \
+          rsync -av --delete --no-owner --no-group \
             --exclude='.git/' \
             --exclude='.github/' \
             --exclude='README.md' \
