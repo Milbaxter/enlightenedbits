@@ -107,6 +107,13 @@
   .cta:hover{transform:translateY(-1px);box-shadow:0 10px 30px rgba(124,196,255,.32)}
   .contact-line{margin-top:26px;font-size:17px;color:#cdd4db}
   .contact-line strong{color:var(--accent);font-weight:650}
+  /* Payback table */
+  .calc{width:100%;border-collapse:collapse;margin:24px 0 10px;font-size:15.5px}
+  .calc th,.calc td{text-align:left;padding:11px 14px;border-bottom:1px solid var(--line)}
+  .calc th{color:var(--muted);font-weight:600;font-size:12.5px;letter-spacing:.05em;text-transform:uppercase}
+  .calc td:last-child{color:var(--accent);font-weight:660;white-space:nowrap}
+  .calc tr:last-child td{border-bottom:none}
+  .fine{color:var(--muted);font-size:13.5px;margin-bottom:14px;max-width:65ch}
   .faq{margin-top:8px}
   .faq h3{font-size:17px;color:#fff;margin:24px 0 6px;font-weight:600}
   .meta{border-top:1px solid var(--line);margin-top:56px;padding-top:24px;display:flex;flex-wrap:wrap;gap:8px 28px;align-items:center;color:var(--muted);font-size:15px}
@@ -137,8 +144,19 @@
       <p class="contact-line">Book an install — email us at <strong>maximilian@enlightenedbits.com</strong></p>
     </div>
 
-    <h2>Earn from idle time</h2>
-    <p>Your AI box doesn't have to sit idle when you're not using it. When it's free, you can rent out its spare inference capacity on a peer-to-peer compute marketplace such as <a href="https://vast.ai" style="color:var(--accent)">Vast.ai</a> — turning downtime into income that offsets the hardware. We'll help you set it up. <span style="color:var(--muted)">(Marketplace availability depends on your hardware and current demand.)</span></p>
+    <h2>Does it pay for itself?</h2>
+    <p>Cloud AI is a meter that never stops — you pay for every token, forever. A local box is a one-time cost, and after that the inference is essentially free. Here's the back-of-the-envelope, based on the cloud API spend you'd be replacing:</p>
+    <table class="calc">
+      <thead><tr><th>Cloud API spend you replace</th><th>≈ tokens / month</th><th>Pays back the $5,000 in</th></tr></thead>
+      <tbody>
+        <tr><td>$500 / month</td><td>~125M</td><td>~10 months</td></tr>
+        <tr><td>$1,000 / month</td><td>~250M</td><td>~5 months</td></tr>
+        <tr><td>$2,000 / month</td><td>~500M</td><td>~2.5 months</td></tr>
+      </tbody>
+    </table>
+    <p class="fine">Assumes a typical blended cloud rate of about $4 per million tokens. After payback, you keep running the same workloads for the 3–5 year life of the machine — for the price of electricity, a few euros a month.</p>
+    <p><strong style="color:#fff">Then there's the rental upside.</strong> When the box is idle, renting out its spare capacity (for example on <a href="https://vast.ai" style="color:var(--accent)">Vast.ai</a>) at even ~$0.20/hour for 12 hours a day adds around $70 a month — money that shortens the payback further, or turns an idle machine into a small earner.</p>
+    <p class="fine">These are rough, illustrative figures — your real numbers depend on your models, your usage, electricity prices, and (for rental) your hardware and current marketplace demand.</p>
 
     <h2>Why local AI</h2>
     <p>For regulated and privacy-sensitive work — law, finance, healthcare, the public sector — sending data to a foreign cloud is often a non-starter. Local AI gives you the productivity of modern models with none of the exposure: your information never leaves your control, you're not locked into a provider's pricing, and there's no black box you depend on. Just full freedom over your own compute.</p>
