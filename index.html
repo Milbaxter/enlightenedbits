@@ -149,9 +149,17 @@
     </div>
 
     <h2>Does it pay for itself?</h2>
-    <p>Cloud AI is a meter that never stops. You pay for every token, for as long as you use it. A local machine is a one-time cost, and after that running your models costs little more than electricity, a few euros a month. For steady, repeated work, owning the compute quickly works out cheaper than renting intelligence one token at a time, and you keep using it for the 3 to 5 year life of the machine.</p>
+    <p>Cloud AI is a meter that never stops. You pay for every token, for as long as you use it. A local machine is a one-time cost, and after that running your models costs little more than electricity, a few euros a month. The more you use AI, the faster it pays for itself. Here is the rough math, anchored on what you already spend on cloud APIs:</p>
+    <table class="calc">
+      <thead><tr><th>Your monthly cloud AI spend</th><th>Pays back a local box in</th><th>You save per year after</th></tr></thead>
+      <tbody>
+        <tr><td>€500 / month</td><td>~5 months</td><td>~€5,900</td></tr>
+        <tr><td>€1,000 / month</td><td>~2.5 months</td><td>~€11,900</td></tr>
+        <tr><td>€2,000 / month</td><td>~6 weeks</td><td>~€23,900</td></tr>
+      </tbody>
+    </table>
+    <p class="fine">Assumes a one-time hardware cost of a few thousand euros plus a few euros a month for electricity, and that a local model fits the work — the savings are strongest for steady, repeated workloads. Over the 3 to 5 year life of the machine that runs into tens of thousands of euros saved, and your data never leaves the building.</p>
     <p><strong style="color:#fff">There is even a small upside when it sits idle.</strong> When you are not using the box, you can rent out its spare capacity, for example on <a href="https://vast.ai" style="color:var(--accent)">Vast.ai</a>, turning an idle machine into a small earner.</p>
-    <p class="fine">These are rough, illustrative points. Your real numbers depend on your models, your usage and electricity prices.</p>
 
     <h2>Why local AI</h2>
     <p>For regulated and privacy-sensitive work like law, finance, healthcare and the public sector, sending data to a foreign cloud is often a non-starter. Local AI gives you the productivity of modern models without the exposure. Your information never leaves your control, you are not locked into a provider's pricing, and there is no black box you depend on.</p>
