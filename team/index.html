@@ -26,10 +26,12 @@
 <meta name="twitter:image" content="https://enlightenedbits.com/og-image.png">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%23b8c79f'/><rect x='28' y='28' width='44' height='44' fill='none' stroke='%231a2810' stroke-width='12'/></svg>">
 <style>
+  @font-face{font-family:'Gajraj One';font-style:normal;font-weight:400;font-display:swap;src:url(/fonts/gajraj-one.woff2) format('woff2')}
+  @font-face{font-family:'Inconsolata';font-style:normal;font-weight:400 700;font-display:swap;src:url(/fonts/inconsolata.woff2) format('woff2')}
   :root{--bg:#b8c79f;--panel:#c4d2ac;--ink:#1a2810;--muted:#46562d;--line:#7c8c5a;--accent:#1a2810}
   *{box-sizing:border-box;margin:0;padding:0}
   html{scroll-behavior:smooth}
-  body{font-family:"Courier New","Lucida Console",Menlo,Monaco,monospace;
+  body{font-family:'Inconsolata',"Courier New",Menlo,Monaco,monospace;
     background-color:var(--bg);
     background-image:radial-gradient(rgba(26,40,16,.12) 1px,transparent 1.5px);
     background-size:4px 4px;
@@ -70,6 +72,8 @@
   .cta:hover{transform:translate(2px,2px);box-shadow:2px 2px 0 var(--ink)}
   .cta:active{transform:translate(4px,4px);box-shadow:0 0 0 var(--ink)}
   footer{color:var(--muted);font-size:12px;padding:26px 22px;text-align:center;border-top:2px solid var(--ink);margin-top:52px;letter-spacing:.04em}
+  /* Title font (otsikko) */
+  h1,h3,.card h2{font-family:'Gajraj One',"Courier New",monospace;font-weight:400}
 </style>
 </head>
 <body>
