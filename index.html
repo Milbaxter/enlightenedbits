@@ -74,10 +74,12 @@
 }
 </script>
 <style>
+  @font-face{font-family:'Gajraj One';font-style:normal;font-weight:400;font-display:swap;src:url(/fonts/gajraj-one.woff2) format('woff2')}
+  @font-face{font-family:'Inconsolata';font-style:normal;font-weight:400 700;font-display:swap;src:url(/fonts/inconsolata.woff2) format('woff2')}
   :root{--bg:#b8c79f;--panel:#c4d2ac;--ink:#1a2810;--muted:#46562d;--line:#7c8c5a;--accent:#1a2810}
   *{box-sizing:border-box;margin:0;padding:0}
   html{scroll-behavior:smooth}
-  body{font-family:"Courier New","Lucida Console",Menlo,Monaco,monospace;
+  body{font-family:'Inconsolata',"Courier New",Menlo,Monaco,monospace;
     background-color:var(--bg);
     background-image:radial-gradient(rgba(26,40,16,.12) 1px,transparent 1.5px);
     background-size:4px 4px;
@@ -131,11 +133,19 @@
   .meta{border-top:2px dashed var(--ink);margin-top:52px;padding-top:22px;display:flex;flex-wrap:wrap;gap:8px 26px;align-items:center;color:var(--muted);font-size:14px}
   .loc{display:flex;align-items:center;gap:8px}
   footer{color:var(--muted);font-size:12px;padding:26px 22px;text-align:center;border-top:2px solid var(--ink);letter-spacing:.04em}
+  /* Title font (otsikko) */
+  h1,h2,h3,.offer .amount,.logo-name{font-family:'Gajraj One',"Courier New",monospace;font-weight:400}
+  h2,h3{letter-spacing:.01em}
+  /* Logo */
+  .logo{display:flex;align-items:center;gap:13px;margin-bottom:34px}
+  .logo-mark{width:30px;height:30px;flex:none;background:var(--bg);border:3px solid var(--ink);display:flex;align-items:center;justify-content:center}
+  .logo-mark::before{content:"";width:11px;height:11px;border:3px solid var(--ink)}
+  .logo-name{font-size:26px;line-height:1;color:var(--ink)}
 </style>
 </head>
 <body>
   <main class="wrap">
-    <span class="badge"><span class="dot"></span>Now booking installations</span>
+    <div class="logo"><span class="logo-mark"></span><span class="logo-name">Enlightened Bits</span></div>
     <h1>Local AI first.<br><span class="grad">Nothing in the cloud.</span></h1>
     <p class="tagline">Your models · your hardware · full freedom</p>
     <p class="lede">Enlightened Bits puts capable AI on your own computers. No cloud, no per-token bills, and no handing your data to someone else's servers. Everything runs on your own hardware, under your control.</p>
