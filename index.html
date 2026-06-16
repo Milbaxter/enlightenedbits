@@ -8,7 +8,7 @@
 <link rel="canonical" href="https://enlightenedbits.com/">
 <meta name="robots" content="index, follow, max-image-preview:large">
 <meta name="author" content="Enlightened Bits">
-<meta name="theme-color" content="#0b0d10">
+<meta name="theme-color" content="#b8c79f">
 <!-- Open Graph -->
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Enlightened Bits">
@@ -24,7 +24,7 @@
 <meta name="twitter:title" content="Local AI, installed for you. Enlightened Bits">
 <meta name="twitter:description" content="Local AI first. We install an AI computer on your own hardware. Own your compute, keep your data.">
 <meta name="twitter:image" content="https://enlightenedbits.com/og-image.png">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%230b0d10'/><circle cx='50' cy='50' r='22' fill='none' stroke='%237cc4ff' stroke-width='8'/></svg>">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%23b8c79f'/><rect x='28' y='28' width='44' height='44' fill='none' stroke='%231a2810' stroke-width='12'/></svg>">
 <!-- Structured data: Organization -->
 <script type="application/ld+json">
 {
@@ -74,55 +74,63 @@
 }
 </script>
 <style>
-  :root{--bg:#0b0d10;--ink:#e8eaed;--muted:#9aa3ad;--accent:#7cc4ff;--line:#1e242b;--glow:rgba(124,196,255,.10)}
+  :root{--bg:#b8c79f;--panel:#c4d2ac;--ink:#1a2810;--muted:#46562d;--line:#7c8c5a;--accent:#1a2810}
   *{box-sizing:border-box;margin:0;padding:0}
   html{scroll-behavior:smooth}
-  body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Roboto,Helvetica,Arial,sans-serif;
-    background:radial-gradient(1200px 600px at 70% -10%,var(--glow),transparent 60%),var(--bg);
-    color:var(--ink);line-height:1.65;-webkit-font-smoothing:antialiased}
-  .wrap{max-width:780px;margin:0 auto;padding:clamp(28px,6vw,72px) 24px}
-  .badge{display:inline-flex;align-items:center;gap:8px;font-size:13px;letter-spacing:.04em;color:var(--muted);
-    border:1px solid var(--line);border-radius:999px;padding:6px 14px;width:max-content;margin-bottom:32px}
-  .dot{width:7px;height:7px;border-radius:50%;background:var(--accent);box-shadow:0 0 10px var(--accent)}
-  h1{font-size:clamp(34px,6vw,56px);line-height:1.08;letter-spacing:-.02em;font-weight:680;margin-bottom:20px}
-  h1 .grad{background:linear-gradient(90deg,#fff,var(--accent));-webkit-background-clip:text;background-clip:text;color:transparent}
-  .lede{font-size:clamp(17px,2.4vw,20px);color:var(--muted);max-width:62ch;margin-bottom:40px}
-  .tagline{font-size:14px;letter-spacing:.18em;text-transform:uppercase;color:var(--accent);font-weight:600;margin:-8px 0 26px}
-  h2{font-size:clamp(22px,3vw,28px);letter-spacing:-.01em;margin:48px 0 16px;font-weight:640}
-  p{color:#cdd4db;margin-bottom:16px;max-width:65ch}
-  .points{display:grid;gap:14px;margin:28px 0 8px}
-  .point{display:flex;gap:13px;align-items:flex-start;font-size:16px;color:#cdd4db}
-  .point svg{flex:none;margin-top:4px;color:var(--accent)}
-  .point strong{color:#fff;font-weight:600}
+  body{font-family:"Courier New","Lucida Console",Menlo,Monaco,monospace;
+    background-color:var(--bg);
+    background-image:radial-gradient(rgba(26,40,16,.12) 1px,transparent 1.5px);
+    background-size:4px 4px;
+    color:var(--ink);line-height:1.55;font-size:16px}
+  ::selection{background:var(--ink);color:var(--bg)}
+  a{color:var(--ink)}
+  .wrap{max-width:760px;margin:0 auto;padding:clamp(28px,6vw,64px) 22px}
+  /* Inverted "LCD selected" highlight */
+  .grad{background:var(--ink);color:var(--bg);padding:0 .12em;-webkit-box-decoration-break:clone;box-decoration-break:clone}
+  @keyframes blink{50%{opacity:0}}
+  .badge{display:inline-flex;align-items:center;gap:9px;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink);
+    border:2px solid var(--ink);border-radius:0;padding:5px 12px;width:max-content;margin-bottom:30px;box-shadow:3px 3px 0 var(--ink)}
+  .dot{width:8px;height:8px;border-radius:0;background:var(--ink);animation:blink 1.2s step-end infinite}
+  h1{font-size:clamp(30px,6vw,50px);line-height:1.12;letter-spacing:.01em;font-weight:700;text-transform:uppercase;margin-bottom:18px}
+  h1::after{content:"_";animation:blink 1s step-end infinite}
+  .lede{font-size:clamp(16px,2.3vw,19px);color:var(--ink);max-width:60ch;margin-bottom:36px}
+  .tagline{font-size:13px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);font-weight:700;margin:-4px 0 24px}
+  h2{font-size:clamp(20px,3vw,26px);letter-spacing:.02em;text-transform:uppercase;margin:46px 0 14px;font-weight:700;
+    border-bottom:2px solid var(--ink);padding-bottom:6px}
+  p{color:var(--ink);margin-bottom:14px;max-width:64ch}
+  .point{display:flex;gap:12px;align-items:flex-start;font-size:15px;color:var(--ink)}
+  .point svg{flex:none;margin-top:3px;color:var(--ink)}
+  .point strong{color:var(--ink);font-weight:700}
   /* Offer card */
-  .offer{border:1px solid var(--line);border-radius:16px;padding:clamp(22px,4vw,34px);margin:36px 0 8px;
-    background:linear-gradient(180deg,rgba(124,196,255,.06),transparent 70%)}
+  .offer{border:2px solid var(--ink);border-radius:0;padding:clamp(20px,4vw,30px);margin:34px 0 8px;
+    background:var(--panel);box-shadow:5px 5px 0 var(--ink)}
   .offer .price{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;margin-bottom:6px}
-  .offer .amount{font-size:clamp(34px,7vw,48px);font-weight:720;letter-spacing:-.02em;color:#fff;line-height:1}
-  .offer .amount .grad{background:linear-gradient(90deg,#fff,var(--accent));-webkit-background-clip:text;background-clip:text;color:transparent}
-  .offer .flat{font-size:14px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);font-weight:600}
-  .offer .sub{color:var(--muted);font-size:16px;margin-bottom:22px;max-width:60ch}
-  .incl{display:grid;gap:13px;margin:0}
-  .incl .point{font-size:15.5px}
+  .offer .amount{font-size:clamp(26px,6vw,40px);font-weight:700;letter-spacing:.01em;color:var(--ink);line-height:1.1;text-transform:uppercase}
+  .offer .flat{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);font-weight:700}
+  .offer .sub{color:var(--ink);font-size:15px;margin-bottom:20px;max-width:60ch}
+  .incl{display:grid;gap:12px;margin:0}
+  .incl .point{font-size:14.5px}
   /* CTA */
-  .cta{display:inline-flex;align-items:center;gap:9px;margin-top:26px;background:var(--accent);color:#06121f;
-    font-weight:650;font-size:16px;text-decoration:none;padding:13px 22px;border-radius:999px;
-    transition:transform .12s ease,box-shadow .12s ease;box-shadow:0 6px 24px rgba(124,196,255,.22)}
-  .cta:hover{transform:translateY(-1px);box-shadow:0 10px 30px rgba(124,196,255,.32)}
-  .contact-line{margin-top:26px;font-size:17px;color:#cdd4db}
-  .contact-line strong{color:var(--accent);font-weight:650}
+  .cta{display:inline-flex;align-items:center;gap:9px;margin-top:24px;background:var(--ink);color:var(--bg);
+    font-weight:700;font-size:14px;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;
+    padding:12px 20px;border:2px solid var(--ink);border-radius:0;box-shadow:4px 4px 0 var(--ink);
+    transition:transform .08s,box-shadow .08s}
+  .cta:hover{transform:translate(2px,2px);box-shadow:2px 2px 0 var(--ink)}
+  .cta:active{transform:translate(4px,4px);box-shadow:0 0 0 var(--ink)}
+  .contact-line{margin-top:24px;font-size:15px;color:var(--ink)}
+  .contact-line strong{color:var(--ink);font-weight:700}
   /* Payback table */
-  .calc{width:100%;border-collapse:collapse;margin:24px 0 10px;font-size:15.5px}
-  .calc th,.calc td{text-align:left;padding:11px 14px;border-bottom:1px solid var(--line)}
-  .calc th{color:var(--muted);font-weight:600;font-size:12.5px;letter-spacing:.05em;text-transform:uppercase}
-  .calc td:last-child{color:var(--accent);font-weight:660;white-space:nowrap}
-  .calc tr:last-child td{border-bottom:none}
-  .fine{color:var(--muted);font-size:13.5px;margin-bottom:14px;max-width:65ch}
+  .calc{width:100%;border-collapse:collapse;margin:22px 0 10px;font-size:14.5px;border:2px solid var(--ink)}
+  .calc th,.calc td{text-align:left;padding:10px 12px;border:1px solid var(--ink)}
+  .calc th{background:var(--ink);color:var(--bg);font-weight:700;font-size:11.5px;letter-spacing:.06em;text-transform:uppercase}
+  .calc td:last-child{font-weight:700;white-space:nowrap}
+  .calc tbody tr:nth-child(even){background:var(--panel)}
+  .fine{color:var(--muted);font-size:13px;margin-bottom:14px;max-width:64ch}
   .faq{margin-top:8px}
-  .faq h3{font-size:17px;color:#fff;margin:24px 0 6px;font-weight:600}
-  .meta{border-top:1px solid var(--line);margin-top:56px;padding-top:24px;display:flex;flex-wrap:wrap;gap:8px 28px;align-items:center;color:var(--muted);font-size:15px}
+  .faq h3{font-size:15px;color:var(--ink);margin:22px 0 5px;font-weight:700;text-transform:uppercase;letter-spacing:.03em}
+  .meta{border-top:2px dashed var(--ink);margin-top:52px;padding-top:22px;display:flex;flex-wrap:wrap;gap:8px 26px;align-items:center;color:var(--muted);font-size:14px}
   .loc{display:flex;align-items:center;gap:8px}
-  footer{color:#5b636c;font-size:13px;padding:28px 24px;text-align:center;border-top:1px solid var(--line)}
+  footer{color:var(--muted);font-size:12px;padding:26px 22px;text-align:center;border-top:2px solid var(--ink);letter-spacing:.04em}
 </style>
 </head>
 <body>
