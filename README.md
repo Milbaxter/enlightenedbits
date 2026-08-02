@@ -1,6 +1,6 @@
 # enlightenedbits.com
 
-The website for **Enlightened Bits** — a European AI company based in Helsinki.
+The website for **Enlightened Bits** — a Finnish AI company based in Helsinki.
 
 It's a single static page. No build step, no framework, no database — just
 `index.html` plus `robots.txt` and `sitemap.xml`.
