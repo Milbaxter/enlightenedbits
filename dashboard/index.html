@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Company Dashboard – Enlightened Bits</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%236f97cb'/><rect x='28' y='28' width='44' height='44' fill='none' stroke='%230c1622' stroke-width='12'/></svg>">
+<style>
+  @font-face{font-family:'Gajraj One';font-style:normal;font-weight:400;font-display:swap;src:url(/fonts/gajraj-one.woff2) format('woff2')}
+  :root{--bg:#6f97cb;--panel:#7ba1d0;--ink:#0c1622;--muted:#26394f;--line:#a9c6e6}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:"Courier New","Lucida Console",Menlo,Monaco,monospace;
+    background-color:var(--bg);
+    background-image:radial-gradient(rgba(12,22,34,.10) 1px,transparent 1.5px);
+    background-size:4px 4px;
+    color:var(--ink);line-height:1.55;font-size:16px}
+  ::selection{background:var(--ink);color:var(--bg)}
+  a{color:var(--ink)}
+  .wrap{max-width:760px;margin:0 auto;padding:clamp(28px,6vw,64px) 22px}
+  @keyframes blink{50%{opacity:0}}
+  .logo{display:flex;align-items:center;gap:13px;margin-bottom:26px}
+  .logo-mark{width:30px;height:30px;flex:none;background:var(--bg);border:3px solid var(--ink);display:flex;align-items:center;justify-content:center}
+  .logo-mark::before{content:"";width:11px;height:11px;border:3px solid var(--ink)}
+  .logo-name{font-family:'Gajraj One',"Courier New",monospace;font-weight:400;font-size:26px;line-height:1;color:var(--ink)}
+  .badge{display:inline-flex;align-items:center;gap:9px;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink);
+    border:2px solid var(--ink);border-radius:0;padding:5px 12px;width:max-content;margin-bottom:24px;box-shadow:3px 3px 0 var(--ink)}
+  .dot{width:8px;height:8px;border-radius:0;background:var(--ink);animation:blink 1.2s step-end infinite}
+  h1{font-size:clamp(28px,5vw,42px);line-height:1.12;letter-spacing:.01em;font-weight:700;text-transform:uppercase;margin-bottom:10px}
+  .updated{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);font-weight:700;margin-bottom:30px}
+  h2{font-size:clamp(18px,2.6vw,22px);letter-spacing:.02em;text-transform:uppercase;margin:42px 0 14px;font-weight:700;
+    border-bottom:2px solid var(--ink);padding-bottom:6px}
+  /* Hero figure */
+  .hero{margin-bottom:8px}
+  .hero .label{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);font-weight:700}
+  .hero .num{font-size:clamp(48px,10vw,76px);font-weight:700;line-height:1;margin:6px 0 2px}
+  .hero .unit{font-size:16px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+  .hero .sub{font-size:14px;color:var(--muted);margin-top:8px}
+  /* KPI row */
+  .kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:16px;margin-top:34px}
+  .kpi{border:2px solid var(--ink);border-radius:0;padding:16px 18px;background:var(--panel);box-shadow:4px 4px 0 var(--ink)}
+  .kpi .label{font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:var(--muted);font-weight:700;margin-bottom:8px}
+  .kpi .num{font-size:clamp(26px,4vw,34px);font-weight:700;line-height:1}
+  .kpi .unit{font-size:13px;font-weight:700;color:var(--muted)}
+  .kpi .state{margin-top:10px;display:flex;align-items:center;gap:8px;font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase}
+  /* Pipeline table */
+  .tbl{border:2px solid var(--ink);border-radius:0;overflow-x:auto;box-shadow:4px 4px 0 var(--ink);background:var(--panel)}
+  table{border-collapse:collapse;width:100%;min-width:420px;font-size:14.5px}
+  th{font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:var(--muted);text-align:left;padding:10px 14px;border-bottom:2px solid var(--ink);font-weight:700}
+  td{padding:12px 14px;border-bottom:1px dashed var(--line);vertical-align:top}
+  tr:last-child td{border-bottom:none}
+  td.status{white-space:nowrap}
+  .early{display:inline-flex;align-items:center;gap:7px;font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;border:2px solid var(--ink);padding:3px 8px}
+  /* To-do list */
+  .todo{margin:0;padding:0;list-style:none}
+  .todo li{display:flex;gap:12px;align-items:flex-start;padding:12px 0;border-bottom:1px dashed var(--line);font-size:15px}
+  .todo li:last-child{border-bottom:none}
+  .todo .box{flex:none;width:16px;height:16px;border:2px solid var(--ink);margin-top:3px;background:var(--panel)}
+  .todo .when{display:block;font-size:12px;color:var(--muted);letter-spacing:.08em;text-transform:uppercase;margin-top:2px}
+  .fine{color:var(--muted);font-size:12.5px;margin-top:34px}
+  /* Password gate */
+  .gate{position:fixed;inset:0;display:flex;align-items:center;justify-content:center;padding:22px;z-index:10}
+  .gate::before{content:"";position:absolute;inset:0;background-color:var(--bg);
+    background-image:radial-gradient(rgba(12,22,34,.10) 1px,transparent 1.5px);
+    background-size:4px 4px}
+  .lock{border:2px solid var(--ink);border-radius:0;background:var(--panel);box-shadow:6px 6px 0 var(--ink);
+    padding:clamp(24px,5vw,36px);width:min(400px,100%);position:relative}
+  .lock h2{margin:0 0 14px}
+  .lock p{font-size:14px;color:var(--muted);margin-bottom:18px}
+  .lock input{width:100%;font-family:inherit;font-size:18px;font-weight:700;color:var(--ink);
+    background:var(--bg);border:2px solid var(--ink);border-radius:0;padding:12px 14px;margin-bottom:14px}
+  .lock input:focus{outline:2px solid var(--ink);outline-offset:2px}
+  .lock button{width:100%;font-family:inherit;background:var(--ink);color:var(--bg);border:2px solid var(--ink);
+    font-weight:700;font-size:13px;letter-spacing:.12em;text-transform:uppercase;padding:12px;cursor:pointer}
+  .lock button:hover{background:var(--ink);color:var(--bg)}
+  .lock button:active{transform:translate(2px,2px)}
+  .err{display:none;font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;margin:10px 0 0}
+  .err.on{display:block;animation:blink .8s step-end 2}
+  .gate.off{display:none}
+</style>
+</head>
+<body>
+  <!-- Password gate -->
+  <div class="gate" id="gate">
+    <form class="lock" id="lockForm">
+      <h2>Restricted</h2>
+      <p>Company dashboard. Enter the password to continue.</p>
+      <input type="password" id="pw" autocomplete="off" placeholder="password" aria-label="Password">
+      <button type="submit">Enter</button>
+      <p class="err" id="err">Wrong password. Try again.</p>
+    </form>
+  </div>
+
+  <!-- Dashboard -->
+  <main class="wrap">
+    <div class="logo"><span class="logo-mark"></span><span class="logo-name">Enlightened Bits</span></div>
+    <div class="badge"><span class="dot"></span> Company dashboard</div>
+    <h1>How the company<br>is doing.</h1>
+    <p class="updated">Single source of truth · last updated 2026-08-25</p>
+
+    <div class="hero">
+      <div class="label">Net run rate</div>
+      <div class="num">-€300<span class="unit"> / month</span></div>
+      <p class="sub">Inbound €0 minus operating costs €300. Pre-revenue.</p>
+    </div>
+
+    <div class="kpis">
+      <div class="kpi">
+        <div class="label">Inbound money</div>
+        <div class="num">€0<span class="unit"> / mo</span></div>
+        <div class="state"><span class="dot"></span> No sales yet</div>
+      </div>
+      <div class="kpi">
+        <div class="label">Operating costs</div>
+        <div class="num">-€300<span class="unit"> / mo</span></div>
+        <div class="state"><span class="dot"></span> Fixed burn</div>
+      </div>
+      <div class="kpi">
+        <div class="label">Sales channels</div>
+        <div class="num">2</div>
+        <div class="state"><span class="dot"></span> Cold outreach · referrals</div>
+      </div>
+    </div>
+
+    <h2>Sales pipeline</h2>
+    <div class="tbl">
+      <table>
+        <thead>
+          <tr><th>Project</th><th>Status</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><strong>Team agency</strong></td><td class="status"><span class="early"><span class="dot"></span> Early · no sale</span></td></tr>
+          <tr><td><strong>Greencode.vc</strong></td><td class="status"><span class="early"><span class="dot"></span> Early · no sale</span></td></tr>
+          <tr><td><strong>Kone säätiö</strong></td><td class="status"><span class="early"><span class="dot"></span> Early · no sale</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2>To-do</h2>
+    <ul class="todo">
+      <li><span class="box"></span><span>SEO: rank for local AI implementation searches<span class="when">keywords: local ai implementation Helsinki · Espoo · more</span></span></li>
+    </ul>
+
+    <p class="fine">Update this page when the numbers move: github.com/Milbaxter/enlightenedbits → dashboard/index.html. Not linked from anywhere on the site.</p>
+  </main>
+
+  <script>
+  // Soft gate: keeps the dashboard out of casual reach. Client-side only —
+  // the numbers live in this same HTML, so treat it as a "don't wander in"
+  // door, not encryption.
+  (function(){
+    var HASH='2926a2731f4b312c08982cacf8061eb14bf65c1a87cc5d70e864e079c6220731';
+    var gate=document.getElementById('gate');
+    var pw=document.getElementById('pw');
+    var err=document.getElementById('err');
+    if(sessionStorage.getItem('eb_dash_ok')==='1'){gate.classList.add('off');return;}
+    pw.focus();
+    document.getElementById('lockForm').addEventListener('submit',function(e){
+      e.preventDefault();
+      var v=pw.value;
+      if(window.crypto&&crypto.subtle){
+        crypto.subtle.digest('SHA-256',new TextEncoder().encode(v)).then(function(buf){
+          var hex=Array.prototype.map.call(new Uint8Array(buf),function(x){return x.toString(16).padStart(2,'0')}).join('');
+          check(hex);
+        });
+      }else{
+        // file:// or ancient browser: plain compare
+        check(v==='8888'?'ok':'no');
+      }
+    });
+    function check(ok){
+      if(ok===HASH||ok==='ok'){
+        sessionStorage.setItem('eb_dash_ok','1');
+        gate.classList.add('off');
+      }else{
+        err.classList.remove('on');void err.offsetWidth;err.classList.add('on');
+        pw.value='';pw.focus();
+      }
+    }
+  })();
+  </script>
+</body>
+</html>
