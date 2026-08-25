@@ -157,19 +157,13 @@
     pw.focus();
     document.getElementById('lockForm').addEventListener('submit',function(e){
       e.preventDefault();
-      var v=pw.value;
-      if(window.crypto&&crypto.subtle){
-        crypto.subtle.digest('SHA-256',new TextEncoder().encode(v)).then(function(buf){
-          var hex=Array.prototype.map.call(new Uint8Array(buf),function(x){return x.toString(16).padStart(2,'0')}).join('');
-          check(hex);
-        });
-      }else{
-        // file:// or ancient browser: plain compare
-        check(v==='8888'?'ok':'no');
-      }
+      crypto.subtle.digest('SHA-256',new TextEncoder().encode(pw.value)).then(function(buf){
+        var hex=Array.prototype.map.call(new Uint8Array(buf),function(x){return x.toString(16).padStart(2,'0')}).join('');
+        check(hex===HASH);
+      });
     });
     function check(ok){
-      if(ok===HASH||ok==='ok'){
+      if(ok){
         sessionStorage.setItem('eb_dash_ok','1');
         gate.classList.add('off');
       }else{
