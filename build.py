@@ -21,9 +21,9 @@ TEMPLATE = ROOT / "templates" / "team.html"
 LANGS = {
     # lang: (output file, own url, og locale, og image, footer place, nav aria)
     "fi": ("tiimi/index.html", "/tiimi/", "fi_FI", "og-image.png",
-           "Kallio, Helsinki", "Päävalikko", "Tapaamispyyntö"),
+           "Kallio, Helsinki", "Päävalikko"),
     "en": ("en/team/index.html", "/en/team/", "en_GB", "og-image-en.png",
-           "Kallio, Helsinki", "Main", "Meeting request"),
+           "Kallio, Helsinki", "Main"),
 }
 HOME = {"fi": "/", "en": "/en/"}
 CONTACT_ANCHOR = {"fi": "yhteystiedot", "en": "contact"}
@@ -113,7 +113,7 @@ def attr(s):
 # ---------------------------------------------------------------- render
 
 def render(sections, lang):
-    out_file, self_url, og_locale, og_image, place, nav_label, subject = LANGS[lang]
+    out_file, self_url, og_locale, og_image, place, nav_label = LANGS[lang]
     nav, page, story, contact, photo = (
         sections[k] for k in ("nav", "page", "story", "contact", "photo"))
     people = [(k.split(None, 1)[1], v) for k, v in sections.items()
@@ -201,7 +201,6 @@ def render(sections, lang):
         "og_image": og_image,
         "footer_place": place,
         "nav_label": nav_label,
-        "book_subject": attr(subject.replace(" ", "%20")),
         "primary_email": attr(primary),
         "lang_switch": lang_switch,
         "schema": json.dumps(schema, ensure_ascii=False, indent=2),
