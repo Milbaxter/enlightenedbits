@@ -185,7 +185,7 @@ section[id]{scroll-margin-top:72px}
 
 /* ---------- Photo band ---------- */
 .eb-band{position:relative;height:420px;border-top:var(--grid-rule);
-  background-position:center center;background-size:cover;background-repeat:no-repeat}
+  background-position:center top;background-size:cover;background-repeat:no-repeat}
 .eb-band::before{content:'';position:absolute;inset:auto 0 0 0;height:120px;
   background:var(--scrim-photo)}
 .eb-band .eb-grid{position:absolute;inset:auto 0 0 0}
