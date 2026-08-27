@@ -123,7 +123,8 @@ maps_url:  https://www.openstreetmap.org/search?query=Josafatinkatu%209%2C%20005
 
 
 ## person maximilian
-name:     Maximilian
+name:      Maximilian
+full_name: Maximilian Rehn
 email:    maximilian@enlightenedbits.com
 phone:    +358 50 494 1660
 role.fi:  Perustaja
@@ -148,7 +149,8 @@ bio.en: >
 
 
 ## person juhani
-name:     Juhani
+name:      Juhani
+full_name: Juhani Lindh
 email:    juhani@enlightenedbits.com
 phone:    +358 45 189 4225
 role.fi:  Perustaja
