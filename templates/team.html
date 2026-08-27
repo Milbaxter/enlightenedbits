@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="{{lang}}">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{{page.title}}</title>
+<meta name="description" content="{{page.description}}">
+<link rel="canonical" href="https://enlightenedbits.com{{self_url}}">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="theme-color" content="#FAF9F7">
+<link rel="alternate" hreflang="fi" href="https://enlightenedbits.com/tiimi/">
+<link rel="alternate" hreflang="en" href="https://enlightenedbits.com/en/team/">
+<meta property="og:type" content="profile">
+<meta property="og:site_name" content="Enlightened Bits">
+<meta property="og:title" content="{{page.og_title}}">
+<meta property="og:description" content="{{page.og_desc}}">
+<meta property="og:url" content="https://enlightenedbits.com{{self_url}}">
+<meta property="og:locale" content="{{og_locale}}">
+<meta property="og:image" content="https://enlightenedbits.com/{{og_image}}?v=3">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://enlightenedbits.com/{{og_image}}?v=3">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%23FAF9F7'/><rect x='28' y='28' width='44' height='44' fill='none' stroke='%230D1418' stroke-width='10'/></svg>">
+<link rel="stylesheet" href="/assets/eb.css">
+<script type="application/ld+json">
+{{schema}}
+</script>
+</head>
+<body>
+<a class="eb-skip" href="#main">{{nav.skip}}</a>
+
+<header class="eb-header">
+  <div class="eb-grid">
+    <div class="eb-cell"><a class="eb-wordmark" href="{{home_url}}">EnlightenedBits</a></div>
+    <nav class="eb-cell eb-span-2 eb-nav" aria-label="{{nav_label}}">
+      <a href="{{home_url}}">{{nav.home}}</a>
+      <a href="{{self_url}}" aria-current="page">{{nav.about}}</a>
+      <a href="#{{contact_anchor}}">{{nav.contact}}</a>
+    </nav>
+    <div class="eb-cell eb-header-action">
+      <p class="eb-lang" style="margin:0">{{lang_switch}}</p>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+  <section style="border-top:0">
+    <div class="eb-grid">
+      <div class="eb-cell eb-span-2 eb-photo-cell">
+        <picture>
+          <source srcset="{{photo.webp}}" type="image/webp">
+          <img class="eb-photo" src="{{photo.jpg}}" alt="{{photo.alt}}"
+               width="{{photo.width}}" height="{{photo.height}}" loading="eager" decoding="async">
+        </picture>
+      </div>
+      <div class="eb-cell eb-span-2" style="padding-top:44px;padding-bottom:40px">
+        <p class="eb-eyebrow" style="margin:0 0 14px">{{page.eyebrow}}</p>
+        <h1 class="eb-statement">{{page.heading}}</h1>
+        <p class="eb-lead" style="margin:28px 0 0">{{page.lede}}</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="eb-grid eb-rule-b">
+<!-- PERSON -->
+      <div class="eb-cell eb-span-2{{person_rule}}" style="padding-top:34px;padding-bottom:34px">
+        <div class="eb-item"><span class="eb-num">{{person.num}}</span><div>
+          <h3>{{person.name}}</h3>
+          <p class="eb-eyebrow" style="margin:4px 0 12px">{{person.role}}</p>
+          <p style="margin-bottom:12px"><strong>{{person.degree}}</strong></p>
+          {{person.bio}}
+          <a class="eb-action-quiet" href="mailto:{{person.email}}">{{person.email}}</a>
+        </div></div>
+      </div>
+<!-- /PERSON -->
+    </div>
+  </section>
+
+  <section>
+    <div class="eb-grid">
+      <div class="eb-cell eb-spacer eb-pt eb-pb"></div>
+      <div class="eb-cell eb-span-3 eb-pt eb-pb eb-prose">
+        <h2 class="eb-h2" style="margin-bottom:20px">{{story.heading}}</h2>
+        {{story.body}}
+        <div class="eb-actions">
+          <a class="eb-action" href="mailto:{{primary_email}}?subject={{book_subject}}">{{story.cta}}</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="{{contact_anchor}}">
+    <div class="eb-grid">
+      <div class="eb-cell eb-span-4" style="padding-top:56px;padding-bottom:20px">
+        <h2 class="eb-h2">{{contact.heading}}</h2>
+      </div>
+    </div>
+    <div class="eb-grid eb-rule-t">
+      <div class="eb-cell eb-span-2 eb-rule-r" style="padding-top:26px;padding-bottom:34px">
+        <p class="eb-eyebrow" style="margin:0 0 12px">{{contact.address_label}}</p>
+        <address style="font-style:normal;font-size:var(--text-body-md);line-height:var(--leading-relaxed);color:var(--ink-950)">
+          {{contact.address}}
+        </address>
+        <div class="eb-actions" style="margin-top:16px">
+          <a class="eb-action-quiet" href="{{contact.maps_url}}" rel="noopener noreferrer" target="_blank">{{contact.maps_label}}</a>
+        </div>
+      </div>
+      <div class="eb-cell eb-span-2" style="padding-top:26px;padding-bottom:34px">
+        <p class="eb-eyebrow" style="margin:0 0 12px">{{contact.contact_label}}</p>
+        <div class="eb-contacts">
+{{contact.people}}
+        </div>
+        <p style="margin:16px 0 0;font-size:var(--text-body-sm);line-height:var(--leading-relaxed);color:var(--text-muted);max-width:44ch">{{contact.intro}}</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="eb-footer">
+  <div class="eb-grid">
+    <div class="eb-cell eb-span-4">© 2026 Enlightened Bits · {{footer_place}}</div>
+  </div>
+</footer>
+</body>
+</html>
