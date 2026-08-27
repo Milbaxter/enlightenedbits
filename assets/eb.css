@@ -74,7 +74,7 @@
   --text-body-lg:1.0625rem;--text-body-md:.9375rem;--text-body-sm:.8125rem;
   /* Hero type. Tune these two to resize every page's opening statement
      and its lede together — nothing else reads them. */
-  --hero-size:clamp(21px,1.8vw,25px);
+  --hero-size:clamp(24px,2.2vw,30px);
   --hero-lede:.9375rem;
   --text-caption:.75rem;--text-micro:.6875rem;
 
@@ -207,7 +207,7 @@ section[id]{scroll-margin-top:72px}
 
 /* ---------- Section heads ---------- */
 .eb-h2{margin:0;font-size:28px;font-weight:600;letter-spacing:var(--tracking-tight);color:var(--ink-950)}
-.eb-h2-lg{margin:0;font-size:clamp(24px,2.2vw,30px);font-weight:600;
+.eb-h2-lg{margin:0;font-size:var(--hero-size);font-weight:600;
   letter-spacing:var(--tracking-tight);line-height:1.26;color:var(--ink-950);max-width:30ch}
 .eb-pt{padding-top:var(--section-y)}
 .eb-pb{padding-bottom:var(--section-y)}
