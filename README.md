@@ -20,7 +20,6 @@ The site is bilingual. Finnish lives at the root, English under `/en/`.
 | `/tiimi/`          | `tiimi/index.html`      | Finnish, **generated** |
 | `/en/`             | `en/index.html`         | English  |
 | `/en/team/`        | `en/team/index.html`    | English, **generated** |
-| `/dashboard/`      | `dashboard/index.html`  | Internal, password-gated, `noindex` |
 
 The old English URLs `/team/` and `/local-ai/` 301-redirect via `vercel.json`
 so existing search rankings and inbound links still land somewhere sensible —
@@ -137,7 +136,7 @@ kept only for reference and does not run.
 
 ## The dashboard
 
-`/dashboard/` is an internal page behind a client-side password gate. It is
-`noindex`, disallowed in `robots.txt`, and not linked from anywhere on the
-site — but the gate is a "don't wander in" door, not encryption. The numbers
-sit in the same HTML. Don't put anything genuinely sensitive there.
+The internal company dashboard used to live at `/dashboard/`. It has moved to
+a **private** repo — `lindhj3/enlightenedbits-dashboard` — because this repo
+is public, and the password gate never protected the source. Don't copy it
+back in.
