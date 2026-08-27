@@ -206,7 +206,7 @@ section[id]{scroll-margin-top:72px}
 .eb-item .eb-bio:last-of-type{margin-bottom:14px}
 
 /* ---------- Section heads ---------- */
-.eb-h2{margin:0;font-size:28px;font-weight:600;letter-spacing:var(--tracking-tight);color:var(--ink-950)}
+.eb-h2{margin:0;font-size:clamp(23px,2.05vw,28px);font-weight:600;letter-spacing:var(--tracking-tight);color:var(--ink-950)}
 .eb-h2-lg{margin:0;font-size:var(--hero-size);font-weight:600;
   letter-spacing:var(--tracking-tight);line-height:1.26;color:var(--ink-950);max-width:30ch}
 .eb-pt{padding-top:var(--section-y)}
