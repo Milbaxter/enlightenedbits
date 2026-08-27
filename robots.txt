@@ -1,4 +1,3 @@
 User-agent: *
 Allow: /
-Disallow: /dashboard
 Sitemap: https://enlightenedbits.com/sitemap.xml
