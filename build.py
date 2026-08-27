@@ -148,7 +148,7 @@ def render(sections, lang):
 
     blocks = []
     for _, p in people:
-        rows = [f'            <p class="eb-contact-name">{esc(p["name"])}</p>',
+        rows = [f'            <p class="eb-contact-name">{esc(p.get("full_name", p["name"]))}</p>',
                 f'            <p><a class="eb-action-quiet" href="mailto:{attr(p["email"])}">'
                 f'{esc(p["email"])}</a></p>']
         if "phone" in p:
@@ -184,7 +184,7 @@ def render(sections, lang):
                 "addressCountry": "FI",
             },
             "employee": [
-                {"@type": "Person", "name": p["name"],
+                {"@type": "Person", "name": p.get("full_name", p["name"]),
                  "jobTitle": pick(p, "role", lang), "email": p["email"],
                  **({"telephone": p["phone"]} if "phone" in p else {})}
                 for _, p in people
