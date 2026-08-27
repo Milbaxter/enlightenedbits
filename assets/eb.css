@@ -241,7 +241,7 @@ section[id]{scroll-margin-top:72px}
 
 /* ---------- Footer ---------- */
 .eb-footer{border-top:var(--grid-rule);background:var(--surface-page)}
-.eb-footer .eb-cell{font-size:var(--text-caption);color:var(--text-muted)}
+.eb-footer .eb-cell{font-size:var(--text-caption);color:var(--text-muted);text-align:center}
 .eb-footer a{color:var(--text-muted)}
 .eb-footer a:hover{color:var(--ink-950)}
 
@@ -278,7 +278,6 @@ section[id]{scroll-margin-top:72px}
 }
 @media (max-width:600px){
   :root{--grid-cols:1;--grid-pad:16px}
-  .eb-footer .eb-cell{justify-self:start!important;text-align:left!important}
   .eb-span-2,.eb-span-3,.eb-span-4{grid-column:span 1}
   .eb-rule-r{border-right:0;border-bottom:var(--grid-rule)}
   .eb-band{height:260px}

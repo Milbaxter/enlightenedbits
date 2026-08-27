@@ -21,9 +21,9 @@ TEMPLATE = ROOT / "templates" / "team.html"
 LANGS = {
     # lang: (output file, own url, og locale, og image, footer place, nav aria)
     "fi": ("tiimi/index.html", "/tiimi/", "fi_FI", "og-image.png",
-           "Helsinki, Suomi", "Päävalikko", "Tapaamispyyntö"),
+           "Kallio, Helsinki", "Päävalikko", "Tapaamispyyntö"),
     "en": ("en/team/index.html", "/en/team/", "en_GB", "og-image-en.png",
-           "Helsinki, Finland", "Main", "Meeting request"),
+           "Kallio, Helsinki", "Main", "Meeting request"),
 }
 HOME = {"fi": "/", "en": "/en/"}
 CONTACT_ANCHOR = {"fi": "yhteystiedot", "en": "contact"}
