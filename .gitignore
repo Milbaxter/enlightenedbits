@@ -2,3 +2,8 @@
 *.swp
 *~
 .vercel
+
+# Local scratch
+INSPA/
+*.zip
+*.icloud
