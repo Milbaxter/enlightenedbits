@@ -20,6 +20,13 @@ The site is bilingual. Finnish lives at the root, English under `/en/`.
 | `/tiimi/`          | `tiimi/index.html`      | Finnish, **generated** |
 | `/en/`             | `en/index.html`         | English  |
 | `/en/team/`        | `en/team/index.html`    | English, **generated** |
+| `/notes/`          | `notes/index.html`      | English notebook |
+
+The standalone `/notes/` version uses a Notes-inspired layout with its own
+`notes/notes.css` and a small `notes/notes.js` for note selection. Edit its five
+notes directly in `notes/index.html`, keeping the list previews in sync.
+Each note has a shareable fragment URL; without JavaScript, all notes remain
+readable. It uses system fonts and makes no third-party requests.
 
 The old English URLs `/team/` and `/local-ai/` 301-redirect via `vercel.json`
 so existing search rankings and inbound links still land somewhere sensible —
