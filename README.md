@@ -23,7 +23,7 @@ The site is bilingual. Finnish lives at the root, English under `/en/`.
 | `/notes/`          | `notes/index.html`      | English notebook |
 
 The standalone `/notes/` version uses a Notes-inspired layout with its own
-`notes/notes.css` and a small `notes/notes.js` for note selection. Edit its six
+`notes/notes.css` and a small `notes/notes.js` for note selection. Edit its seven
 notes directly in `notes/index.html`, keeping the list previews in sync.
 Each note has a shareable fragment URL; without JavaScript, all notes remain
 readable. It uses system fonts and makes no third-party requests.
