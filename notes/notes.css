@@ -16,7 +16,7 @@ h1 { font-size: 17px; margin: 0; font-weight: 500; }
 nav { display: grid; gap: 4px; }
 .note-link { padding: 17px 13px; border-radius: 7px; text-decoration: none; color: var(--ink); }
 .note-link strong { display: block; font-size: 14px; line-height: 1.4; font-weight: 600; letter-spacing: -.15px; }
-.note-link span { display: block; margin-top: 5px; font-size: 12px; line-height: 1.5; color: #706b5e; }
+.note-link span { display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; overflow: hidden; margin-top: 5px; font-size: 12px; line-height: 1.5; color: #706b5e; }
 .note-link:hover { background: #ece8df; }
 .note-link[aria-current="true"] { background: #f2e6b9; }
 main { min-width: 0; padding: 44px 64px 36px; }
