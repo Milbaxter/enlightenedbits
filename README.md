@@ -28,7 +28,8 @@ one sentence, in `notes/index.html`. Its own `notes/notes.css` controls the boar
 or a card; these longer notes have not been written yet. All seven topics remain in the sidebar, including two without board cards.
 Keep sidebar titles in sync with the cards. Without JavaScript, sidebar links
 jump to the cards or the two topic placeholders.
-It uses system fonts and makes no third-party requests.
+It uses system fonts plus self-hosted Kalam for the handwritten board heading
+(license: `fonts/kalam-OFL.txt`) and makes no third-party requests.
 
 The old English URLs `/team/` and `/local-ai/` 301-redirect via `vercel.json`
 so existing search rankings and inbound links still land somewhere sensible —
