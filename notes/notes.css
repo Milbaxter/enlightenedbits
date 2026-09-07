@@ -1,3 +1,4 @@
+@font-face { font-family: 'Kalam'; font-style: normal; font-weight: 700; font-display: swap; src: url('/fonts/kalam-bold.ttf') format('truetype'); }
 :root { color-scheme: light; --paper: #faf9f6; --ink: #252521; --muted: #706d65; --accent: #926900; --line: #e7e4dc; }
 * { box-sizing: border-box; }
 [hidden] { display: none !important; }
@@ -21,7 +22,7 @@ nav { display: grid; gap: 4px; }
 nav [aria-current="page"] { background: #f2e6b9; }
 main { min-width: 0; padding: 48px 40px 36px; scroll-margin-top: 20px; }
 main:focus, .detail:focus { outline: none; }
-.board-title { margin: 0 0 32px; font-size: clamp(23px, 3vw, 30px); font-weight: 650; line-height: 1.25; letter-spacing: -.7px; }
+.board-title { margin: 0 0 32px; font-family: 'Kalam', cursive; font-size: clamp(28px, 3.4vw, 38px); font-weight: 700; line-height: 1.3; letter-spacing: -.5px; }
 .board { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 30px; align-items: stretch; }
 .sticky { --note-paper: #f5e8a7; --tilt: -.7deg; position: relative; isolation: isolate; min-height: 220px; scroll-margin-top: 24px; transform: rotate(var(--tilt)); }
 .sticky:nth-child(3n + 2) { --note-paper: #e3ead3; --tilt: .8deg; }
