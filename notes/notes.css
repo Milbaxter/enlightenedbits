@@ -29,7 +29,6 @@ article[hidden] { display: none; }
 article:focus, main:focus { outline: none; }
 h2 { margin: 0 0 28px; font-size: clamp(30px, 4vw, 40px); line-height: 1.15; letter-spacing: -1.3px; font-weight: 700; }
 article p { font-size: 18px; line-height: 1.65; letter-spacing: -.2px; margin: 0 0 22px; }
-article .underlined { margin-top: 34px; font-size: 16px; text-decoration: underline; text-decoration-color: #dbc57d; text-decoration-thickness: 2px; text-underline-offset: 6px; }
 blockquote { margin: 0 0 30px; }
 blockquote p { font-size: 24px; line-height: 1.5; }
 cite { color: var(--muted); font-size: 13px; font-style: normal; }
