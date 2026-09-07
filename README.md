@@ -22,11 +22,12 @@ The site is bilingual. Finnish lives at the root, English under `/en/`.
 | `/en/team/`        | `en/team/index.html`    | English, **generated** |
 | `/notes/`          | `notes/index.html`      | English notebook |
 
-The standalone `/notes/` version uses a Notes-inspired layout with its own
-`notes/notes.css` and a small `notes/notes.js` for note selection. Edit its seven
-notes directly in `notes/index.html`, keeping the list previews in sync.
-Each note has a shareable fragment URL; without JavaScript, all notes remain
-readable. It uses system fonts and makes no third-party requests.
+The standalone `/notes/` version displays seven Post-it-style cards, each with
+one sentence, in `notes/index.html`. Its own `notes/notes.css` controls the board.
+`notes/notes.js` opens a placeholder for each future longer note from the sidebar
+or a card; these longer notes have not been written yet. Keep sidebar titles in
+sync with the cards. Without JavaScript, the sidebar links jump to the cards.
+It uses system fonts and makes no third-party requests.
 
 The old English URLs `/team/` and `/local-ai/` 301-redirect via `vercel.json`
 so existing search rankings and inbound links still land somewhere sensible —

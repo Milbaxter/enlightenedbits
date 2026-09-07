@@ -15,65 +15,37 @@
   <script src="/notes/notes.js" defer></script>
 </head>
 <body>
-  <a class="skip" href="#open-source">Skip to note</a>
+  <a class="skip" href="#reading">Skip to notes</a>
   <div class="notebook">
     <aside class="sidebar" aria-label="Notebook">
       <a class="brand" href="/">Enlightened Bits<span>Helsinki, Finland</span></a>
       <div class="folder"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none"><path d="M3 7a2 2 0 0 1 2-2h5l2 2h7a2 2 0 0 1 2 2v10H3V7Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg><h1>Notes</h1><span class="count">7</span></div>
       <nav aria-label="Choose a note">
-        <a class="note-link" href="#open-source"><strong>Open Source AI</strong><span>The Enlightenment grew through the sharing of knowledge: ideas people could study, question, and build on.</span></a>
-        <a class="note-link" href="#local-ai"><strong>Local AI</strong><span>Run models on your own hardware. Keep private work close. Choose what you use and how you use it.</span></a>
-        <a class="note-link" href="#cheaper-faster-better"><strong>Cheaper, faster, better.</strong><span>We believe open-source and local AI can deliver all three. Lower costs. Faster workflows. Better tools for the way your company actually works.</span></a>
-        <a class="note-link" href="#keep-learning"><strong>AI is improving exponentially.</strong><span>Massive improvements are happening. What these tools can do keeps expanding, and so does what we can build with them.</span></a>
-        <a class="note-link" href="#ai-for-life"><strong>AI for a better world.</strong><span>We believe AI is our greatest opportunity to improve society and the wellbeing of every human being and all life.</span></a>
-        <a class="note-link" href="#stay-curious"><strong>Stay curious. Build things.</strong><span>The best way to understand what’s changing is to make something with it.</span></a>
-        <a class="note-link" href="#keep-it-simple"><strong>Keep it simple.</strong><span>“Keep things simple, but not too simple.”</span></a>
+        <a class="overview-link" href="#">All notes</a>
+        <a class="note-link" href="#open-source"><strong>Open Source AI</strong></a>
+        <a class="note-link" href="#local-ai"><strong>Local AI</strong></a>
+        <a class="note-link" href="#cheaper-faster-better"><strong>Cheaper, faster, better.</strong></a>
+        <a class="note-link" href="#keep-learning"><strong>AI is improving exponentially.</strong></a>
+        <a class="note-link" href="#ai-for-life"><strong>AI for a better world.</strong></a>
+        <a class="note-link" href="#stay-curious"><strong>Stay curious. Build things.</strong></a>
+        <a class="note-link" href="#keep-it-simple"><strong>Keep it simple.</strong></a>
       </nav>
     </aside>
     <main id="reading" tabindex="-1">
-      <div class="toolbar"><a class="back" href="#"><span aria-hidden="true">‹</span> Notes</a></div>
-      <div class="pages">
-        <article id="open-source" tabindex="-1">
-          <h2>Open Source AI</h2>
-          <p>The Enlightenment grew through the sharing of knowledge: ideas people could study, question, and build on.</p>
-          <p>We see open source as a continuation of that spirit. Share what you learn. Let others look inside, improve it, and take it somewhere you never imagined.</p>
-          <p>Knowledge becomes something we build together. That’s beautiful progress.</p>
-        </article>
-        <article id="local-ai" tabindex="-1">
-          <h2>Local AI</h2>
-          <p>Run models on your own hardware. Keep private work close. Choose what you use and how you use it.</p>
-          <p>Local AI gives you more control over your data, your setup, and the models you run. Something you can keep, adapt, and make your own.</p>
-        </article>
-        <article id="cheaper-faster-better" tabindex="-1">
-          <h2>Cheaper, faster,<br>better.</h2>
-          <p>We believe open-source and local AI can deliver all three. Lower costs. Faster workflows. Better tools for the way your company actually works.</p>
-          <p>Choose your models. Connect your data. Build around your own needs, with a stack you control and can keep improving.</p>
-          <p>We want more companies to have their own AI stack. And we’re here to help them build it.</p>
-        </article>
-        <article id="keep-learning" tabindex="-1">
-          <h2>AI is improving<br>exponentially.</h2>
-          <p>Massive improvements are happening. What these tools can do keeps expanding, and so does what we can build with them.</p>
-          <p>Change will be constant. Get used to working and learning with AI that keeps getting better. Revisit what didn’t work before. Rethink what’s possible.</p>
-          <p>You don’t need to follow every release. Keep experimenting, keep learning, and let your way of working evolve with the tools.</p>
-        </article>
-        <article id="ai-for-life" tabindex="-1">
-          <h2>AI for a<br>better world.</h2>
-          <p>We believe AI is our greatest opportunity to improve society and the wellbeing of every human being and all life.</p>
-          <p>Better care. More accessible education. More time to create, understand each other, and care for the living world.</p>
-          <p>That future is something we have to build. We want the knowledge, tools, and benefits to reach everyone.</p>
-        </article>
-        <article id="stay-curious" tabindex="-1">
-          <h2>Stay curious.<br>Build things.</h2>
-          <p>The best way to understand what’s changing is to make something with it.</p>
-          <p>Small experiments. Real problems. Learn as you go.</p>
-          <p>You don’t need a perfect plan to start. Just something worth trying.</p>
-        </article>
-        <article id="keep-it-simple" tabindex="-1">
-          <h2>Keep it simple.</h2>
-          <blockquote><p>“Keep things simple,<br>but not too simple.”</p><cite>— A paraphrase of Einstein</cite></blockquote>
-          <p>Enough to solve the problem. Enough to understand how it works. Enough to make it yours.</p>
-        </article>
-      </div>
+      <section class="board" aria-label="All notes">
+        <article class="sticky" id="open-source"><a href="#open-source"><h2>Open Source AI</h2><p>Sharing knowledge drove the Enlightenment, and open-source AI carries that spirit forward.</p></a></article>
+        <article class="sticky" id="local-ai"><a href="#local-ai"><h2>Local AI</h2><p>Run models on your own hardware, with control over your data and the tools you use.</p></a></article>
+        <article class="sticky" id="cheaper-faster-better"><a href="#cheaper-faster-better"><h2>Cheaper, faster, better.</h2><p>We believe open-source and local AI can give companies a cheaper, faster, better AI stack of their own.</p></a></article>
+        <article class="sticky" id="keep-learning"><a href="#keep-learning"><h2>AI is improving exponentially.</h2><p>Massive improvements mean constant change in how we work, learn, and build with AI.</p></a></article>
+        <article class="sticky" id="ai-for-life"><a href="#ai-for-life"><h2>AI for a better world.</h2><p>We believe AI is our greatest opportunity to improve society and the wellbeing of all life.</p></a></article>
+        <article class="sticky" id="stay-curious"><a href="#stay-curious"><h2>Stay curious. Build things.</h2><p>The best way to understand what’s changing is to make something with it.</p></a></article>
+        <article class="sticky" id="keep-it-simple"><a href="#keep-it-simple"><h2>Keep it simple.</h2><p>Keep things simple, but not too simple.</p></a></article>
+      </section>
+      <section class="detail" hidden aria-labelledby="detail-title" tabindex="-1">
+        <a class="back" href="#"><span aria-hidden="true">‹</span> All notes</a>
+        <h2 id="detail-title"></h2>
+        <p>Longer note coming soon.</p>
+      </section>
       <footer><p>We’re two engineers in Helsinki building with open-source and local AI.</p><a href="mailto:maximilian@enlightenedbits.com">Let’s build something <span aria-hidden="true">↗</span></a><a class="company-link" href="/en/">About Enlightened Bits</a></footer>
     </main>
   </div>
