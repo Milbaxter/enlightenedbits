@@ -21,14 +21,18 @@ nav { display: grid; gap: 4px; }
 nav [aria-current="page"] { background: #f2e6b9; }
 main { min-width: 0; padding: 48px 40px 36px; scroll-margin-top: 20px; }
 main:focus, .detail:focus { outline: none; }
-.board { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; align-items: stretch; }
-.sticky { background: #f5ebbb; box-shadow: 0 3px 5px #302b1510; min-height: 220px; scroll-margin-top: 24px; }
-.sticky:nth-child(3n + 2) { background: #e9eddf; }
-.sticky:nth-child(3n) { background: #efe5df; }
-.sticky a { display: block; height: 100%; padding: 25px 23px 30px; text-decoration: none; color: var(--ink); }
+.board-title { margin: 0 0 32px; font-size: clamp(23px, 3vw, 30px); font-weight: 650; line-height: 1.25; letter-spacing: -.7px; }
+.board { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 30px; align-items: stretch; }
+.sticky { --note-paper: #f5e8a7; --tilt: -.7deg; position: relative; isolation: isolate; min-height: 220px; scroll-margin-top: 24px; transform: rotate(var(--tilt)); }
+.sticky:nth-child(3n + 2) { --note-paper: #e3ead3; --tilt: .8deg; }
+.sticky:nth-child(3n) { --note-paper: #edddd3; --tilt: -.4deg; }
+.sticky::before, .sticky::after { content: ""; position: absolute; z-index: -1; bottom: 9px; width: 46%; height: 35%; background: #463c2838; filter: blur(7px); pointer-events: none; }
+.sticky::before { left: 7px; transform: skewY(-6deg); }
+.sticky::after { right: 7px; transform: skewY(6deg); }
+.sticky a { display: block; height: 100%; padding: 30px 23px; text-decoration: none; color: var(--ink); background: linear-gradient(to bottom, #6e5b1710, #6e5b1705 24px, #ffffff16 25px, transparent 65%, #ffffff28), var(--note-paper); border-top: 1px solid #ffffff70; border-radius: 1px 1px 10px 2px / 1px 1px 3px 2px; box-shadow: 1px 3px 4px #302b1520, 4px 12px 14px -7px #302b1550, inset 0 -1px #ffffff55; }
 .sticky h2 { margin: 0 0 18px; font-size: 23px; line-height: 1.2; letter-spacing: -.6px; font-weight: 700; }
 .sticky p { margin: 0; font-size: 15px; line-height: 1.6; letter-spacing: -.1px; }
-.sticky:hover { box-shadow: 0 5px 12px #302b1520; }
+.sticky:hover, .sticky:focus-within { transform: translateY(-3px) rotate(0deg); }
 .detail { max-width: 600px; min-height: 460px; padding: 0 12px; }
 .back { display: inline-flex; align-items: center; gap: 6px; font-size: 16px; text-decoration: none; margin-bottom: 70px; }
 .back span { font-size: 30px; line-height: 20px; }
@@ -47,10 +51,10 @@ footer .company-link { margin-top: 16px; color: var(--muted); font-size: 12px; }
   nav { display: flex; overflow-x: auto; gap: 6px; padding: 5px; margin: -5px; }
   .note-link, .overview-link { white-space: nowrap; flex-shrink: 0; padding: 10px 12px; }
   main { padding: 28px 22px 36px; }
-  .board { gap: 18px; }
+  .board { gap: 26px; }
   .sticky a { padding: 24px; }
   .detail { padding: 0; min-height: 360px; }
   .back { margin-bottom: 44px; }
 }
 @media (max-width: 480px) { .board { grid-template-columns: 1fr; } .sticky { min-height: 0; } .sticky a { padding: 26px; } }
-@media (prefers-reduced-motion: no-preference) { .sticky { transition: box-shadow .15s ease; } }
+@media (prefers-reduced-motion: no-preference) { .sticky { transition: transform .18s ease; } }
