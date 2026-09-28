@@ -70,3 +70,9 @@ preview deployment.
 Old URLs keep working: `/team/` and `/local-ai/` redirect as before, and
 `/meista/` / `/en/about/` redirect to the team pages.
 
+## Public repository content
+
+This repository and its history are public. Keep client proposals, internal
+company dashboards, financial records, credentials, and personal contact details
+in private systems. Only publish approved website content here. The ignore rules
+help prevent accidental additions, but do not replace reviewing staged files.

@@ -10,3 +10,18 @@ INSPA/
 node_modules/
 dist/
 .astro/
+
+# Private credentials and internal business material
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+dashboard/
+private/
+internal/
+[Tt]arjous*
+[Ff]inal_[Tt]arjous*
+[Pp]roposal*
