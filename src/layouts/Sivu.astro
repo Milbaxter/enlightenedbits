@@ -39,6 +39,11 @@ const navItems = (['home', 'approach', 'about'] as const).map((key) => ({
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%23050505'/><rect x='18' y='18' width='64' height='64' fill='none' stroke='%23EFECE6' stroke-width='9'/><rect x='36' y='36' width='28' height='28' fill='none' stroke='%23EFECE6' stroke-width='9'/></svg>">
   <link rel="preload" href="/fonts/gajraj-one.woff2" as="font" type="font/woff2" crossorigin>
   <script is:inline>document.documentElement.classList.add('js')</script>
+  <script type="application/ld+json" set:html={JSON.stringify({
+    '@context': 'https://schema.org', '@type': 'Organization', name: 'Enlightened Bits',
+    url: 'https://enlightenedbits.com/',
+    address: { '@type': 'PostalAddress', streetAddress: 'Josafatinkatu 9', postalCode: '00510', addressLocality: 'Helsinki', addressCountry: 'FI' },
+  })} />
 </head>
 <body>
 <a class="skip" href="#main">{t.ui.skip}</a>

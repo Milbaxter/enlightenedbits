@@ -393,3 +393,19 @@ body::after{content:'';position:fixed;inset:-50%;z-index:500;pointer-events:none
 @media (max-width:380px){
   .site-header .wordmark-name{font-size:.9em}
 }
+
+/* Hero copy must never slide under the fixed header: reserve its height,
+   let overflow run downwards, and size the headline by viewport height too
+   so short laptop windows still fit everything. */
+.dive-copy{padding-top:100px;align-items:safe flex-end}
+@media (min-width:861px){
+  .dive-copy h1{font-size:clamp(2.6rem,min(7.2vw,13.5svh),8.2rem)}
+}
+@media (max-height:820px){
+  .dive-copy .wrap{padding-bottom:clamp(28px,5svh,64px)}
+  .dive-copy h1{margin-top:12px}
+  .dive-copy .lead{margin-top:18px;font-size:clamp(1.05rem,2.6svh,1.35rem)}
+  .dive-copy .actions{margin-top:20px}
+  .dive-copy .proof{margin-top:18px}
+}
+@media (max-height:600px) and (min-width:861px){ .dive-copy .proof{display:none} }

@@ -8,7 +8,7 @@ export const fi: Content = {
     navLabel: 'Päävalikko',
     nav: { home: 'Etusivu', approach: 'Näin työskentelemme', about: 'Meistä', contact: 'Yhteystiedot' },
     book: 'Varaa maksuton kartoituspuhelu',
-    footer: '© 2026 Enlightened Bits · Kallio, Helsinki',
+    footer: '© 2026 Enlightened Bits · Josafatinkatu 9, 00510 Helsinki',
     footerNote: 'Tekoäly omilla ehdoilla',
   },
 
@@ -70,7 +70,7 @@ export const fi: Content = {
     ],
     questionsNote:
       'Ette ole yksin. <a href="https://stat.fi/julkaisu/cm1hnps701dbm07w59uo0jw6u" rel="noopener">Tilastokeskuksen mukaan</a> 38 % vähintään kymmenen hengen yrityksistä käytti tekoälyä vuonna 2025, mutta vain 15 % oli kirjannut sille yhteiset toimintatavat. <a href="https://tieke.fi/kartoitimme-tekoalyn-vastuullinen-kayttoonotto-ja-somen-murros-pohdituttavat-jarjestoissa-arki-on-tasapainoilua-digitalisaation-kanssa/" rel="noopener">TIEKEn kartoituksessa</a> 37 % järjestöistä ei vielä käyttänyt tekoälyä lainkaan.',
-    processTitle: 'Neljä palvelua, jotka voi ostaa myös erikseen',
+    processTitle: 'Neljä vaihetta. Aloitetaan siitä, missä olette nyt.',
     processLink: 'Katso palvelut tarkemmin',
     audienceTitle: 'Kenen kanssa teemme töitä',
     audienceLead: 'Organisaatioille, joille <em>arvot</em> eivät ole koriste.',
@@ -155,7 +155,7 @@ export const fi: Content = {
       'Neljä vaihetta arvoista käytäntöön: suunta, kartoitus, kokeilu ja käyttöönotto. Voitte aloittaa mistä vaiheesta tahansa.',
     heroLines: ['Arvoista käytäntöön,', '<em>teidän tahdissanne.</em>'],
     lede:
-      'Neljä palvelua, jotka voi ostaa yhdessä tai erikseen. Jokainen tuottaa jotain, mikä jää teille, vaikka jatkaisitte omin voimin. Useimmat aloittavat maksuttomalla kartoituspuhelulla ja suuntatyöpajalla.',
+      'Osa organisaatioista vasta pohtii suuntaa, osa on jo kokeillut ja haluaa viedä tekoälyn arkeen. Siksi voitte aloittaa mistä vaiheesta tahansa, ja jokainen vaihe tuottaa jotain, mikä jää teille, vaikka jatkaisitte omin voimin. Useimmat aloittavat maksuttomalla kartoituspuhelulla ja suuntatyöpajalla.',
     outcomeLabel: 'Lopputulos',
     faqTitle: 'Usein kysyttyä',
     faq: [
@@ -188,11 +188,11 @@ export const fi: Content = {
 
   about: {
     title: 'Meistä – Enlightened Bits, Helsinki',
-    description: 'Pieni tiimi Kalliosta. Autamme yrityksiä ja yhteisöjä käyttämään tekoälyä omilla ehdoillaan.',
+    description: 'Enlightened Bits on helsinkiläinen tekoälykonsultti. Autamme yrityksiä ja yhteisöjä käyttämään tekoälyä omilla ehdoillaan.',
     eyebrow: 'Meistä',
     heroTitle: 'Ihmiset Enlightened Bitsin takana.',
     lede:
-      'Olemme pieni tiimi Helsingistä, taustamme Aalto-yliopistosta. Uskomme, että tekoälyn hyödyt kuuluvat kaikille, kunhan jokainen organisaatio saa itse päättää, millä ehdoilla sitä käyttää.',
+      'Olemme helsinkiläinen tekoälykonsultti, ja taustamme on Aalto-yliopistossa. Uskomme, että tekoälyn hyödyt kuuluvat kaikille, kunhan jokainen organisaatio saa itse päättää, millä ehdoilla sitä käyttää.',
     photoAlt: 'Maximilian ja Juhani juoksemassa Helsingin maratonia sateessa.',
     people: [
       {

@@ -8,7 +8,7 @@ export const en: Content = {
     navLabel: 'Main menu',
     nav: { home: 'Home', approach: 'How we work', about: 'About', contact: 'Contact' },
     book: 'Book a free discovery call',
-    footer: '© 2026 Enlightened Bits · Kallio, Helsinki',
+    footer: '© 2026 Enlightened Bits · Josafatinkatu 9, 00510 Helsinki',
     footerNote: 'AI on your own terms',
   },
 
@@ -70,7 +70,7 @@ export const en: Content = {
     ],
     questionsNote:
       'You are not alone. According to <a href="https://stat.fi/en/publication/cm1hnps701dbm07w59uo0jw6u" rel="noopener">Statistics Finland</a>, 38% of Finnish companies with ten or more employees used AI in 2025, but only 15% had written down shared practices for it. In a <a href="https://tieke.fi/kartoitimme-tekoalyn-vastuullinen-kayttoonotto-ja-somen-murros-pohdituttavat-jarjestoissa-arki-on-tasapainoilua-digitalisaation-kanssa/" rel="noopener">survey by TIEKE</a>, 37% of non-profits were not using AI at all.',
-    processTitle: 'Four services, each available on its own',
+    processTitle: 'Four steps. We start from where you are now.',
     processLink: 'See the services in detail',
     audienceTitle: 'Who we work with',
     audienceLead: 'For organisations whose <em>values</em> are not decoration.',
@@ -155,7 +155,7 @@ export const en: Content = {
       'Four steps from values to practice: direction, mapping, pilot and adoption. You can start at any step.',
     heroLines: ['From values to practice,', '<em>at your own pace.</em>'],
     lede:
-      'Four services you can buy together or on their own. Each leaves you with something of your own, even if you carry on by yourselves. Most start with a free discovery call and the direction workshop.',
+      'Some organisations are still finding their direction, others have already run pilots and want to bring AI into everyday work. So you can start at any step, and each one leaves you with something of your own, even if you carry on by yourselves. Most start with a free discovery call and the direction workshop.',
     outcomeLabel: 'Outcome',
     faqTitle: 'Frequently asked',
     faq: [
@@ -188,11 +188,11 @@ export const en: Content = {
 
   about: {
     title: 'About – Enlightened Bits, Helsinki',
-    description: 'A small team from Kallio, Helsinki. We help companies and communities use AI on their own terms.',
+    description: 'Enlightened Bits is an AI consultancy based in Helsinki. We help companies and communities use AI on their own terms.',
     eyebrow: 'About',
     heroTitle: 'The people behind Enlightened Bits.',
     lede:
-      'We are a small team from Helsinki with roots at Aalto University. We believe the benefits of AI belong to everyone, as long as each organisation gets to decide for itself on what terms it uses it.',
+      'We are an AI consultancy based in Helsinki, with roots at Aalto University. We believe the benefits of AI belong to everyone, as long as each organisation gets to decide for itself on what terms it uses it.',
     photoAlt: 'Maximilian and Juhani running the Helsinki Marathon in the rain.',
     people: [
       {
@@ -223,7 +223,7 @@ export const en: Content = {
     storyAction: 'Work with us',
     contactTitle: 'Contact',
     visitLabel: 'Visiting address',
-    address: ['Enlightened Bits', 'Josafatinkatu 9 1h 64', '00510 Helsinki'],
+    address: ['Enlightened Bits', 'Josafatinkatu 9 1h 64', '00510 Helsinki', 'Finland'],
     mapLabel: 'Show on a map',
     reachLabel: 'Email and phone',
     visitNote: 'Our office is in Helsinki. Please arrange a visit by email in advance.',
