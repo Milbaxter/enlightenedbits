@@ -1,0 +1,58 @@
+---
+// Organisational context: the bridge from what/why to a form a machine
+// can work with. `full` adds what the context contains and the outcome
+// (approach page); the home page shows the bridge and links onward.
+import Kohtaus from './Kohtaus.astro';
+import Cta from './Cta.astro';
+import type { Content } from '../i18n/types';
+
+interface Props { t: Content; full?: boolean }
+const { t, full = false } = Astro.props;
+const c = t.context;
+---
+<Kohtaus clip="konteksti" class="context-scene" id={c.anchor}>
+  <div class="scene-copy">
+    <p class="eyebrow reveal" style="color:rgb(239 236 230 / .75)">{c.eyebrow}</p>
+    <h2 class="reveal reveal-d1" set:html={c.title} />
+    <p class="lead reveal reveal-d2">{c.lede}</p>
+  </div>
+</Kohtaus>
+
+<section class="section paper">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow reveal">{c.eyebrow}</p>
+      <h2 class="reveal reveal-d1">{c.bridgeTitle}</h2>
+    </div>
+    <ol class="bridge">
+      {c.bridge.map((b, i) => (
+        <li class:list={['bridge-step reveal', `reveal-d${i}`, i === 2 && 'bridge-step--key']}>
+          <span class="bridge-label">{b.label}</span>
+          <h3>{b.title}</h3>
+          <p>{b.text}</p>
+        </li>
+      ))}
+    </ol>
+
+    {full && (
+      <div class="includes-wrap">
+        <h3 class="includes-title reveal">{c.includesTitle}</h3>
+        <ul class="includes">
+          {c.includes.map((x) => (
+            <li class="reveal"><h4>{x.title}</h4><p>{x.text}</p></li>
+          ))}
+        </ul>
+        <div class="context-outcome reveal">
+          <span class="eyebrow">{c.outcomeLabel}</span>
+          <p>{c.outcome}</p>
+        </div>
+      </div>
+    )}
+
+    <p class="closer reveal" set:html={c.closer} />
+    <div class="context-foot reveal">
+      <p class="muted">{c.fit}</p>
+      {!full && <Cta href={`${t.routes.approach}#${c.anchor}`}>{c.homeLink}</Cta>}
+    </div>
+  </div>
+</section>

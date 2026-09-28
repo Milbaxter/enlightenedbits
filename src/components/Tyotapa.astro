@@ -1,0 +1,52 @@
+---
+import Sivu from '../layouts/Sivu.astro';
+import Kohtaus from './Kohtaus.astro';
+import Vaihe from './Vaihe.astro';
+import Cta from './Cta.astro';
+import Loppu from './Loppu.astro';
+import Konteksti from './Konteksti.astro';
+import type { Content } from '../i18n/types';
+
+interface Props { t: Content; alternate: string }
+const { t, alternate } = Astro.props;
+const a = t.approach;
+const slug = (s: string) => s.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '');
+---
+<Sivu t={t} title={a.title} description={a.description} current="approach" alternate={alternate}>
+  <Kohtaus clip="hero" class="page-hero" eager>
+    <div class="scene-copy">
+      <p class="eyebrow reveal" style="color:rgb(239 236 230 / .75)">{t.ui.nav.approach}</p>
+      <h1 class="reveal reveal-d1" style="margin-top:22px"><Fragment set:html={a.heroLines[0]} /><br><Fragment set:html={a.heroLines[1]} /></h1>
+      <p class="lead reveal reveal-d2">{a.lede}</p>
+      <div class="actions reveal reveal-d3">
+        {t.process.map((s) => <Cta href={`#${slug(s.title)}`} size="sm" quiet>{s.title}</Cta>)}
+        <Cta href={`#${t.context.anchor}`} size="sm" quiet>{t.context.eyebrow}</Cta>
+      </div>
+    </div>
+  </Kohtaus>
+
+  {t.process.map((s, i) => (
+    <Vaihe step={s} index={i} total={t.process.length} detail outcomeLabel={a.outcomeLabel} id={slug(s.title)} />
+  ))}
+
+  <Konteksti t={t} full />
+
+  <section class="section paper">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow reveal">{t.lang === 'fi' ? 'Kysymyksiä ja vastauksia' : 'FAQ'}</p>
+        <h2 class="reveal reveal-d1">{a.faqTitle}</h2>
+      </div>
+      <div class="faq">
+        {a.faq.map((f) => (
+          <details class="reveal">
+            <summary>{f.q}</summary>
+            <p>{f.a}</p>
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <Loppu lead={t.home.ctaTitle} label={t.ui.book} href={t.routes.contact} />
+</Sivu>
