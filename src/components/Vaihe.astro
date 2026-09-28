@@ -4,8 +4,8 @@ import type { Step } from '../i18n/types';
 
 // One process step as a full-bleed scene. `detail` adds the body text and
 // outcome box (approach page); without it the step stays a short teaser.
-interface Props { step: Step; index: number; total: number; detail?: boolean; outcomeLabel?: string; id?: string }
-const { step, index, total, detail = false, outcomeLabel, id } = Astro.props;
+interface Props { step: Step; index: number; total: number; detail?: boolean; outcomeLabel?: string; id?: string; offerUntil?: string }
+const { step, index, total, detail = false, outcomeLabel, id, offerUntil } = Astro.props;
 export const clips = ['suunta', 'kartoitus', 'kokeilu', 'juurrutus'];
 ---
 <Kohtaus clip={clips[index]} class="step-scene" id={id}>
@@ -18,6 +18,7 @@ export const clips = ['suunta', 'kartoitus', 'kokeilu', 'juurrutus'];
     <h2 class="reveal reveal-d1">{step.title}</h2>
     <p class="short reveal reveal-d2">{step.short}</p>
     {step.price && <p class="step-price reveal reveal-d2"><span>{step.product}</span><b>{step.price}</b></p>}
+    {step.offer && <p class="step-price step-offer reveal reveal-d2" data-until={offerUntil}><b>{step.offer}</b></p>}
     {detail && (
       <>
         <p class="step-detail reveal reveal-d2">{step.body}</p>

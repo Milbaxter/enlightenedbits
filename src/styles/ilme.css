@@ -453,3 +453,15 @@ em{font-family:inherit;font-style:normal;font-weight:inherit;letter-spacing:inhe
 .bridge-step--key{--accent:#FF6B3D}
 em{color:var(--accent)}
 .arrows{color:var(--accent)}
+
+/* Time-limited offer band: dark, framed by a single orange rule. */
+.offer{border-top:2px solid var(--accent);border-bottom:1px solid var(--rule)}
+.offer-inner{display:grid;grid-template-columns:1.1fr 1fr;gap:clamp(28px,5vw,96px);align-items:end}
+.offer h2{font-size:var(--fs-h2);line-height:1}
+.offer .eyebrow{color:var(--accent)}
+.offer p{color:var(--text-body);font-size:var(--fs-body);max-width:48ch}
+.offer .offer-note{color:var(--text-muted);margin-top:14px}
+.offer .actions{margin-top:28px}
+.step-offer{border-color:var(--accent);color:var(--accent)}
+.step-price + .step-offer{margin-left:10px}
+@media (max-width:860px){ .offer-inner{grid-template-columns:1fr} .step-price + .step-offer{margin-left:0} }
