@@ -344,9 +344,6 @@ body::after{content:'';position:fixed;inset:-50%;z-index:500;pointer-events:none
 
 /* ---------- Sales copy additions ---------- */
 .principles{grid-template-columns:repeat(var(--cols,4),minmax(0,1fr))}
-.proof{list-style:none;display:grid;grid-template-columns:repeat(2,max-content);gap:10px 40px;margin:44px 0 0;padding:18px 0 0;
-  border-top:1px solid rgb(239 236 230 / .22);max-width:760px;font-size:.95rem;color:rgb(239 236 230 / .72)}
-.proof li::before{content:'—';margin-right:10px;color:rgb(239 236 230 / .4)}
 .pains-note{margin:36px 0 0;max-width:62ch;color:var(--text-muted)}
 .pains-note a{color:var(--text)}
 .step-price{display:inline-flex;align-items:baseline;gap:14px;margin:26px 0 0;padding:10px 18px;border:1px solid rgb(239 236 230 / .4);
@@ -355,7 +352,6 @@ body::after{content:'';position:fixed;inset:-50%;z-index:500;pointer-events:none
 .people{grid-template-columns:repeat(2,minmax(0,1fr))}
 .person h3{font-size:clamp(2.2rem,3.6vw,3.8rem)}
 @media (max-width:860px){.people{grid-template-columns:1fr}}
-@media (max-width:860px){.proof{grid-template-columns:1fr;gap:6px}}
 
 /* ---------- Language switch: always visible, FI | EN pill ---------- */
 .lang{margin:0;display:inline-flex;align-items:center;border:1px solid rgb(239 236 230 / .35);border-radius:999px;padding:3px;font-size:.9rem;font-weight:500;color:var(--bone)}
@@ -406,6 +402,4 @@ body::after{content:'';position:fixed;inset:-50%;z-index:500;pointer-events:none
   .dive-copy h1{margin-top:12px}
   .dive-copy .lead{margin-top:18px;font-size:clamp(1.05rem,2.6svh,1.35rem)}
   .dive-copy .actions{margin-top:20px}
-  .dive-copy .proof{margin-top:18px}
 }
-@media (max-height:600px) and (min-width:861px){ .dive-copy .proof{display:none} }
