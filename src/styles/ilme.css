@@ -465,3 +465,13 @@ em{color:var(--accent)}
 .step-offer{border-color:var(--accent);color:var(--accent)}
 .step-price + .step-offer{margin-left:10px}
 @media (max-width:860px){ .offer-inner{grid-template-columns:1fr} .step-price + .step-offer{margin-left:0} }
+
+/* The opening copy is on screen from the first frame, so it animates in
+   with CSS alone. Waiting for the scroll observer left phones on a dark
+   still with no text until the visitor scrolled. */
+.js .dive-copy .reveal{opacity:1;transform:none;transition:none;animation:hero-in 1.1s var(--ease) both}
+.js .dive-copy .reveal-d1{animation-delay:.1s}
+.js .dive-copy .reveal-d2{animation-delay:.2s}
+.js .dive-copy .reveal-d3{animation-delay:.3s}
+@keyframes hero-in{from{opacity:0;transform:translateY(28px)}}
+@media (prefers-reduced-motion: reduce){ .js .dive-copy .reveal{animation:none} }

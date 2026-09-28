@@ -36,9 +36,16 @@ const { line, cue } = Astro.props;
     const fade = section.querySelector<HTMLElement>('[data-dive-fade]')!;
     const cue = section.querySelector<HTMLElement>('[data-dive-cue]')!;
     const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    const ready = () => { if (video.readyState >= 2) section.classList.add('dive-ready'); };
-    ['loadeddata', 'seeked', 'playing'].forEach((ev) => video.addEventListener(ev, ready));
-    ready();
+    // Reveal the clip only once a frame has actually been painted. iOS
+    // reports 'playing'/'loadeddata' while the element is still black, so
+    // wait for a seek and then for the frame itself before covering the still.
+    let shown = false;
+    const ready = () => { if (!shown) { shown = true; section.classList.add('dive-ready'); } };
+    video.addEventListener('seeked', () => {
+      const v = video as HTMLVideoElement & { requestVideoFrameCallback?: (cb: () => void) => number };
+      if (v.requestVideoFrameCallback) v.requestVideoFrameCallback(ready);
+      setTimeout(ready, 300);
+    });
     const clamp = (v: number, a = 0, b = 1) => Math.min(b, Math.max(a, v));
     const band = (p: number, a: number, b: number) => clamp((p - a) / (b - a));
 
@@ -76,8 +83,9 @@ const { line, cue } = Astro.props;
     window.addEventListener('scroll', paint, { passive: true });
     window.addEventListener('resize', paint);
     if (!reduce) {
-      // iOS needs a play/pause before seeking paints frames.
-      video.play().then(() => video.pause()).catch(() => {});
+      // iOS needs a play/pause before seeking paints frames; the small seek
+      // afterwards makes it decode and paint the opening frame.
+      video.play().then(() => { video.pause(); video.currentTime = 0.001; }).catch(() => {});
       new IntersectionObserver(([e]) => {
         cancelAnimationFrame(raf);
         if (e.isIntersecting) raf = requestAnimationFrame(tick);
