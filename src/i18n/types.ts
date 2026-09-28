@@ -41,6 +41,9 @@ export interface Content {
     proof: string[];
     secondaryAction: string;
     bandLeft: string;
+    beliefsEyebrow: string;
+    beliefsTitle: string;
+    beliefs: { title: string; text: string }[];
     principlesTitle: string;
     principlesLead: string;
     principles: { title: string; text: string }[];

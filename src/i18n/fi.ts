@@ -17,7 +17,7 @@ export const fi: Content = {
     description:
       'Tekoälykonsultointi yrityksille, järjestöille ja julkiselle sektorille. Autamme päättämään, mihin tekoälyä kannattaa käyttää, ja rakennamme sen niin, että data ja päätösvalta pysyvät teillä.',
     heroLines: ['Tekoälyä', '<em>omilla ehdoilla.</em>'],
-    caption: 'Ensin miksi ja mihin.\nVasta sitten millä.',
+    caption: 'Ensin tavoitteet.\nSitten tekoäly.',
     lede:
       'Autamme organisaatioita päättämään, mihin tekoälyä kannattaa käyttää ja mihin ei. Sitten rakennamme sen niin, että data ja päätösvalta pysyvät teillä.',
     proof: [
@@ -28,6 +28,22 @@ export const fi: Content = {
     ],
     secondaryAction: 'Näin työskentelemme',
     bandLeft: 'Tekoälykonsultointi yrityksille ja yhteisöille',
+    beliefsEyebrow: 'Mihin uskomme',
+    beliefsTitle: 'Tekoäly on keino. <em>Ihminen</em> on tarkoitus.',
+    beliefs: [
+      {
+        title: 'Aikaa ajattelulle',
+        text: 'Tekoäly hoitaa rutiinit nopeammin. Vapautuva aika kannattaa käyttää siihen, mitä kone ei tee puolestamme: ajatteluun, kohtaamisiin ja parempiin päätöksiin.',
+      },
+      {
+        title: 'Pelko pitää ymmärtää',
+        text: 'Tekoäly herättää myös pelkoa: työn, oikeudenmukaisuuden ja hallinnan menettämisen puolesta. Pelkoa ei kuitata. Se kuunnellaan, koska siinä on usein viisautta.',
+      },
+      {
+        title: 'Parempi yhteiskunta kaikille',
+        text: 'Tekoälyn hyödyt eivät saa jäädä harvoille. Kun yritykset, järjestöt ja julkinen sektori ottavat sen käyttöön omien arvojensa mukaan, se voi auttaa rakentamaan yhteiskuntaa, joka toimii paremmin kaikille.',
+      },
+    ],
     principlesTitle: 'Miksi me',
     principlesLead: 'Tekoäly on <em>väline</em>. Suunnan päätätte te.',
     principles: [
@@ -53,7 +69,7 @@ export const fi: Content = {
       'Arkaluonteista tietoa ei voi viedä ulkomaiseen pilveen, joten koko asia tuntuu mahdottomalta.',
     ],
     questionsNote:
-      'Ette ole yksin. <a href="https://tieke.fi/kartoitimme-tekoalyn-vastuullinen-kayttoonotto-ja-somen-murros-pohdituttavat-jarjestoissa-arki-on-tasapainoilua-digitalisaation-kanssa/" rel="noopener">TIEKEn kartoituksessa</a> 37 % järjestöistä ei vielä käyttänyt tekoälyä, ja suurimmat huolet koskivat tietoturvaa ja tuotosten luotettavuutta.',
+      'Ette ole yksin. <a href="https://stat.fi/julkaisu/cm1hnps701dbm07w59uo0jw6u" rel="noopener">Tilastokeskuksen mukaan</a> 38 % vähintään kymmenen hengen yrityksistä käytti tekoälyä vuonna 2025, mutta vain 15 % oli kirjannut sille yhteiset toimintatavat. <a href="https://tieke.fi/kartoitimme-tekoalyn-vastuullinen-kayttoonotto-ja-somen-murros-pohdituttavat-jarjestoissa-arki-on-tasapainoilua-digitalisaation-kanssa/" rel="noopener">TIEKEn kartoituksessa</a> 37 % järjestöistä ei vielä käyttänyt tekoälyä lainkaan.',
     processTitle: 'Neljä palvelua, jotka voi ostaa myös erikseen',
     processLink: 'Katso palvelut tarkemmin',
     audienceTitle: 'Kenen kanssa teemme töitä',
@@ -66,7 +82,7 @@ export const fi: Content = {
     ],
     whyTitle: 'Tunnemme tekniikan, joten voimme puhua siitä rehellisesti.',
     whyText: [
-      'Olemme kolmen perustajan tiimi, ja olemme rakentaneet tekoälyagentteja ja koneoppimisjärjestelmiä. Tiedämme, mihin nykyiset mallit pystyvät ja mihin eivät.',
+      'Olemme rakentaneet tekoälyagentteja ja koneoppimisjärjestelmiä. Tiedämme, mihin nykyiset mallit pystyvät ja mihin eivät.',
       'Siksi emme myy hypeä. Neuvomme ja rakennamme itse, toimimme läpinäkyvästi, ja joskus paras suosituksemme on jättää tekoäly pois.',
     ],
     ctaTitle: 'Aloitetaan maksuttomalla kartoituspuhelulla. Kertokaa, mikä teille on tärkeää, niin mietitään yhdessä, mistä kannattaa aloittaa.',
@@ -77,7 +93,7 @@ export const fi: Content = {
       eyebrow: 'Vaihe 01',
       title: 'Suunta',
       short: 'Työpaja, jossa organisaatio muotoilee omat arvonsa ja tavoitteensa tekoälyn suhteen.',
-      body: 'Kokoamme yhteen johdon, työntekijät ja tarvittaessa jäsenet tai vapaaehtoiset. Käymme läpi, mitä tekoäly on ja mitä se ei ole. Sen jälkeen keskustelemme siitä, mitä te arvostatte, mitä tavoittelette ja mitä ette halua luovuttaa koneelle.',
+      body: 'Kokoamme yhteen johdon, työntekijät ja tarvittaessa jäsenet tai vapaaehtoiset. Käymme läpi, mitä tekoäly on ja mitä se ei ole. Sen jälkeen keskustelemme siitä, mitä te arvostatte, mitä tavoittelette ja mitä ette halua luovuttaa koneelle. Otamme puheeksi myös ne huolet ja pelot, joita tekoäly herättää.',
       outcome: 'Organisaationne omat tekoälyperiaatteet ja kolme ensimmäistä käyttökohdetta: lyhyt, selkokielinen ja yhdessä tehty.',
       product: 'Suuntatyöpaja',
       price: '1 500 € + alv',
@@ -98,7 +114,7 @@ export const fi: Content = {
     },
     {
       eyebrow: 'Vaihe 04',
-      title: 'Juurrutus',
+      title: 'Käyttöönotto',
       short: 'Osaaminen, käytännöt ja seuranta, jotta muutos kestää.',
       body: 'Koulutamme ihmiset käyttämään työkaluja harkiten ja kirjaamme yhteiset pelisäännöt. Sovimme myös, miten periaatteita tarkastellaan uudelleen, kun teknologia ja tarpeet muuttuvat.',
       outcome: 'Osaava työyhteisö, sovitut käytännöt ja kevyt tapa arvioida suuntaa jatkossa.',
@@ -136,7 +152,7 @@ export const fi: Content = {
   approach: {
     title: 'Näin työskentelemme – Enlightened Bits',
     description:
-      'Neljä vaihetta arvoista käytäntöön: suunta, kartoitus, kokeilu ja juurrutus. Voitte aloittaa mistä vaiheesta tahansa.',
+      'Neljä vaihetta arvoista käytäntöön: suunta, kartoitus, kokeilu ja käyttöönotto. Voitte aloittaa mistä vaiheesta tahansa.',
     heroLines: ['Arvoista käytäntöön,', '<em>teidän tahdissanne.</em>'],
     lede:
       'Neljä palvelua, jotka voi ostaa yhdessä tai erikseen. Jokainen tuottaa jotain, mikä jää teille, vaikka jatkaisitte omin voimin. Useimmat aloittavat maksuttomalla kartoituspuhelulla ja suuntatyöpajalla.',
@@ -172,11 +188,11 @@ export const fi: Content = {
 
   about: {
     title: 'Meistä – Enlightened Bits, Helsinki',
-    description: 'Kolmen hengen tiimi Kalliosta. Autamme yrityksiä ja yhteisöjä käyttämään tekoälyä omilla ehdoillaan.',
+    description: 'Pieni tiimi Kalliosta. Autamme yrityksiä ja yhteisöjä käyttämään tekoälyä omilla ehdoillaan.',
     eyebrow: 'Meistä',
     heroTitle: 'Ihmiset Enlightened Bitsin takana.',
     lede:
-      'Olemme kolmen perustajan tiimi Helsingistä, kaikki Aalto-yliopistosta. Uskomme, että tekoälyn hyödyt kuuluvat kaikille, kunhan jokainen organisaatio saa itse päättää, millä ehdoilla sitä käyttää.',
+      'Olemme pieni tiimi Helsingistä, taustamme Aalto-yliopistosta. Uskomme, että tekoälyn hyödyt kuuluvat kaikille, kunhan jokainen organisaatio saa itse päättää, millä ehdoilla sitä käyttää.',
     photoAlt: 'Maximilian ja Juhani juoksemassa Helsingin maratonia sateessa.',
     people: [
       {
@@ -196,13 +212,6 @@ export const fi: Content = {
         bio: '',
         email: 'juhani@enlightenedbits.com',
         phone: '+358 45 189 4225',
-      },
-      {
-        name: 'Anton',
-        fullName: 'Anton Baer',
-        role: 'Perustaja',
-        degree: 'Elokuvaohjaus, Aalto-yliopisto',
-        bio: '',
       },
     ],
     storyTitle: 'Miten tähän päädyttiin',

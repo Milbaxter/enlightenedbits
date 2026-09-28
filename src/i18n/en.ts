@@ -17,7 +17,7 @@ export const en: Content = {
     description:
       'AI consulting for companies, non-profits and the public sector. We help you decide where AI is worth using, then build it so your data and your decisions stay with you.',
     heroLines: ['AI on', '<em>your own terms.</em>'],
-    caption: 'First why and what for.\nOnly then with what.',
+    caption: 'Your goals first.\nThen the AI.',
     lede:
       'We help organisations decide where AI is worth using and where it is not. Then we build it so that your data and your decisions stay with you.',
     proof: [
@@ -28,6 +28,22 @@ export const en: Content = {
     ],
     secondaryAction: 'How we work',
     bandLeft: 'AI consulting for companies and communities',
+    beliefsEyebrow: 'What we believe',
+    beliefsTitle: 'AI is the means. <em>People</em> are the point.',
+    beliefs: [
+      {
+        title: 'Time to think',
+        text: 'AI handles routine work faster. The time it frees up is best spent on what a machine can’t do for us: thinking, meeting people and making better decisions.',
+      },
+      {
+        title: 'Fear needs to be understood',
+        text: 'AI also raises fears about work, fairness and losing control. We don’t brush them aside. We listen, because fear often carries real wisdom.',
+      },
+      {
+        title: 'A better society for everyone',
+        text: 'The benefits of AI must not stay with a few. When companies, non-profits and the public sector adopt it on their own values, it can help build a society that works better for everyone.',
+      },
+    ],
     principlesTitle: 'Why us',
     principlesLead: 'AI is a <em>tool</em>. You set the direction.',
     principles: [
@@ -53,7 +69,7 @@ export const en: Content = {
       'Sensitive data can’t go to a foreign cloud, so the whole thing feels impossible.',
     ],
     questionsNote:
-      'You are not alone. In a <a href="https://tieke.fi/kartoitimme-tekoalyn-vastuullinen-kayttoonotto-ja-somen-murros-pohdituttavat-jarjestoissa-arki-on-tasapainoilua-digitalisaation-kanssa/" rel="noopener">survey by TIEKE</a>, 37% of Finnish non-profits were not yet using AI, and their biggest concerns were data security and the reliability of outputs.',
+      'You are not alone. According to <a href="https://stat.fi/en/publication/cm1hnps701dbm07w59uo0jw6u" rel="noopener">Statistics Finland</a>, 38% of Finnish companies with ten or more employees used AI in 2025, but only 15% had written down shared practices for it. In a <a href="https://tieke.fi/kartoitimme-tekoalyn-vastuullinen-kayttoonotto-ja-somen-murros-pohdituttavat-jarjestoissa-arki-on-tasapainoilua-digitalisaation-kanssa/" rel="noopener">survey by TIEKE</a>, 37% of non-profits were not using AI at all.',
     processTitle: 'Four services, each available on its own',
     processLink: 'See the services in detail',
     audienceTitle: 'Who we work with',
@@ -66,7 +82,7 @@ export const en: Content = {
     ],
     whyTitle: 'We know the technology, so we can talk about it honestly.',
     whyText: [
-      'We are a team of three founders, and we have built AI agents and machine learning systems. We know what today’s models can and cannot do.',
+      'We have built AI agents and machine learning systems. We know what today’s models can and cannot do.',
       'So we don’t sell hype. We advise and build ourselves, we work transparently, and sometimes our best advice is to leave AI out.',
     ],
     ctaTitle: 'Let’s start with a free discovery call. Tell us what matters to you, and we’ll work out together where to begin.',
@@ -77,7 +93,7 @@ export const en: Content = {
       eyebrow: 'Step 01',
       title: 'Direction',
       short: 'A workshop where your organisation articulates its own values and goals for AI.',
-      body: 'We bring together leadership, staff and, where relevant, members or volunteers. We cover what AI is and what it isn’t, then talk about what you value, what you are aiming for, and what you don’t want to hand over to a machine.',
+      body: 'We bring together leadership, staff and, where relevant, members or volunteers. We cover what AI is and what it isn’t, then talk about what you value, what you are aiming for, and what you don’t want to hand over to a machine. We also make room for the worries and fears AI raises.',
       outcome: 'Your organisation’s own AI principles and your first three use cases: short, plain-spoken and made together.',
       product: 'Direction workshop',
       price: '€1,500 + VAT',
@@ -98,7 +114,7 @@ export const en: Content = {
     },
     {
       eyebrow: 'Step 04',
-      title: 'Embedding',
+      title: 'Adoption',
       short: 'Skills, practices and follow-up, so the change lasts.',
       body: 'We train people to use the tools with judgement and write down shared ground rules. We also agree how the principles will be revisited as the technology and your needs change.',
       outcome: 'A capable team, agreed practices, and a light way to keep checking direction.',
@@ -136,7 +152,7 @@ export const en: Content = {
   approach: {
     title: 'How we work – Enlightened Bits',
     description:
-      'Four steps from values to practice: direction, mapping, pilot and embedding. You can start at any step.',
+      'Four steps from values to practice: direction, mapping, pilot and adoption. You can start at any step.',
     heroLines: ['From values to practice,', '<em>at your own pace.</em>'],
     lede:
       'Four services you can buy together or on their own. Each leaves you with something of your own, even if you carry on by yourselves. Most start with a free discovery call and the direction workshop.',
@@ -172,11 +188,11 @@ export const en: Content = {
 
   about: {
     title: 'About – Enlightened Bits, Helsinki',
-    description: 'A team of three from Kallio, Helsinki. We help companies and communities use AI on their own terms.',
+    description: 'A small team from Kallio, Helsinki. We help companies and communities use AI on their own terms.',
     eyebrow: 'About',
     heroTitle: 'The people behind Enlightened Bits.',
     lede:
-      'We are a team of three founders from Helsinki, all from Aalto University. We believe the benefits of AI belong to everyone, as long as each organisation gets to decide for itself on what terms it uses it.',
+      'We are a small team from Helsinki with roots at Aalto University. We believe the benefits of AI belong to everyone, as long as each organisation gets to decide for itself on what terms it uses it.',
     photoAlt: 'Maximilian and Juhani running the Helsinki Marathon in the rain.',
     people: [
       {
@@ -196,13 +212,6 @@ export const en: Content = {
         bio: '',
         email: 'juhani@enlightenedbits.com',
         phone: '+358 45 189 4225',
-      },
-      {
-        name: 'Anton',
-        fullName: 'Anton Baer',
-        role: 'Co-founder',
-        degree: 'Film Directing, Aalto University',
-        bio: '',
       },
     ],
     storyTitle: 'How we got here',

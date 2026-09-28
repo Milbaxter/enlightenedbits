@@ -9,7 +9,9 @@ const { line, cue } = Astro.props;
 <section class="dive" data-dive>
   <div class="dive-sticky">
     <video class="dive-video" muted playsinline preload="auto" poster="/media/sukellus.jpg" aria-hidden="true">
+      <source src="/media/sukellus-mobiili-hevc.mp4" type='video/mp4; codecs="hvc1.1.6.L93.90"' media="(max-width: 760px)">
       <source src="/media/sukellus-mobiili.mp4" type="video/mp4" media="(max-width: 760px)">
+      <source src="/media/sukellus-hevc.mp4" type='video/mp4; codecs="hvc1.1.6.L120.90"'>
       <source src="/media/sukellus.mp4" type="video/mp4">
     </video>
     <div class="dive-shade" aria-hidden="true"></div>

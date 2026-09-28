@@ -352,9 +352,9 @@ body::after{content:'';position:fixed;inset:-50%;z-index:500;pointer-events:none
 .step-price{display:inline-flex;align-items:baseline;gap:14px;margin:26px 0 0;padding:10px 18px;border:1px solid rgb(239 236 230 / .4);
   border-radius:999px;font-size:1rem;color:var(--bone);background:rgb(5 5 5 / .35);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px)}
 .step-price b{font-weight:500}
-.people{grid-template-columns:repeat(3,minmax(0,1fr))}
+.people{grid-template-columns:repeat(2,minmax(0,1fr))}
 .person h3{font-size:clamp(2.2rem,3.6vw,3.8rem)}
-@media (max-width:1080px){.people{grid-template-columns:1fr}}
+@media (max-width:860px){.people{grid-template-columns:1fr}}
 @media (max-width:860px){.proof{grid-template-columns:1fr;gap:6px}}
 
 /* ---------- Language switch: always visible, FI | EN pill ---------- */
@@ -373,4 +373,23 @@ body::after{content:'';position:fixed;inset:-50%;z-index:500;pointer-events:none
   .menu-btn{width:42px;height:42px;flex:none}
   .lang{flex:none}
   .lang a{padding:6px 10px}
+}
+
+/* ---------- Logo: the original Enlightened Bits mark ----------
+   Nested squares + "Enlightened Bits" in Gajraj One, as on the site
+   until 08/2026. Gajraj One is for the logo only, never for text.
+   Everything is sized in em so one font-size scales the whole lockup. */
+@font-face{font-family:'Gajraj One';src:url('/fonts/gajraj-one.woff2') format('woff2');font-weight:400;font-style:normal;font-display:swap}
+.wordmark{display:inline-flex;align-items:center;gap:.5em;font-family:'Gajraj One',var(--font-sans);font-weight:400;
+  font-size:22px;letter-spacing:-.01em;color:var(--bone)}
+.wordmark-mark{width:1.15em;height:1.15em;flex:none;box-sizing:border-box;border:.115em solid currentColor;
+  display:flex;align-items:center;justify-content:center}
+.wordmark-mark::before{content:'';width:.42em;height:.42em;border:.115em solid currentColor}
+.wordmark-name{line-height:1;transform:translateY(.04em)}
+.site-footer .wordmark{font-size:30px;color:var(--bone)}
+@media (max-width:860px){
+  .site-header .wordmark{font-size:18px}
+}
+@media (max-width:380px){
+  .site-header .wordmark-name{font-size:.9em}
 }
