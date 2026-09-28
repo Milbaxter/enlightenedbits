@@ -36,6 +36,9 @@ const { line, cue } = Astro.props;
     const fade = section.querySelector<HTMLElement>('[data-dive-fade]')!;
     const cue = section.querySelector<HTMLElement>('[data-dive-cue]')!;
     const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    // If iOS paints the video layer before its first frame, it shows the
+    // poster instead of black.
+    video.poster = window.matchMedia('(max-width: 760px)').matches ? '/media/sukellus-mobiili.jpg' : '/media/sukellus.jpg';
     // Reveal the clip only once a frame has actually been painted. iOS
     // reports 'playing'/'loadeddata' while the element is still black, so
     // wait for a seek and then for the frame itself before covering the still.
