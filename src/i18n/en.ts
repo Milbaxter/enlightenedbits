@@ -20,12 +20,6 @@ export const en: Content = {
     caption: 'Your goals first.\nThen the AI.',
     lede:
       'We help organisations decide where AI is worth using and where it is not. Then we build it so that your data and your decisions stay with you.',
-    proof: [
-      'Built AI agents in San Francisco',
-      'Machine learning in neuroscience research',
-      'Independent of big tech',
-      'Free discovery call',
-    ],
     secondaryAction: 'How we work',
     bandLeft: 'AI consulting for companies and communities',
     beliefsEyebrow: 'What we believe',

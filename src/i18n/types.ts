@@ -38,7 +38,6 @@ export interface Content {
     heroLines: string[];
     caption: string;
     lede: string;
-    proof: string[];
     secondaryAction: string;
     bandLeft: string;
     beliefsEyebrow: string;

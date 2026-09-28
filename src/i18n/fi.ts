@@ -20,12 +20,6 @@ export const fi: Content = {
     caption: 'Ensin tavoitteet.\nSitten tekoäly.',
     lede:
       'Autamme organisaatioita päättämään, mihin tekoälyä kannattaa käyttää ja mihin ei. Sitten rakennamme sen niin, että data ja päätösvalta pysyvät teillä.',
-    proof: [
-      'Rakentaneet tekoälyagentteja San Franciscossa',
-      'Koneoppimista neurotieteen tutkimuksessa',
-      'Riippumattomia suurista teknologiayhtiöistä',
-      'Maksuton kartoituspuhelu',
-    ],
     secondaryAction: 'Näin työskentelemme',
     bandLeft: 'Tekoälykonsultointi yrityksille ja yhteisöille',
     beliefsEyebrow: 'Mihin uskomme',
