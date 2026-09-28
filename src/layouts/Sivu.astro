@@ -1,0 +1,111 @@
+---
+import '@fontsource-variable/inter-tight';
+import '@fontsource/instrument-serif/400-italic.css';
+import '../styles/ilme.css';
+import type { Content } from '../i18n/types';
+
+interface Props {
+  t: Content;
+  title: string;
+  description: string;
+  current: 'home' | 'approach' | 'about';
+  alternate: string;
+}
+
+const { t, title, description, current, alternate } = Astro.props;
+const other = t.lang === 'fi' ? 'en' : 'fi';
+const canonical = new URL(Astro.url.pathname, Astro.site);
+const navItems = (['home', 'approach', 'about'] as const).map((key) => ({
+  key,
+  href: t.routes[key],
+  label: t.ui.nav[key],
+}));
+---
+<!doctype html>
+<html lang={t.lang}>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>{title}</title>
+  <meta name="description" content={description}>
+  <link rel="canonical" href={canonical}>
+  <link rel="alternate" hreflang={t.lang} href={canonical}>
+  <link rel="alternate" hreflang={other} href={new URL(alternate, Astro.site)}>
+  <meta property="og:title" content={title}>
+  <meta property="og:description" content={description}>
+  <meta property="og:image" content={new URL('/media/sukellus.jpg', Astro.site)}>
+  <meta name="theme-color" content="#050505">
+  <meta name="color-scheme" content="dark">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%23070707'/><circle cx='50' cy='50' r='26' fill='%23FFFFFF' opacity='.18'/><circle cx='50' cy='50' r='11' fill='%23FFF4DF'/></svg>">
+  <script is:inline>document.documentElement.classList.add('js')</script>
+</head>
+<body>
+<a class="skip" href="#main">{t.ui.skip}</a>
+
+<header class="site-header" id="top">
+  <div class="wrap">
+    <a class="wordmark" href={t.routes.home}>enlightened bits</a>
+    <nav class="nav" id="nav" aria-label={t.ui.navLabel}>
+      {navItems.map((n) => (
+        <a href={n.href} aria-current={n.key === current ? 'page' : undefined}>{n.label}</a>
+      ))}
+      <a href={t.routes.contact}>{t.ui.nav.contact}</a>
+    </nav>
+    <p class="lang" aria-label={t.lang === 'fi' ? 'Kieli / Language' : 'Language / Kieli'}>
+      {t.lang === 'fi'
+        ? <><a href={Astro.url.pathname} aria-current="page" hreflang="fi">FI</a><span>/</span><a href={alternate} hreflang="en">EN</a></>
+        : <><a href={alternate} hreflang="fi">FI</a><span>/</span><a href={Astro.url.pathname} aria-current="page" hreflang="en">EN</a></>}
+    </p>
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="nav" aria-label={t.lang === 'fi' ? 'Valikko' : 'Menu'}><i></i><i></i><i></i></button>
+  </div>
+</header>
+
+<main id="main">
+  <slot />
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <a class="wordmark" href={t.routes.home}>enlightened bits</a>
+    <span>{t.ui.footerNote}</span>
+    <span>{t.ui.footer}</span>
+  </div>
+</footer>
+
+<script>
+  const header = document.querySelector<HTMLElement>('.site-header')!;
+  const onScroll = () => header.classList.toggle('scrolled', window.scrollY > 24);
+  onScroll();
+  window.addEventListener('scroll', onScroll, { passive: true });
+
+  const btn = document.querySelector<HTMLButtonElement>('.menu-btn')!;
+  btn.addEventListener('click', () => {
+    const open = header.classList.toggle('open');
+    btn.setAttribute('aria-expanded', String(open));
+  });
+  document.querySelectorAll('.nav a').forEach((a) =>
+    a.addEventListener('click', () => { header.classList.remove('open'); btn.setAttribute('aria-expanded', 'false'); }));
+
+  // Reveal on scroll
+  const io = new IntersectionObserver((entries) => {
+    for (const e of entries) if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+  }, { rootMargin: '0px 0px -10% 0px' });
+  document.querySelectorAll('.reveal').forEach((el) => io.observe(el));
+
+  // Motion clips: play only while on screen; respect reduced motion.
+  const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const videos = document.querySelectorAll<HTMLVideoElement>('video[data-clip]');
+  if (reduce) {
+    videos.forEach((v) => { v.removeAttribute('autoplay'); v.pause(); });
+  } else {
+    const vio = new IntersectionObserver((entries) => {
+      for (const e of entries) {
+        const v = e.target as HTMLVideoElement;
+        if (e.isIntersecting) v.play().catch(() => {}); else v.pause();
+      }
+    }, { threshold: 0.05 });
+    videos.forEach((v) => vio.observe(v));
+  }
+</script>
+</body>
+</html>
