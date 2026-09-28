@@ -1,7 +1,6 @@
 ---
 // Full-bleed motion scene. The clip loops silently behind the copy;
-// the poster (the clip's own first frame) stands in until it loads,
-// and permanently for reduced-motion visitors.
+// the poster (the clip's own first frame) stands in until it loads.
 interface Props { clip: string; class?: string; id?: string; eager?: boolean }
 const { clip, class: cls, id, eager = false } = Astro.props;
 ---

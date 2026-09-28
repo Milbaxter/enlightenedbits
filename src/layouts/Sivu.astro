@@ -102,24 +102,20 @@ const navItems = (['home', 'approach', 'about'] as const).map((key) => ({
   }, { rootMargin: '0px 0px -10% 0px' });
   document.querySelectorAll('.reveal').forEach((el) => io.observe(el));
 
-  // Motion clips: play only while on screen; respect reduced motion.
-  const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  // Motion clips play only while on screen. Every visitor gets the same
+  // motion; the site deliberately ignores the reduced-motion setting.
   const videos = document.querySelectorAll<HTMLVideoElement>('video[data-clip]');
-  if (reduce) {
-    videos.forEach((v) => { v.removeAttribute('autoplay'); v.pause(); });
-  } else {
-    const vio = new IntersectionObserver((entries) => {
-      for (const e of entries) {
-        const v = e.target as HTMLVideoElement;
-        if (e.isIntersecting) v.play().catch(() => {}); else v.pause();
-      }
-    }, { threshold: 0.05 });
-    videos.forEach((v) => vio.observe(v));
-  }
+  const vio = new IntersectionObserver((entries) => {
+    for (const e of entries) {
+      const v = e.target as HTMLVideoElement;
+      if (e.isIntersecting) v.play().catch(() => {}); else v.pause();
+    }
+  }, { threshold: 0.05 });
+  videos.forEach((v) => vio.observe(v));
   // Logo: the light always comes home to the centre bit, alone and orange.
   // In between, the other bits light up in small shapes.
   const marks = document.querySelectorAll('.wordmark-mark');
-  if (marks.length && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+  if (marks.length) {
     const frames = [
       [4], [2], [1, 5], [1, 3, 5, 7], [4],
       [0, 2, 6, 8], [0, 1, 2, 3, 5, 6, 7, 8], [4],

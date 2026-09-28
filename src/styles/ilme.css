@@ -261,14 +261,6 @@ video.dive-video{opacity:0;transition:opacity .5s var(--ease)}
 .dive-cue{position:absolute;right:var(--gutter);bottom:clamp(64px,9vw,120px);margin:0;display:flex;flex-direction:column;
   align-items:center;gap:14px;font-size:.95rem;font-weight:400;color:var(--bone)}
 .dive-cue span{width:1px;height:56px;background:linear-gradient(transparent, var(--bone));transform-origin:top;animation:cue 2.4s var(--ease) infinite;order:2}
-.dive-static{height:auto}
-.dive-static .dive-sticky{position:relative}
-.dive-static .dive-line,.dive-static .dive-cue{display:none}
-
-@media (prefers-reduced-motion:reduce){
-  *,*::before,*::after{animation:none!important;transition:none!important}
-  .js .reveal{opacity:1;transform:none}
-}
 
 /* ---------- Responsive ---------- */
 @media (max-width:1080px){
@@ -474,4 +466,3 @@ em{color:var(--accent)}
 .js .dive-copy .reveal-d2{animation-delay:.2s}
 .js .dive-copy .reveal-d3{animation-delay:.3s}
 @keyframes hero-in{from{opacity:0;transform:translateY(28px)}}
-@media (prefers-reduced-motion: reduce){ .js .dive-copy .reveal{animation:none} }
