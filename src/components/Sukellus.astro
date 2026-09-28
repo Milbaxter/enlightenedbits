@@ -35,7 +35,6 @@ const { line, cue } = Astro.props;
     const line = section.querySelector<HTMLElement>('[data-dive-line]')!;
     const fade = section.querySelector<HTMLElement>('[data-dive-fade]')!;
     const cue = section.querySelector<HTMLElement>('[data-dive-cue]')!;
-    const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     // Reveal the clip only once a frame has actually been painted. iOS
     // reports 'playing'/'loadeddata' while the element is still black, so
     // wait for a seek and then for the frame itself before covering the still.
@@ -82,16 +81,12 @@ const { line, cue } = Astro.props;
     paint();
     window.addEventListener('scroll', paint, { passive: true });
     window.addEventListener('resize', paint);
-    if (!reduce) {
-      // iOS needs a play/pause before seeking paints frames; the small seek
-      // afterwards makes it decode and paint the opening frame.
-      video.play().then(() => { video.pause(); video.currentTime = 0.001; }).catch(() => {});
-      new IntersectionObserver(([e]) => {
-        cancelAnimationFrame(raf);
-        if (e.isIntersecting) raf = requestAnimationFrame(tick);
-      }).observe(section);
-    } else {
-      section.classList.add('dive-static');
-    }
+    // iOS needs a play/pause before seeking paints frames; the small seek
+    // afterwards makes it decode and paint the opening frame.
+    video.play().then(() => { video.pause(); video.currentTime = 0.001; }).catch(() => {});
+    new IntersectionObserver(([e]) => {
+      cancelAnimationFrame(raf);
+      if (e.isIntersecting) raf = requestAnimationFrame(tick);
+    }).observe(section);
   }
 </script>
