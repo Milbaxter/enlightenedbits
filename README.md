@@ -1,145 +1,72 @@
 # enlightenedbits.com
 
-The website for **Enlightened Bits** — a Finnish AI company based in Helsinki.
+The website for **Enlightened Bits** — AI on your own terms, from Helsinki.
 
-Static HTML, one shared stylesheet, no framework and no database. The fonts
-and images are served from this repo — nothing is fetched from Google or any
-other third party at page load.
-
-The team page is **generated** from a content file so the Finnish and English
-versions cannot drift apart; every other page is hand-written HTML. See
-*Editing the team page* below.
+Built with [Astro](https://astro.build) as a fully static site: no database,
+no client framework, no third-party requests at page load. Fonts, images and
+video are all served from this repo.
 
 ## Structure
 
-The site is bilingual. Finnish lives at the root, English under `/en/`.
+The site is bilingual. Finnish lives at the root, English under `/en/`. Every
+word on the new pages lives in two files, so the languages cannot drift apart:
 
-| URL                | File                    | Language |
-|--------------------|-------------------------|----------|
-| `/`                | `index.html`            | Finnish  |
-| `/tiimi/`          | `tiimi/index.html`      | Finnish, **generated** |
-| `/en/`             | `en/index.html`         | English  |
-| `/en/team/`        | `en/team/index.html`    | English, **generated** |
-| `/notes/`          | `notes/index.html`      | English notebook |
+```
+src/i18n/fi.ts      ← all Finnish copy
+src/i18n/en.ts      ← all English copy (same shape)
+src/i18n/types.ts   ← the shape both files must follow
+```
 
-The standalone `/notes/` version displays five featured Post-it-style cards, each with
-one sentence, in `notes/index.html`. Its own `notes/notes.css` controls the board.
-`notes/notes.js` opens a placeholder for each future longer note from the sidebar
-or a card; these longer notes have not been written yet. All seven topics remain in the sidebar, including two without board cards.
-Keep sidebar titles in sync with the cards. Without JavaScript, sidebar links
-jump to the cards or the two topic placeholders.
-It uses system fonts plus self-hosted Kalam for the handwritten board heading
-(license: `fonts/kalam-OFL.txt`) and makes no third-party requests.
+| URL                      | Page                        | Source                        |
+|--------------------------|-----------------------------|-------------------------------|
+| `/` · `/en/`             | Home                        | `src/components/Etusivu.astro` |
+| `/nain-tyoskentelemme/` · `/en/approach/` | Services & how we work | `src/components/Tyotapa.astro` |
+| `/tiimi/` · `/en/team/`  | Team & contact              | `src/components/Meista.astro`  |
+| `/agi/` · `/en/agi/`     | R&D (hand-written HTML)     | `public/agi/`, `public/en/agi/` |
+| `/notes/`                | Notebook (hand-written)     | `public/notes/`               |
 
-The old English URLs `/team/` and `/local-ai/` 301-redirect via `vercel.json`
-so existing search rankings and inbound links still land somewhere sensible —
-`/team/` to `/en/team/`, and `/local-ai/` to `/en/` now that the local-AI page
-is retired.
+Anything in `public/` is served as-is at the same path — the older hand-written
+pages, `assets/eb.css` they use, `sitemap.xml` and `robots.txt`
+all live there unchanged.
 
-Each page declares `hreflang` alternates for both languages, and `sitemap.xml`
-lists every URL with its alternates.
+Other building blocks in `src/components/`:
 
-## Design system
+- `Sukellus.astro` — the home hero: a scroll-scrubbed video (`public/media/sukellus*.mp4`).
+- `Kohtaus.astro` — a full-bleed looping film scene; `Vaihe.astro` uses it for each service step.
+- `Konteksti.astro` — the organisational-context service section.
+- `Cta.astro` — the “text → → →” link used instead of buttons.
 
-`assets/eb.css` is the whole visual language, ported from the Claude Design
-canvas export. It is worth reading before editing any page:
+## Design
 
-- **Colour** is drawn from `kuvat/landing-page-picture.webp` — near-black
-  headlands, desaturated tide blues, grey-green water shadow, washed sky.
-  Nothing is saturated. If a colour feels bright, it is wrong.
-- **The grid** (`.eb-grid` / `.eb-cell`) is four columns with hairline rules.
-  Type is placed in cells, not centred, and the first one or two columns are
-  usually left empty on purpose. That emptiness is the layout — don't fill it.
-  The grid collapses to two columns under 900px and one under 600px.
-- **Type** is Work Sans for everything, IBM Plex Mono for eyebrows, numerals
-  and metadata, and Gajraj One for the wordmark only — never for running text.
+`src/styles/ilme.css` is the whole visual language: black-and-white film
+scenes alternating with paper sections, Inter Tight set large and light, and
+Instrument Serif italic reserved for the one word that carries the meaning.
+
+Video loops in `public/media/` are 8-second seamless loops (same first and last
+frame), H.264 720p with a short keyframe interval. Each has a `.jpg` poster of
+its first frame, shown until the video loads and permanently for visitors who
+prefer reduced motion.
 
 ## How to make a change
 
-**In the browser:** open the file on GitHub, click the ✏️ pencil, edit, and
-**Commit changes** to `main`. The change is live in about a minute.
-
-**Locally:**
 ```bash
-git clone git@github.com:Milbaxter/enlightenedbits.git
+git clone https://github.com/Milbaxter/enlightenedbits.git
 cd enlightenedbits
-python3 -m http.server 8000    # then open http://localhost:8000
+npm install
+npm run dev        # http://127.0.0.1:4330
 ```
 
-Use a local server rather than opening the file directly — the pages link
-`/assets/eb.css` and `/fonts/…` with absolute paths, which only resolve when
-something is serving the directory as a site root.
-
-When you change copy on one hand-written page, change the other language too.
-The team page handles that for you — see below.
-
-## Editing the team page
-
-`/tiimi/` and `/en/team/` are built from a single file:
-
-```
-content/tiimi.md     ← the words. This is the file you edit.
-templates/team.html  ← the markup. You rarely need to touch this.
-build.py             ← turns the two into both HTML pages.
-```
-
-Edit the prose in `content/tiimi.md`, then:
-
-```bash
-python3 build.py
-```
-
-```
-  wrote  tiimi/index.html
-  wrote  en/team/index.html
-```
-
-Commit the content file **and** the two generated HTML files together — Vercel
-deploys the HTML, not the content file.
-
-The format is deliberately small:
-
-```
-## person juhani
-name:      Juhani
-email:     juhani@enlightenedbits.com
-role.fi:   Perustaja
-role.en:   Co-founder
-
-bio.fi: >
-  Indent the lines under a `>` and they become one paragraph.
-
-  A blank line inside the block starts a new paragraph.
-```
-
-`key.fi` / `key.en` give the two languages; a plain `key` is used for both.
-Adding a `## person <id>` section adds a third person to both pages, numbered
-and ruled automatically. Lines beginning with `#` are comments.
-
-`python3 build.py --check` exits non-zero if the HTML is out of date with the
-content file — handy before committing.
+Change copy in `src/i18n/fi.ts` **and** `src/i18n/en.ts`. Both follow the
+shape in `src/i18n/types.ts`, so an editor with TypeScript support flags a
+field that one language is missing.
 
 ## Deployment
 
-Every push to `main` deploys automatically via **Vercel**.
+Every push to `main` deploys automatically via **Vercel**, which runs
+`npm run build` and serves `dist/` (set explicitly in `vercel.json`, together
+with redirects, cache headers and security headers). Pull requests get a
+preview deployment.
 
-`vercel.json` holds the redirects, the cache headers (fonts and images are
-immutable for a year; `eb.css` always revalidates) and the security headers.
-
-The old Hetzner deploy is retired — `.github/workflows/deploy.yml.disabled` is
-kept only for reference and does not run.
-
-## Files
-
-| Path                  | Purpose                                        |
-|-----------------------|------------------------------------------------|
-| `content/tiimi.md`    | Team-page copy, both languages                  |
-| `templates/team.html` | Team-page markup                                |
-| `build.py`            | Builds the team page from the two above         |
-| `assets/eb.css`       | The design system — tokens, grid, components    |
-| `kuvat/`              | Photography (WebP with a JPEG fallback)         |
-| `fonts/`              | Self-hosted WOFF2 subsets                       |
-| `vercel.json`         | Redirects, cache and security headers           |
-| `sitemap.xml`         | Sitemap with `hreflang` alternates              |
-| `og-image.png`        | Social preview card, 1200×630                   |
+Old URLs keep working: `/team/` and `/local-ai/` redirect as before, and
+`/meista/` / `/en/about/` redirect to the team pages.
 

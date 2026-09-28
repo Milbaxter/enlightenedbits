@@ -1,0 +1,81 @@
+---
+// Scroll-driven hero: the camera flies over the figure and into the
+// current as the visitor scrolls. The clip is scrubbed, not played, so
+// the visitor sets the pace. Copy fades out early; the closing line
+// rises over the white current at the end.
+interface Props { line: string; cue: string }
+const { line, cue } = Astro.props;
+---
+<section class="dive" data-dive>
+  <div class="dive-sticky">
+    <video class="dive-video" muted playsinline preload="auto" poster="/media/sukellus.jpg" aria-hidden="true">
+      <source src="/media/sukellus-mobiili.mp4" type="video/mp4" media="(max-width: 760px)">
+      <source src="/media/sukellus.mp4" type="video/mp4">
+    </video>
+    <div class="dive-shade" aria-hidden="true"></div>
+    <div class="dive-copy" data-dive-copy>
+      <div class="wrap"><slot /></div>
+    </div>
+    <p class="dive-line" data-dive-line>{line}</p>
+    <div class="dive-fade" data-dive-fade aria-hidden="true"></div>
+    <p class="dive-cue" data-dive-cue aria-hidden="true"><span></span>{cue}</p>
+  </div>
+</section>
+
+<script>
+  const section = document.querySelector<HTMLElement>('[data-dive]');
+  if (section) {
+    const video = section.querySelector<HTMLVideoElement>('video')!;
+    const copy = section.querySelector<HTMLElement>('[data-dive-copy]')!;
+    const line = section.querySelector<HTMLElement>('[data-dive-line]')!;
+    const fade = section.querySelector<HTMLElement>('[data-dive-fade]')!;
+    const cue = section.querySelector<HTMLElement>('[data-dive-cue]')!;
+    const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const clamp = (v: number, a = 0, b = 1) => Math.min(b, Math.max(a, v));
+    const band = (p: number, a: number, b: number) => clamp((p - a) / (b - a));
+
+    let target = 0, current = 0, raf = 0;
+
+    const progress = () => {
+      const r = section.getBoundingClientRect();
+      return clamp(-r.top / (r.height - window.innerHeight));
+    };
+
+    const paint = () => {
+      const p = progress();
+      copy.style.opacity = String(1 - band(p, 0.04, 0.26));
+      copy.style.transform = `translateY(${-band(p, 0, 0.3) * 60}px)`;
+      cue.style.opacity = String(1 - band(p, 0, 0.08));
+      const l = band(p, 0.62, 0.8) * (1 - band(p, 0.93, 1));
+      line.style.opacity = String(l);
+      line.style.transform = `translate(-50%, calc(-50% + ${(1 - band(p, 0.62, 0.8)) * 30}px))`;
+      fade.style.opacity = String(band(p, 0.9, 1));
+      target = p;
+    };
+
+    // Ease the playhead toward the scroll position so seeking feels
+    // like camera motion rather than stepping through frames.
+    const tick = () => {
+      current += (target - current) * 0.14;
+      if (video.duration && !video.seeking) {
+        const t = current * (video.duration - 0.05);
+        if (Math.abs(video.currentTime - t) > 0.008) video.currentTime = t;
+      }
+      raf = requestAnimationFrame(tick);
+    };
+
+    paint();
+    window.addEventListener('scroll', paint, { passive: true });
+    window.addEventListener('resize', paint);
+    if (!reduce) {
+      // iOS needs a play/pause before seeking paints frames.
+      video.play().then(() => video.pause()).catch(() => {});
+      new IntersectionObserver(([e]) => {
+        cancelAnimationFrame(raf);
+        if (e.isIntersecting) raf = requestAnimationFrame(tick);
+      }).observe(section);
+    } else {
+      section.classList.add('dive-static');
+    }
+  }
+</script>

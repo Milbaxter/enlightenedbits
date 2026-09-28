@@ -7,3 +7,6 @@
 INSPA/
 *.zip
 *.icloud
+node_modules/
+dist/
+.astro/

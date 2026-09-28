@@ -1,0 +1,109 @@
+---
+import Sivu from '../layouts/Sivu.astro';
+import Kohtaus from './Kohtaus.astro';
+import Vaihe from './Vaihe.astro';
+import Sukellus from './Sukellus.astro';
+import Cta from './Cta.astro';
+import Loppu from './Loppu.astro';
+import Konteksti from './Konteksti.astro';
+import type { Content } from '../i18n/types';
+
+interface Props { t: Content; alternate: string }
+const { t, alternate } = Astro.props;
+const h = t.home;
+const num = (i: number) => String(i + 1).padStart(2, '0');
+---
+<Sivu t={t} title={h.title} description={h.description} current="home" alternate={alternate}>
+  <Sukellus line={h.caption} cue={t.lang === 'fi' ? 'Vieritä' : 'Scroll'}>
+    <div class="scene-copy">
+      <p class="eyebrow reveal" style="color:rgb(239 236 230 / .75)">{h.bandLeft}</p>
+      <h1 class="reveal reveal-d1"><Fragment set:html={h.heroLines[0]} /><br><Fragment set:html={h.heroLines[1]} /></h1>
+      <p class="lead reveal reveal-d2">{h.lede}</p>
+      <div class="actions reveal reveal-d3">
+        <Cta href={t.routes.contact}>{t.ui.book}</Cta>
+        <Cta href={t.routes.approach} size="sm" quiet>{h.secondaryAction}</Cta>
+      </div>
+      <ul class="proof reveal reveal-d3">
+        {h.proof.map((p) => <li>{p}</li>)}
+      </ul>
+    </div>
+  </Sukellus>
+
+
+
+  <section class="section">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow reveal">{h.questionsEyebrow}</p>
+        <h2 class="reveal reveal-d1">{h.questionsTitle}</h2>
+      </div>
+      <ol class="questions">
+        {h.questions.map((q) => <li class="reveal">{q}</li>)}
+      </ol>
+      <p class="pains-note reveal" set:html={h.questionsNote} />
+    </div>
+  </section>
+
+  <section class="section paper">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow reveal">{h.principlesTitle}</p>
+        <h2 class="reveal reveal-d1"><Fragment set:html={h.principlesLead} /></h2>
+      </div>
+      <div class="principles" style={`--cols:${h.principles.length}`}>
+        {h.principles.map((p, i) => (
+          <article class:list={['principle reveal', `reveal-d${i}`]}>
+            <span class="num">{num(i)}</span>
+            <h3>{p.title}</h3>
+            <p set:html={p.text} />
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section steps-intro rule-top">
+    <div class="wrap">
+      <div class="section-head" style="margin-bottom:0">
+        <p class="eyebrow reveal">{t.ui.nav.approach}</p>
+        <h2 class="reveal reveal-d1">{h.processTitle}</h2>
+      </div>
+    </div>
+  </section>
+  {t.process.map((s, i) => <Vaihe step={s} index={i} total={t.process.length} />)}
+  <section class="section" style="padding:48px 0">
+    <div class="wrap"><Cta href={t.routes.approach}>{h.processLink}</Cta></div>
+  </section>
+
+  <Konteksti t={t} />
+
+  <section class="section paper">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow reveal">{h.audienceTitle}</p>
+        <h2 class="reveal reveal-d1"><Fragment set:html={h.audienceLead} /></h2>
+      </div>
+      <div class="audience">
+        {h.audience.map((a, i) => (
+          <div class="audience-item reveal">
+            <span class="num">{num(i)}</span>
+            <div><h3>{a.title}</h3><p>{a.text}</p></div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <Kohtaus clip="yhteiso" class="why">
+    <div class="scene-copy">
+      <p class="eyebrow reveal" style="color:rgb(239 236 230 / .75)">{t.ui.nav.about}</p>
+      <h2 class="reveal reveal-d1">{h.whyTitle}</h2>
+      {h.whyText.map((p) => <p class="reveal reveal-d2">{p}</p>)}
+      <div class="actions reveal reveal-d3">
+        <Cta href={t.routes.about}>{t.about.heroTitle.replace(/\.$/, '')}</Cta>
+      </div>
+    </div>
+  </Kohtaus>
+
+  <Loppu lead={h.ctaTitle} label={t.ui.book} href={t.routes.contact} />
+</Sivu>

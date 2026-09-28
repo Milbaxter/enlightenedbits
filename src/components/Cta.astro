@@ -1,0 +1,6 @@
+---
+// Text link followed by three arrows — the site's only "button".
+interface Props { href: string; size?: 'sm' | 'md' | 'lg'; quiet?: boolean; class?: string }
+const { href, size = 'md', quiet = false, class: cls } = Astro.props;
+---
+<a class:list={['cta', size !== 'md' && `cta-${size}`, quiet && 'cta-quiet', cls]} href={href}><slot /><span class="arrows" aria-hidden="true"><i>→</i><i>→</i><i>→</i></span></a>

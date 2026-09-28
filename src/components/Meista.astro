@@ -1,0 +1,76 @@
+---
+import Sivu from '../layouts/Sivu.astro';
+import Cta from './Cta.astro';
+import Loppu from './Loppu.astro';
+import type { Content } from '../i18n/types';
+
+interface Props { t: Content; alternate: string }
+const { t, alternate } = Astro.props;
+const a = t.about;
+const contactId = t.routes.contact.split('#')[1];
+---
+<Sivu t={t} title={a.title} description={a.description} current="about" alternate={alternate}>
+  <div class="wrap about-hero">
+    <div>
+      <p class="eyebrow reveal">{a.eyebrow}</p>
+      <h1 class="reveal reveal-d1">{a.heroTitle}</h1>
+      <p class="lead reveal reveal-d2">{a.lede}</p>
+    </div>
+    <figure class="founders reveal reveal-d2">
+      <img src="/kuvat/founders.jpg" alt={a.photoAlt} width="1200" height="1231" loading="eager" decoding="async">
+    </figure>
+  </div>
+
+  <section class="section paper">
+    <div class="wrap people">
+      {a.people.map((p) => (
+        <article class="person reveal">
+          <h3>{p.name}</h3>
+          <p class="role">{[p.role, p.degree].filter(Boolean).join(' · ')}</p>
+          {p.bio && <p>{p.bio}</p>}
+          {p.email && <p style="margin:0"><a href={`mailto:${p.email}`}>{p.email}</a></p>}
+        </article>
+      ))}
+    </div>
+  </section>
+
+  <section class="section paper rule-top">
+    <div class="wrap story">
+      <div>
+        <h2 class="reveal">{a.storyTitle}</h2>
+      </div>
+      <div>
+        {a.story.map((p) => <p class="reveal">{p}</p>)}
+        <div class="actions reveal">
+          <Cta href={`#${contactId}`}>{a.storyAction}</Cta>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id={contactId} style="scroll-margin-top:84px">
+    <div class="wrap">
+      <div class="section-head">
+        <h2 class="reveal">{a.contactTitle}</h2>
+      </div>
+      <div class="contact-grid">
+        {a.people.filter((p) => p.email).map((p) => (
+          <div class="contact-card reveal">
+            <span class="eyebrow">{p.role}</span>
+            <p class="name">{p.fullName}</p>
+            <p><a href={`mailto:${p.email}`}>{p.email}</a></p>
+            {p.phone && <p><a href={`tel:${p.phone.replace(/\s/g, '')}`}>{p.phone}</a></p>}
+          </div>
+        ))}
+        <div class="contact-card reveal">
+          <span class="eyebrow">{a.visitLabel}</span>
+          {a.address.map((l, i) => <p class:list={[i === 0 && 'name']}>{l}</p>)}
+          <p style="margin-top:12px"><a href="https://www.openstreetmap.org/search?query=Josafatinkatu%209%20Helsinki" rel="noopener">{a.mapLabel} ↗</a></p>
+          <p class="muted" style="margin-top:12px;font-size:.95rem">{a.visitNote}</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <Loppu lead={t.home.ctaTitle} label={t.ui.book} href={`mailto:${a.people[0].email}`} />
+</Sivu>
