@@ -8,7 +8,10 @@ const { line, cue } = Astro.props;
 ---
 <section class="dive" data-dive>
   <div class="dive-sticky">
-    <video class="dive-video" muted playsinline preload="auto" poster="/media/sukellus.jpg" aria-hidden="true">
+    <!-- Shown until the clip has a decoded frame. iOS ignores preload and
+         paints an empty video black, so the still carries the first view. -->
+    <img class="dive-video dive-poster" src="/media/sukellus.jpg" srcset="/media/sukellus-mobiili.jpg 1280w, /media/sukellus.jpg 1920w" sizes="100vw" alt="" aria-hidden="true" fetchpriority="high" decoding="async">
+    <video class="dive-video" muted playsinline preload="auto" aria-hidden="true">
       <source src="/media/sukellus-mobiili-hevc.mp4" type='video/mp4; codecs="hvc1.1.6.L93.90"' media="(max-width: 760px)">
       <source src="/media/sukellus-mobiili.mp4" type="video/mp4" media="(max-width: 760px)">
       <source src="/media/sukellus-hevc.mp4" type='video/mp4; codecs="hvc1.1.6.L120.90"'>
@@ -33,6 +36,9 @@ const { line, cue } = Astro.props;
     const fade = section.querySelector<HTMLElement>('[data-dive-fade]')!;
     const cue = section.querySelector<HTMLElement>('[data-dive-cue]')!;
     const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const ready = () => { if (video.readyState >= 2) section.classList.add('dive-ready'); };
+    ['loadeddata', 'seeked', 'playing'].forEach((ev) => video.addEventListener(ev, ready));
+    ready();
     const clamp = (v: number, a = 0, b = 1) => Math.min(b, Math.max(a, v));
     const band = (p: number, a: number, b: number) => clamp((p - a) / (b - a));
 
