@@ -91,6 +91,11 @@ const navItems = (['home', 'approach', 'about'] as const).map((key) => ({
   document.querySelectorAll('.nav a').forEach((a) =>
     a.addEventListener('click', () => { header.classList.remove('open'); btn.setAttribute('aria-expanded', 'false'); }));
 
+  // Time-limited offers disappear on their own once the last day is over.
+  document.querySelectorAll<HTMLElement>('[data-until]').forEach((el) => {
+    if (Date.now() > new Date(`${el.dataset.until}T23:59:59+02:00`).getTime()) el.remove();
+  });
+
   // Reveal on scroll
   const io = new IntersectionObserver((entries) => {
     for (const e of entries) if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }

@@ -26,6 +26,20 @@ const num = (i: number) => String(i + 1).padStart(2, '0');
     </div>
   </Sukellus>
 
+  <section class="section offer" data-until={t.offer.until}>
+    <div class="wrap offer-inner">
+      <div>
+        <p class="eyebrow reveal">{t.offer.eyebrow}</p>
+        <h2 class="reveal reveal-d1" set:html={t.offer.title} />
+      </div>
+      <div>
+        <p class="reveal reveal-d2">{t.offer.text}</p>
+        <p class="offer-note reveal reveal-d2">{t.offer.note}</p>
+        <div class="actions reveal reveal-d3"><Cta href={t.routes.contact}>{t.ui.book}</Cta></div>
+      </div>
+    </div>
+  </section>
+
 
 
   <section class="section">
@@ -84,7 +98,7 @@ const num = (i: number) => String(i + 1).padStart(2, '0');
       </div>
     </div>
   </section>
-  {t.process.map((s, i) => <Vaihe step={s} index={i} total={t.process.length} />)}
+  {t.process.map((s, i) => <Vaihe step={s} index={i} total={t.process.length} offerUntil={t.offer.until} />)}
   <section class="section" style="padding:48px 0">
     <div class="wrap"><Cta href={t.routes.approach}>{h.processLink}</Cta></div>
   </section>

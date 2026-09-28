@@ -82,6 +82,14 @@ export const en: Content = {
     ctaTitle: 'Let’s start with a free discovery call. Tell us what matters to you, and we’ll work out together where to begin.',
   },
 
+  offer: {
+    until: '2026-10-31',
+    eyebrow: 'Autumn offer for non-profits',
+    title: 'Mapping at <em>half price</em> for non-profits.',
+    text: 'Non-profits, foundations and other public-benefit organisations get 50% off our Mapping service when they book it by 31 October 2026. Together we look at where your time really goes, where AI could free it up for what matters more, and where it has no place.',
+    note: 'Start with a free discovery call. The work itself can take place in November or later.',
+  },
+
   process: [
     {
       eyebrow: 'Step 01',
@@ -97,6 +105,7 @@ export const en: Content = {
       title: 'Mapping',
       short: 'A look at everyday work: where the real benefits are and where the limits lie.',
       body: 'We look at where your time actually goes. We identify the tasks where AI could free up time for what matters more, and the ones where it has no place. Along the way we assess privacy, risks and costs.',
+      offer: '−50% for non-profits until 31 Oct',
       outcome: 'A prioritised list of use cases, the terms for each, and an honest estimate of the benefits.',
     },
     {

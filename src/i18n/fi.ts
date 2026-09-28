@@ -82,6 +82,14 @@ export const fi: Content = {
     ctaTitle: 'Aloitetaan maksuttomalla kartoituspuhelulla. Kertokaa, mikä teille on tärkeää, niin mietitään yhdessä, mistä kannattaa aloittaa.',
   },
 
+  offer: {
+    until: '2026-10-31',
+    eyebrow: 'Syys–lokakuun tarjous yleishyödyllisille',
+    title: 'Kartoitus <em>puoleen hintaan</em> yleishyödyllisille yhteisöille.',
+    text: 'Järjestöt, säätiöt ja muut yleishyödylliset yhteisöt saavat Kartoituksesta 50 %:n alennuksen, kun tilaatte sen 31.10.2026 mennessä. Käymme kanssanne läpi, mihin aika oikeasti kuluu, missä tekoäly voisi vapauttaa sitä tärkeämpään ja missä se ei kuulu kuvaan.',
+    note: 'Aloitetaan maksuttomalla kartoituspuhelulla. Itse työ voidaan tehdä myös marraskuussa tai myöhemmin.',
+  },
+
   process: [
     {
       eyebrow: 'Vaihe 01',
@@ -97,6 +105,7 @@ export const fi: Content = {
       title: 'Kartoitus',
       short: 'Arjen työn läpikäynti: missä on todellista hyötyä ja missä rajat kulkevat.',
       body: 'Käymme läpi, mihin aika teillä oikeasti kuluu. Tunnistamme tehtävät, joissa tekoäly voisi vapauttaa aikaa tärkeämpään, ja ne, joissa se ei kuulu kuvaan. Samalla arvioimme tietosuojan, riskit ja kustannukset.',
+      offer: '−50 % yleishyödyllisille 31.10. asti',
       outcome: 'Priorisoitu lista käyttökohteista, niiden ehdot ja rehellinen arvio hyödyistä.',
     },
     {

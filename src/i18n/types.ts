@@ -9,6 +9,8 @@ export interface Step {
   /** Sold as its own product, e.g. "Suuntatyöpaja", with a public price. */
   product?: string;
   price?: string;
+  /** Time-limited offer shown as a pill on the step. */
+  offer?: string;
 }
 
 export interface Person {
@@ -59,6 +61,8 @@ export interface Content {
     whyText: string[];
     ctaTitle: string;
   };
+  /** Time-limited offer; hidden automatically after `until` (YYYY-MM-DD). */
+  offer: { until: string; eyebrow: string; title: string; text: string; note: string };
   process: Step[];
   context: {
     eyebrow: string;
