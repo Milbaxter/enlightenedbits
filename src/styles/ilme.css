@@ -23,8 +23,8 @@
   --rule:rgb(239 236 230 / .16);
   --rule-strong:rgb(239 236 230 / .4);
 
-  --font-sans:'Inter Tight Variable', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  --font-serif:'Instrument Serif', 'Times New Roman', serif;
+  --font-sans:'Albert Sans Variable', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  --font-serif:'Young Serif', Georgia, 'Times New Roman', serif;
 
   --fs-hero:clamp(3.1rem, 9.2vw, 10.2rem);
   --fs-h2:clamp(2.3rem, 5.4vw, 5.6rem);
@@ -421,3 +421,35 @@ video.dive-video{opacity:0;transition:opacity .5s var(--ease)}
   .site-footer a{display:inline-block;padding:8px 0}
   .wordmark{min-height:44px}
 }
+
+/* Typography: Young Serif carries every headline, Albert Sans the text.
+   Young Serif has one weight and no italic, so emphasis is a softer tone
+   of the same face, and the tight tracking the thin grotesk needed is
+   relaxed for the serif. */
+h1,h2,h3,.cta-lg,.dive-line,.closer{font-family:var(--font-serif);font-weight:400}
+h1,h2,.cta-lg,.closer{letter-spacing:-.03em}
+h3{letter-spacing:-.02em}
+.dive-copy h1,.step-scene h2,.dive-line,.person h3{letter-spacing:-.035em}
+.audience-item h3{letter-spacing:-.02em}
+em{font-family:inherit;font-style:normal;font-weight:inherit;letter-spacing:inherit;color:color-mix(in srgb, currentColor 58%, transparent)}
+.bridge-label{font-style:normal}
+
+/* Logo B: nine bits, the centre one lit. Name set in Albert Sans. */
+.wordmark{font-family:var(--font-sans);font-weight:500;letter-spacing:-.02em;gap:.55em}
+.wordmark-mark{width:1.25em;height:1.25em;border:0;display:block}
+.wordmark-mark::before{content:none}
+
+/* Logo bits are switched by a small script in Sivu.astro. The centre
+   bit only ever lights alone, and then in orange. */
+.wordmark-bit{fill:currentColor;opacity:0;transition:opacity .28s ease}
+.wordmark-bit.on{opacity:1}
+.wordmark-bit:nth-of-type(5){fill:#FF6B3D}
+
+/* Accent: signal orange, the one colour in the black-and-white film.
+   Used only for emphasised words and CTA arrows. A lighter tone on black,
+   a deeper one on paper so both clear contrast. */
+:root{--accent:#FF6B3D}
+.paper{--accent:#D1441A}
+.bridge-step--key{--accent:#FF6B3D}
+em{color:var(--accent)}
+.arrows{color:var(--accent)}
