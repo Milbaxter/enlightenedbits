@@ -23,7 +23,7 @@ export const en: Content = {
     secondaryAction: 'How we work',
     bandLeft: 'AI consulting for companies and communities',
     beliefsEyebrow: 'What we believe',
-    beliefsTitle: 'AI is the means. <em>People</em> are the point.',
+    beliefsTitle: 'AI serves <em>people</em>, not the other way round.',
     beliefs: [
       {
         title: 'Time to think',

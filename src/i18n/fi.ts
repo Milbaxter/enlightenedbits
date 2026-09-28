@@ -23,7 +23,7 @@ export const fi: Content = {
     secondaryAction: 'Näin työskentelemme',
     bandLeft: 'Tekoälykonsultointia yrityksille ja yhteisöille',
     beliefsEyebrow: 'Mihin uskomme',
-    beliefsTitle: 'Tekoäly on väline. <em>Ihminen</em> on päämäärä.',
+    beliefsTitle: 'Tekoäly palvelee <em>ihmistä</em>, ei toisin päin.',
     beliefs: [
       {
         title: 'Aikaa ajattelulle',
