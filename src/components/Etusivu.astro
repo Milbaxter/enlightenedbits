@@ -47,6 +47,23 @@ const num = (i: number) => String(i + 1).padStart(2, '0');
   <section class="section paper">
     <div class="wrap">
       <div class="section-head">
+        <p class="eyebrow reveal">{h.beliefsEyebrow}</p>
+        <h2 class="reveal reveal-d1"><Fragment set:html={h.beliefsTitle} /></h2>
+      </div>
+      <div class="principles" style={`--cols:${h.beliefs.length}`}>
+        {h.beliefs.map((b, i) => (
+          <article class:list={['principle reveal', `reveal-d${i}`]}>
+            <h3>{b.title}</h3>
+            <p>{b.text}</p>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section paper">
+    <div class="wrap">
+      <div class="section-head">
         <p class="eyebrow reveal">{h.principlesTitle}</p>
         <h2 class="reveal reveal-d1"><Fragment set:html={h.principlesLead} /></h2>
       </div>
