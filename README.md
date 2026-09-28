@@ -26,7 +26,7 @@ src/i18n/types.ts   ← the shape both files must follow
 | `/notes/`                | Notebook (hand-written)     | `public/notes/`               |
 
 Anything in `public/` is served as-is at the same path — the older hand-written
-pages, `assets/eb.css` they use, the offer PDFs, `sitemap.xml` and `robots.txt`
+pages, `assets/eb.css` they use, `sitemap.xml` and `robots.txt`
 all live there unchanged.
 
 Other building blocks in `src/components/`:
