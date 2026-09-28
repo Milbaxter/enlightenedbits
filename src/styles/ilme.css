@@ -454,8 +454,8 @@ em{font-family:inherit;font-style:normal;font-weight:inherit;letter-spacing:inhe
 em{color:var(--accent)}
 .arrows{color:var(--accent)}
 
-/* Time-limited offer band: dark, framed by a single orange rule. */
-.offer{border-top:2px solid var(--accent);border-bottom:1px solid var(--rule)}
+/* Time-limited offer band: dark, set off by hairlines like other sections. */
+.offer{border-top:1px solid var(--rule);border-bottom:1px solid var(--rule)}
 .offer-inner{display:grid;grid-template-columns:1.1fr 1fr;gap:clamp(28px,5vw,96px);align-items:end}
 .offer h2{font-size:var(--fs-h2);line-height:1}
 .offer .eyebrow{color:var(--accent)}
