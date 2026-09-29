@@ -292,7 +292,7 @@ video.dive-video{opacity:0;transition:opacity .5s var(--ease)}
 /* The figure sits dead centre in the source clip; on wide screens slide
    the frame right so the headline and the person don't compete. */
 @media (min-width:861px){
-  .dive-video{transform:scale(1.22) translateX(17%);transform-origin:50% 60%}
+  .dive-video{transform:scale(1.3) translateX(11%);transform-origin:50% 60%}
   .dive-copy h1{font-size:clamp(3.1rem,7.2vw,8.2rem)}
 }
 
