@@ -48,5 +48,5 @@ const slug = (s: string) => s.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g,
     </div>
   </section>
 
-  <Loppu lead={t.home.ctaTitle} label={t.ui.book} href={t.routes.contact} />
+  <Loppu lead={t.home.ctaTitle} label={t.ui.book} href={t.ui.bookHref} fallback={t.routes.contact} />
 </Sivu>

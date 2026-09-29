@@ -7,7 +7,8 @@ export const fi: Content = {
     skip: 'Siirry sisältöön',
     navLabel: 'Päävalikko',
     nav: { home: 'Etusivu', approach: 'Näin työskentelemme', about: 'Meistä', contact: 'Yhteystiedot' },
-    book: 'Varaa maksuton kartoituspuhelu',
+    book: 'Soita meille',
+    bookHref: 'tel:+358504941660',
     footer: '© 2026 Enlightened Bits · Josafatinkatu 9, 00510 Helsinki',
     footerNote: 'Tekoälyä omilla ehdoilla',
   },
@@ -79,7 +80,7 @@ export const fi: Content = {
       'Olemme rakentaneet tekoälyagentteja ja koneoppimisjärjestelmiä. Tiedämme, mihin nykyiset mallit pystyvät ja mihin eivät.',
       'Emme lupaa ihmeitä. Neuvomme ja toteutamme itse, kerromme avoimesti, mitä teemme, ja joskus suosittelemme jättämään tekoälyn pois.',
     ],
-    ctaTitle: 'Aloitetaan maksuttomalla kartoituspuhelulla. Kertokaa, mikä teille on tärkeää, niin mietitään yhdessä, mistä kannattaa lähteä liikkeelle.',
+    ctaTitle: 'Soita tai lähetä sähköpostia, niin jutellaan. Ensimmäinen keskustelu on maksuton. Kerro, mikä teillä on tärkeää, niin mietitään yhdessä, mistä kannattaa lähteä liikkeelle.',
   },
 
   offer: {
@@ -226,7 +227,7 @@ export const fi: Content = {
     storyAction: 'Ota yhteyttä',
     contactTitle: 'Yhteystiedot',
     visitLabel: 'Käyntiosoite',
-    address: ['Enlightened Bits', 'Josafatinkatu 9 1h 64', '00510 Helsinki'],
+    address: ['Enlightened Bits', 'Josafatinkatu 9 LH 64', '00510 Helsinki'],
     mapLabel: 'Näytä kartalla',
     reachLabel: 'Sähköposti ja puhelin',
     visitNote: 'Toimistomme on Helsingissä. Sovithan käynnistä etukäteen sähköpostitse.',

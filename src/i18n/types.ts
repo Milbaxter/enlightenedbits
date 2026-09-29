@@ -31,6 +31,8 @@ export interface Content {
     navLabel: string;
     nav: { home: string; approach: string; about: string; contact: string };
     book: string;
+    /** Where every booking CTA points: a direct phone call. */
+    bookHref: string;
     footer: string;
     footerNote: string;
   };
