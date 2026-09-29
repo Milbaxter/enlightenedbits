@@ -6,8 +6,8 @@ const { clip, class: cls, id, eager = false } = Astro.props;
 ---
 <section class:list={['scene', cls]} id={id}>
   <div class="scene-media" aria-hidden="true">
-    <video data-clip muted loop playsinline autoplay={eager} preload={eager ? 'auto' : 'none'} poster={`/media/${clip}.jpg`}>
-      <source src={`/media/${clip}.mp4`} type="video/mp4">
+    <video data-clip muted loop playsinline autoplay={eager} preload={eager ? 'auto' : 'none'} poster={`/media/${clip}.jpg?v=kulta`}>
+      <source src={`/media/${clip}.mp4?v=kulta`} type="video/mp4">
     </video>
   </div>
   <div class="wrap"><slot /></div>

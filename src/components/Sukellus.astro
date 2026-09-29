@@ -10,12 +10,12 @@ const { line, cue } = Astro.props;
   <div class="dive-sticky">
     <!-- Shown until the clip has a decoded frame. iOS ignores preload and
          paints an empty video black, so the still carries the first view. -->
-    <img class="dive-video dive-poster" src="/media/sukellus.jpg" srcset="/media/sukellus-mobiili.jpg 1280w, /media/sukellus.jpg 1920w" sizes="100vw" alt="" aria-hidden="true" fetchpriority="high" decoding="async">
+    <img class="dive-video dive-poster" src="/media/sukellus.jpg?v=kulta" srcset="/media/sukellus-mobiili.jpg?v=kulta 1280w, /media/sukellus.jpg?v=kulta 1920w" sizes="100vw" alt="" aria-hidden="true" fetchpriority="high" decoding="async">
     <video class="dive-video" muted playsinline preload="auto" aria-hidden="true">
-      <source src="/media/sukellus-mobiili-hevc.mp4" type='video/mp4; codecs="hvc1.1.6.L93.90"' media="(max-width: 760px)">
-      <source src="/media/sukellus-mobiili.mp4" type="video/mp4" media="(max-width: 760px)">
-      <source src="/media/sukellus-hevc.mp4" type='video/mp4; codecs="hvc1.1.6.L120.90"'>
-      <source src="/media/sukellus.mp4" type="video/mp4">
+      <source src="/media/sukellus-mobiili-hevc.mp4?v=kulta" type='video/mp4; codecs="hvc1.1.6.L93.90"' media="(max-width: 760px)">
+      <source src="/media/sukellus-mobiili.mp4?v=kulta" type="video/mp4" media="(max-width: 760px)">
+      <source src="/media/sukellus-hevc.mp4?v=kulta" type='video/mp4; codecs="hvc1.1.6.L120.90"'>
+      <source src="/media/sukellus.mp4?v=kulta" type="video/mp4">
     </video>
     <div class="dive-shade" aria-hidden="true"></div>
     <div class="dive-copy" data-dive-copy>
