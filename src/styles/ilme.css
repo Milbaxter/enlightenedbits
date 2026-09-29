@@ -7,9 +7,9 @@
    ============================================================ */
 
 :root{
-  --black:#050505;
+  --black:#0A0705;
   --ink:#0B0B0B;
-  --graphite:#161616;
+  --graphite:#18130E;
   --paper:#F3F1EC;
   --paper-2:#E9E6DF;
   --bone:#EFECE6;
@@ -23,8 +23,8 @@
   --rule:rgb(239 236 230 / .16);
   --rule-strong:rgb(239 236 230 / .4);
 
-  --font-sans:'Albert Sans Variable', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  --font-serif:'Young Serif', Georgia, 'Times New Roman', serif;
+  --font-sans:'Hedvig Letters Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  --font-serif:'Hedvig Letters Serif Variable', Georgia, 'Times New Roman', serif;
 
   --fs-hero:clamp(3.1rem, 9.2vw, 10.2rem);
   --fs-h2:clamp(2.3rem, 5.4vw, 5.6rem);
@@ -82,7 +82,7 @@ strong{color:var(--text);font-weight:500}
 /* ---------- Header ---------- */
 .site-header{position:fixed;inset:0 0 auto 0;z-index:100;color:var(--bone);
   transition:background .4s var(--ease),transform .5s var(--ease)}
-.site-header.scrolled{background:rgb(5 5 5 / .72);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px)}
+.site-header.scrolled{background:rgb(10 7 5 / .72);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px)}
 .site-header .wrap{display:flex;align-items:center;gap:36px;height:84px}
 .wordmark{font-weight:600;font-size:1.55rem;letter-spacing:-.05em;color:var(--bone);text-decoration:none;white-space:nowrap;line-height:1}
 .nav{display:flex;gap:30px;margin:0 auto;font-size:1.08rem;font-weight:300}
@@ -119,11 +119,11 @@ strong{color:var(--text);font-weight:500}
 .scene{position:relative;min-height:100vh;min-height:100svh;display:flex;align-items:flex-end;
   isolation:isolate;overflow:hidden;background:var(--black)}
 .scene-media{position:absolute;inset:0;z-index:-2}
-.scene-media video,.scene-media img{width:100%;height:100%;object-fit:cover;object-position:70% 50%;filter:grayscale(1) contrast(1.05)}
+.scene-media video,.scene-media img{width:100%;height:100%;object-fit:cover;object-position:70% 50%;}
 .scene::before{content:'';position:absolute;inset:0;z-index:-1;pointer-events:none;
   background:
-    linear-gradient(90deg, rgb(5 5 5 / .85) 0%, rgb(5 5 5 / .5) 32%, rgb(5 5 5 / 0) 60%),
-    linear-gradient(180deg, rgb(5 5 5 / .5) 0%, rgb(5 5 5 / 0) 22%, rgb(5 5 5 / 0) 60%, rgb(5 5 5 / .75) 100%)}
+    linear-gradient(90deg, rgb(10 7 5 / .85) 0%, rgb(10 7 5 / .5) 32%, rgb(10 7 5 / 0) 60%),
+    linear-gradient(180deg, rgb(10 7 5 / .5) 0%, rgb(10 7 5 / 0) 22%, rgb(10 7 5 / 0) 60%, rgb(10 7 5 / .75) 100%)}
 .scene .wrap{padding-top:140px;padding-bottom:clamp(56px,8vw,110px)}
 .scene-copy{max-width:780px}
 
@@ -247,8 +247,8 @@ video.dive-video{opacity:0;transition:opacity .5s var(--ease)}
 .dive-ready video.dive-video{opacity:1}
 .dive-poster{z-index:-4}
 .dive-shade{position:absolute;inset:0;z-index:-2;pointer-events:none;background:
-  linear-gradient(90deg, rgb(5 5 5 / .8) 0%, rgb(5 5 5 / .45) 36%, rgb(5 5 5 / 0) 62%),
-  linear-gradient(180deg, rgb(5 5 5 / .5) 0%, rgb(5 5 5 / 0) 22%, rgb(5 5 5 / 0) 62%, rgb(5 5 5 / .7) 100%)}
+  linear-gradient(90deg, rgb(10 7 5 / .8) 0%, rgb(10 7 5 / .45) 36%, rgb(10 7 5 / 0) 62%),
+  linear-gradient(180deg, rgb(10 7 5 / .5) 0%, rgb(10 7 5 / 0) 22%, rgb(10 7 5 / 0) 62%, rgb(10 7 5 / .7) 100%)}
 .dive-copy{position:absolute;inset:0;display:flex;align-items:flex-end;will-change:opacity,transform}
 .dive-copy .wrap{padding-bottom:clamp(64px,9vw,120px)}
 .dive-copy .scene-copy{max-width:none}
@@ -285,7 +285,7 @@ video.dive-video{opacity:0;transition:opacity .5s var(--ease)}
   .principle:nth-child(n+2){border-top:1px solid var(--rule)}
   .principle h3{margin-top:28px}
   .scene-media video,.scene-media img{object-position:72% 50%}
-  .scene::before,.dive-shade{background:linear-gradient(180deg, rgb(5 5 5 / .45) 0%, rgb(5 5 5 / .1) 30%, rgb(5 5 5 / .75) 65%, rgb(5 5 5 / .95) 100%)}
+  .scene::before,.dive-shade{background:linear-gradient(180deg, rgb(10 7 5 / .45) 0%, rgb(10 7 5 / .1) 30%, rgb(10 7 5 / .75) 65%, rgb(10 7 5 / .95) 100%)}
   .dive-cue{display:none}
 }
 
@@ -343,7 +343,7 @@ video.dive-video{opacity:0;transition:opacity .5s var(--ease)}
 .pains-note{margin:36px 0 0;max-width:62ch;color:var(--text-muted)}
 .pains-note a{color:var(--text)}
 .step-price{display:inline-flex;align-items:baseline;gap:14px;margin:26px 0 0;padding:10px 18px;border:1px solid rgb(239 236 230 / .4);
-  border-radius:999px;font-size:1rem;color:var(--bone);background:rgb(5 5 5 / .35);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px)}
+  border-radius:999px;font-size:1rem;color:var(--bone);background:rgb(10 7 5 / .35);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px)}
 .step-price b{font-weight:500}
 .people{grid-template-columns:repeat(2,minmax(0,1fr))}
 .person h3{font-size:clamp(2.2rem,3.6vw,3.8rem)}
@@ -432,17 +432,17 @@ em{font-family:inherit;font-style:normal;font-weight:inherit;letter-spacing:inhe
 .wordmark-mark::before{content:none}
 
 /* Logo bits are switched by a small script in Sivu.astro. The centre
-   bit only ever lights alone, and then in orange. */
+   bit only ever lights alone, and then in gold. */
 .wordmark-bit{fill:currentColor;opacity:0;transition:opacity .28s ease}
 .wordmark-bit.on{opacity:1}
-.wordmark-bit:nth-of-type(5){fill:#FF6B3D}
+.wordmark-bit:nth-of-type(5){fill:#F2B45A}
 
-/* Accent: signal orange, the one colour in the black-and-white film.
+/* Accent: warm gold, matching the gold light in the film.
    Used only for emphasised words and CTA arrows. A lighter tone on black,
    a deeper one on paper so both clear contrast. */
-:root{--accent:#FF6B3D}
-.paper{--accent:#D1441A}
-.bridge-step--key{--accent:#FF6B3D}
+:root{--accent:#F2B45A}
+.paper{--accent:#9A5F12}
+.bridge-step--key{--accent:#F2B45A}
 em{color:var(--accent)}
 .arrows{color:var(--accent)}
 
@@ -466,3 +466,135 @@ em{color:var(--accent)}
 .js .dive-copy .reveal-d2{animation-delay:.2s}
 .js .dive-copy .reveal-d3{animation-delay:.3s}
 @keyframes hero-in{from{opacity:0;transform:translateY(28px)}}
+
+
+/* ============================================================
+   Pelkistys (valittu 29.9.): versio A – yksi lämmin musta pohja,
+   kulta vain korostuksissa – suuremmalla tekstillä ja
+   Hedvig Letters -fonteilla.
+   ============================================================ */
+/* A · Musta ja kulta, minimi
+   Koko sivusto yhdellä lämpimällä mustalla pohjalla: valkoiset otsikot,
+   pehmeän lämmin leipäteksti, kulta vain korostussanoissa ja CTA-nuolissa.
+   Ei numerointia, kortteja, pillereitä eikä hiusviivoja – väljyys ja koko tekevät työn. */
+
+/* ---------- Värit: yksi pohja, kolme tekstisävyä, yksi aksentti ---------- */
+:root{
+  --bg:var(--black);
+  --text:#FBF8F3;
+  --text-body:#D2CABD;
+  --text-muted:#978D80;
+  --rule:rgb(251 248 243 / .1);
+  --rule-strong:rgb(251 248 243 / .1);
+  --accent:#F2B45A;
+}
+/* Paperiosiot neutraloidaan samaan mustaan pohjaan. */
+.paper,
+.bridge-step--key{
+  --bg:var(--black);
+  --bg-raised:var(--black);
+  --text:#FBF8F3;
+  --text-body:#D2CABD;
+  --text-muted:#978D80;
+  --rule:rgb(251 248 243 / .1);
+  --rule-strong:rgb(251 248 243 / .1);
+  --accent:#F2B45A;
+  background:var(--black);
+  color:var(--text-body);
+}
+.paper ::selection{background:var(--text);color:var(--black)}
+em{color:var(--accent)}
+.arrows{color:var(--accent)}
+.offer .eyebrow,.step-offer{color:var(--text-muted)}
+body::after{opacity:.04}                      /* rae hiljaisemmaksi */
+
+/* ---------- Yksi ohut viiva peräkkäisten osioiden väliin, muut pois ---------- */
+.section + .section,.closing{border-top:1px solid var(--rule)}
+.rule-top,.offer{border-top:0;border-bottom:0}
+.principles,.questions,.audience,.bridge,.includes,.faq,.people,.contact-grid{border-top:0}
+.questions li,.audience-item,.includes li,.faq details{border-bottom:0}
+.outcome,.context-outcome{border-top:0;padding-top:0}
+
+/* ---------- Numerointi ja seurantapalkit pois ---------- */
+.principle .num,
+.audience-item .num,
+.step-index{display:none}
+.questions li::before{content:none}
+
+/* ---------- Periaatteet: pelkkä ruudukko, väli hoitaa erottelun ---------- */
+.principles{gap:clamp(36px,4vw,64px)}
+.principles > .principle,
+.principles > .principle + .principle{padding:0;border:0}
+.principle h3{margin:0 0 14px}
+
+/* ---------- Kysymykset: isoja lauseita, ei numeroita eikä viivoja ---------- */
+.questions li{display:block;padding:clamp(14px,1.8vw,24px) 0;max-width:24ch}
+
+/* ---------- Kenelle: kaksi palstaa ilman numerosaraketta ---------- */
+.audience{row-gap:clamp(40px,5vw,72px)}
+.audience-item{display:block;padding:0}
+
+/* ---------- Konteksti-silta: ei laatikkoa, ei nuolia, ei pystyviivoja ---------- */
+.bridge{column-gap:clamp(28px,4vw,56px);row-gap:44px}
+.bridge > .bridge-step,
+.bridge > .bridge-step + .bridge-step{padding:0;border:0;margin-top:0}
+.bridge .bridge-step--key{padding:0!important;background:transparent}
+.bridge-step + .bridge-step .bridge-label::before{content:none}
+.bridge-step h3{margin:22px 0 12px}
+.includes{row-gap:36px}
+.includes li{padding:0}
+
+/* ---------- Vaiheen hinta: tavallista tekstiä, ei pilleriä ---------- */
+.step-price{display:flex;padding:0;border:0;border-radius:0;background:none;
+  -webkit-backdrop-filter:none;backdrop-filter:none;color:var(--bone);gap:12px}
+.step-price + .step-offer{margin:6px 0 0}
+
+/* ---------- UKK: väljä lista, vain +-merkki ---------- */
+.faq summary{padding:22px 0}
+.faq summary::after{color:var(--text-muted)}
+
+/* ---------- Tiimi ja yhteystiedot ---------- */
+.people{row-gap:56px}
+.person{padding:0}
+.contact-card{padding-top:0}
+.contact-grid{row-gap:44px}
+
+/* ---------- Loppu-CTA ja alatunniste ---------- */
+.closing .eyebrow{color:var(--text-body)}
+.site-footer{border-top:1px solid var(--rule)}
+
+/* ---------- Header: kieli ja valikko ilman pillereitä ---------- */
+.lang{border:0;padding:0;gap:2px}
+.lang a{border-radius:0;color:rgb(251 248 243 / .55)}
+.lang a[aria-current]{background:none;color:var(--text);text-decoration:underline;
+  text-decoration-color:var(--accent);text-underline-offset:.35em}
+.menu-btn{background:transparent;color:var(--text);border-radius:0}
+
+/* ---------- Logo: 3x3-bitit (pohjan kommentti on rikki, palautetaan tässä) ---------- */
+.wordmark-bit{fill:currentColor;opacity:0;transition:opacity .28s ease}
+.wordmark-bit.on{opacity:1}
+.wordmark-bit:nth-of-type(5){fill:#F2B45A}
+
+/* ---------- Kirkkaan videon päällä oleva lause pysyy tummana ---------- */
+.dive-line{color:var(--black)}
+
+/* ---------- Mobiili ---------- */
+@media (max-width:860px){
+  .principles,.bridge,.includes,.audience,.people{row-gap:40px}
+  .questions li{max-width:none}
+  .bridge-step h3{margin-top:14px}
+}
+
+/* Headings a touch smaller than before; body text stays at its normal size. */
+:root{--fs-hero:clamp(2.8rem, 8vw, 9rem); --fs-h2:clamp(2rem, 4.7vw, 4.9rem)}
+@media (min-width:861px){ .dive-copy h1{font-size:clamp(2.3rem, min(6.3vw, 12svh), 7.2rem)} }
+.step-scene h2{font-size:clamp(3.1rem, 9.5vw, 10rem)}
+.page-hero h1{font-size:clamp(2.7rem, 7vw, 7.6rem)}
+.about-hero h1{font-size:clamp(2.7rem, 6.5vw, 7rem)}
+.cta-lg,.closer{font-size:clamp(2.1rem, 5.2vw, 5.2rem)}
+.person h3{font-size:clamp(2rem, 3.2vw, 3.3rem)}
+
+/* Hedvig Letters: serif headings, sans text, no italics. */
+h1,h2,h3,.cta-lg,.dive-line,.closer{font-family:var(--font-serif);font-weight:400;letter-spacing:-.025em}
+body,.lead,p,li,a{font-family:var(--font-sans);font-weight:400}
+em{font-style:normal}
