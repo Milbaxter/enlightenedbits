@@ -193,7 +193,7 @@ export const fi: Content = {
     title: 'Meistä – Enlightened Bits, Helsinki',
     description: 'Enlightened Bits on helsinkiläinen tekoälykonsultointiyritys. Autamme yrityksiä ja yhteisöjä käyttämään tekoälyä omilla ehdoillaan.',
     eyebrow: 'Meistä',
-    heroTitle: 'Keitä olemme.',
+    heroTitle: 'Keitä olemme?',
     lede:
       'Enlightened Bits on helsinkiläinen tekoälykonsultointiyritys, ja taustamme on Aalto-yliopistossa. Uskomme, että tekoälyn hyödyt kuuluvat kaikille, kunhan jokainen organisaatio saa itse päättää, millä ehdoilla sitä käyttää.',
     photoAlt: 'Maximilian ja Juhani juoksevat Helsinki City Marathonia sateessa.',

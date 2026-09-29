@@ -128,7 +128,7 @@ const num = (i: number) => String(i + 1).padStart(2, '0');
       <h2 class="reveal reveal-d1">{h.whyTitle}</h2>
       {h.whyText.map((p) => <p class="reveal reveal-d2">{p}</p>)}
       <div class="actions reveal reveal-d3">
-        <Cta href={t.routes.about}>{t.about.heroTitle.replace(/\.$/, '')}</Cta>
+        <Cta href={t.routes.about}>{t.about.heroTitle.replace(/[.?]$/, '')}</Cta>
       </div>
     </div>
   </Kohtaus>
