@@ -41,7 +41,7 @@ const navItems = (['home', 'approach', 'about'] as const).map((key) => ({
   <script type="application/ld+json" set:html={JSON.stringify({
     '@context': 'https://schema.org', '@type': 'Organization', name: 'Enlightened Bits',
     url: 'https://enlightenedbits.com/',
-    address: { '@type': 'PostalAddress', streetAddress: 'Josafatinkatu 9', postalCode: '00510', addressLocality: 'Helsinki', addressCountry: 'FI' },
+    address: { '@type': 'PostalAddress', streetAddress: 'Josafatinkatu 9 LH 64', postalCode: '00510', addressLocality: 'Helsinki', addressCountry: 'FI' },
   })} />
 </head>
 <body>
@@ -95,6 +95,12 @@ const navItems = (['home', 'approach', 'about'] as const).map((key) => ({
   document.querySelectorAll<HTMLElement>('[data-until]').forEach((el) => {
     if (Date.now() > new Date(`${el.dataset.until}T23:59:59+02:00`).getTime()) el.remove();
   });
+
+  // Call buttons dial straight away on phones; elsewhere they lead to the
+  // contact details, where the numbers are shown.
+  if (!window.matchMedia('(pointer: coarse)').matches) {
+    document.querySelectorAll<HTMLAnchorElement>('a[data-fallback]').forEach((a) => { a.href = a.dataset.fallback!; });
+  }
 
   // Reveal on scroll
   const io = new IntersectionObserver((entries) => {

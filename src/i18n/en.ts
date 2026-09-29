@@ -7,7 +7,8 @@ export const en: Content = {
     skip: 'Skip to content',
     navLabel: 'Main menu',
     nav: { home: 'Home', approach: 'How we work', about: 'About', contact: 'Contact' },
-    book: 'Book a free discovery call',
+    book: 'Call us',
+    bookHref: 'tel:+358504941660',
     footer: '© 2026 Enlightened Bits · Josafatinkatu 9, 00510 Helsinki',
     footerNote: 'AI on your own terms',
   },
@@ -79,7 +80,7 @@ export const en: Content = {
       'We have built AI agents and machine learning systems. We know what today’s models can and cannot do.',
       'So we don’t sell hype. We advise and build ourselves, we work transparently, and sometimes our best advice is to leave AI out.',
     ],
-    ctaTitle: 'Let’s start with a free discovery call. Tell us what matters to you, and we’ll work out together where to begin.',
+    ctaTitle: 'Call or email us. The first conversation is free: tell us what matters to you, and we’ll work out together where to begin.',
   },
 
   offer: {
@@ -226,7 +227,7 @@ export const en: Content = {
     storyAction: 'Work with us',
     contactTitle: 'Contact',
     visitLabel: 'Visiting address',
-    address: ['Enlightened Bits', 'Josafatinkatu 9 1h 64', '00510 Helsinki', 'Finland'],
+    address: ['Enlightened Bits', 'Josafatinkatu 9 LH 64', '00510 Helsinki', 'Finland'],
     mapLabel: 'Show on a map',
     reachLabel: 'Email and phone',
     visitNote: 'Our office is in Helsinki. Please arrange a visit by email in advance.',

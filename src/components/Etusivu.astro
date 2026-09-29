@@ -20,7 +20,7 @@ const num = (i: number) => String(i + 1).padStart(2, '0');
       <h1 class="reveal reveal-d1"><Fragment set:html={h.heroLines[0]} /><br><Fragment set:html={h.heroLines[1]} /></h1>
       <p class="lead reveal reveal-d2">{h.lede}</p>
       <div class="actions reveal reveal-d3">
-        <Cta href={t.routes.contact}>{t.ui.book}</Cta>
+        <Cta href={t.ui.bookHref} fallback={t.routes.contact}>{t.ui.book}</Cta>
         <Cta href={t.routes.approach} size="sm" quiet>{h.secondaryAction}</Cta>
       </div>
     </div>
@@ -35,7 +35,7 @@ const num = (i: number) => String(i + 1).padStart(2, '0');
       <div>
         <p class="reveal reveal-d2">{t.offer.text}</p>
         <p class="offer-note reveal reveal-d2">{t.offer.note}</p>
-        <div class="actions reveal reveal-d3"><Cta href={t.routes.contact}>{t.ui.book}</Cta></div>
+        <div class="actions reveal reveal-d3"><Cta href={t.ui.bookHref} fallback={t.routes.contact}>{t.ui.book}</Cta></div>
       </div>
     </div>
   </section>
@@ -133,5 +133,5 @@ const num = (i: number) => String(i + 1).padStart(2, '0');
     </div>
   </Kohtaus>
 
-  <Loppu lead={h.ctaTitle} label={t.ui.book} href={t.routes.contact} />
+  <Loppu lead={h.ctaTitle} label={t.ui.book} href={t.ui.bookHref} fallback={t.routes.contact} />
 </Sivu>

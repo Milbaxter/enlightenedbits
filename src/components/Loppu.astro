@@ -1,11 +1,11 @@
 ---
 import Cta from './Cta.astro';
-interface Props { lead: string; label: string; href: string }
-const { lead, label, href } = Astro.props;
+interface Props { lead: string; label: string; href: string; fallback?: string }
+const { lead, label, href, fallback } = Astro.props;
 ---
 <section class="closing">
   <div class="wrap">
     <p class="eyebrow reveal">{lead}</p>
-    <div class="actions reveal reveal-d1"><Cta href={href} size="lg">{label}</Cta></div>
+    <div class="actions reveal reveal-d1"><Cta href={href} size="lg" fallback={fallback}>{label}</Cta></div>
   </div>
 </section>

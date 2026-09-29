@@ -1,6 +1,7 @@
 ---
 // Text link followed by three arrows — the site's only "button".
-interface Props { href: string; size?: 'sm' | 'md' | 'lg'; quiet?: boolean; class?: string }
-const { href, size = 'md', quiet = false, class: cls } = Astro.props;
+// `fallback` is used instead of a tel: link on devices that can't call.
+interface Props { href: string; size?: 'sm' | 'md' | 'lg'; quiet?: boolean; class?: string; fallback?: string }
+const { href, size = 'md', quiet = false, class: cls, fallback } = Astro.props;
 ---
-<a class:list={['cta', size !== 'md' && `cta-${size}`, quiet && 'cta-quiet', cls]} href={href}><slot /><span class="arrows" aria-hidden="true"><i>→</i><i>→</i><i>→</i></span></a>
+<a class:list={['cta', size !== 'md' && `cta-${size}`, quiet && 'cta-quiet', cls]} href={href} data-fallback={fallback}><slot /><span class="arrows" aria-hidden="true"><i>→</i><i>→</i><i>→</i></span></a>

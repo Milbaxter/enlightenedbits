@@ -72,5 +72,5 @@ const contactId = t.routes.contact.split('#')[1];
     </div>
   </section>
 
-  <Loppu lead={t.home.ctaTitle} label={t.ui.book} href={`mailto:${a.people[0].email}`} />
+  <Loppu lead={t.home.ctaTitle} label={t.ui.book} href={t.ui.bookHref} fallback={t.routes.contact} />
 </Sivu>
