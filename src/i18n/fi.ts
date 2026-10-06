@@ -85,7 +85,7 @@ export const fi: Content = {
 
   offer: {
     until: '2026-10-31',
-    eyebrow: 'Syys–lokakuun tarjous yleishyödyllisille',
+    eyebrow: 'Lokakuun tarjous yleishyödyllisille',
     title: 'Kartoitus <em>puoleen hintaan</em> yleishyödyllisille yhteisöille.',
     text: 'Järjestöt, säätiöt ja muut yleishyödylliset yhteisöt saavat Kartoituksesta 50 %:n alennuksen, kun tilaus tehdään viimeistään 31.10.2026. Kartoituksessa selvitämme yhdessä, mihin työaika kuluu, missä tekoäly voisi vapauttaa sitä tärkeämpään ja missä sille ei ole paikkaa.',
     note: 'Ensimmäinen askel on maksuton kartoituspuhelu. Itse työn voi ajoittaa myös marraskuulle tai myöhemmäksi.',
