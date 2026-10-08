@@ -17,10 +17,10 @@ export const fi: Content = {
     title: 'Enlightened Bits – Tekoälyä omilla ehdoilla',
     description:
       'Tekoälykonsultointia yrityksille, järjestöille ja julkiselle sektorille. Autamme organisaatioita käyttämään tekoälyä taitavammin: määrittelemään ongelman, antamaan tekoälylle hyvän kontekstin ja mittaamaan todellisia tuloksia.',
-    heroLines: ['Tekoälyä', '<em>omilla ehdoilla.</em>'],
+    heroLines: ['Määrittele ongelma.', '<em>Anna tekoälyn tehdä työ.</em>'],
     caption: 'Ensin tavoitteet.\nSitten tekoäly.',
     lede:
-      'Autamme organisaatioita käyttämään tekoälyä taitavammin: määrittelemään ongelman selkeästi, antamaan tekoälylle hyvän kontekstin ja mittaamaan todellisia tuloksia. Tiedot ja päätösvalta pysyvät teillä.',
+      'Autamme organisaatioita käyttämään tekoälyä taitavasti: selkeät tavoitteet, hyvä konteksti ja tulokset, jotka voi mitata omassa toiminnassa.',
     secondaryAction: 'Näin työskentelemme',
     bandLeft: 'Tekoälykonsultointia yrityksille ja yhteisöille',
     beliefsEyebrow: 'Mihin uskomme',
