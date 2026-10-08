@@ -105,8 +105,6 @@ export const en: Content = {
       short: 'A workshop where your organisation articulates its own values and goals for AI.',
       body: 'We bring together leadership, staff and, where relevant, members or volunteers. We cover what AI is and what it isn’t, then talk about what you value, what you are aiming for, and what you don’t want to hand over to a machine. We also make room for the worries and fears AI raises.',
       outcome: 'Your organisation’s own AI principles and your first three use cases: short, plain-spoken and made together.',
-      product: 'Direction workshop',
-      price: '€1,500 + VAT',
     },
     {
       eyebrow: 'Step 02',
@@ -172,7 +170,7 @@ export const en: Content = {
     faq: [
       {
         q: 'What does it cost?',
-        a: 'The first discovery call is free. The direction workshop is €1,500 + VAT. Other services are priced to your needs after the discovery call.',
+        a: 'The first discovery call is free. We price each project to your needs after that call.',
       },
       {
         q: 'Do we need to be using AI already?',
@@ -192,7 +190,7 @@ export const en: Content = {
       },
       {
         q: 'Can we buy just part of it?',
-        a: 'Yes. Many start with the direction workshop alone (€1,500 + VAT) and then decide whether to continue together or on their own.',
+        a: 'Yes. Many start with the direction workshop alone and then decide whether to continue together or on their own.',
       },
     ],
   },
