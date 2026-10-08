@@ -16,11 +16,11 @@ export const en: Content = {
   home: {
     title: 'Enlightened Bits – AI on your own terms',
     description:
-      'AI consulting for companies, non-profits and the public sector. We help you decide where AI is worth using, then build it so your data and your decisions stay with you.',
+      'AI consulting for companies, non-profits and the public sector. We help organisations use AI more skilfully: define the problem, give the AI good context, and measure real results.',
     heroLines: ['AI on', '<em>your own terms.</em>'],
     caption: 'Your goals first.\nThen the AI.',
     lede:
-      'We help organisations decide where AI is worth using and where it is not. Then we build it so that your data and your decisions stay with you.',
+      'We help organisations use AI more skilfully: define the problem clearly, give the AI good context, and measure real results. Your data and your decisions stay with you.',
     secondaryAction: 'How we work',
     bandLeft: 'AI consulting for companies and communities',
     beliefsEyebrow: 'What we believe',
