@@ -67,16 +67,6 @@ export const fi: Content = {
         text: 'Opetamme tiimillenne uudet työkalut. Taitava käyttäjä saa samasta tekoälystä paljon enemmän irti.',
       },
     ],
-    questionsEyebrow: 'Kuulostaako tutulta?',
-    questionsTitle: 'Tekoälyä käytetään jo, mutta yhteinen suunnitelma puuttuu.',
-    questions: [
-      'Osa työntekijöistä käyttää tekoälyä omin päin, ja osa ei uskalla kokeilla sitä lainkaan.',
-      'Hallitus odottaa tekoälysuunnitelmaa, mutta kukaan ei tiedä, mistä aloittaa.',
-      'Tekoälyä on kokeiltu, mutta vastaukset jäivät ympäripyöreiksi, koska se ei tunne organisaatiotanne.',
-      'Arkaluonteisia tietoja ei voi viedä ulkomaiseen pilvipalveluun, joten koko asia tuntuu mahdottomalta.',
-    ],
-    questionsNote:
-      'Tilanne on yleinen. <a href="https://stat.fi/julkaisu/cm1hnps701dbm07w59uo0jw6u" rel="noopener">Tilastokeskuksen mukaan</a> vähintään kymmenen hengen yrityksistä 38 % käytti tekoälyä vuonna 2025, mutta vain 15 %:lla oli sille kirjatut käytännöt. <a href="https://tieke.fi/kartoitimme-tekoalyn-vastuullinen-kayttoonotto-ja-somen-murros-pohdituttavat-jarjestoissa-arki-on-tasapainoilua-digitalisaation-kanssa/" rel="noopener">TIEKEn kyselyssä</a> 37 % järjestöistä ei käyttänyt tekoälyä vielä lainkaan.',
     processTitle: 'Kolme tapaa tehdä työtä kanssamme. Aloitetaan siitä, missä olette nyt.',
     processLink: 'Lue palveluista tarkemmin',
     audienceTitle: '',

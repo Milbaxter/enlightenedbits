@@ -67,16 +67,6 @@ export const en: Content = {
         text: 'We teach your team to use the new tools well. A skilled user gets much more from the same AI.',
       },
     ],
-    questionsEyebrow: 'Sound familiar?',
-    questionsTitle: 'AI is already part of your work. The plan is still missing.',
-    questions: [
-      'Some of your people use AI on their own, and others are afraid to touch it.',
-      'The board is asking for an AI plan, and nobody knows where to start.',
-      'You ran a pilot, but the answers stayed generic because the machine doesn’t know you.',
-      'Sensitive data can’t go to a foreign cloud, so the whole thing feels impossible.',
-    ],
-    questionsNote:
-      'You are not alone. According to <a href="https://stat.fi/en/publication/cm1hnps701dbm07w59uo0jw6u" rel="noopener">Statistics Finland</a>, 38% of Finnish companies with ten or more employees used AI in 2025, but only 15% had written down shared practices for it. In a <a href="https://tieke.fi/kartoitimme-tekoalyn-vastuullinen-kayttoonotto-ja-somen-murros-pohdituttavat-jarjestoissa-arki-on-tasapainoilua-digitalisaation-kanssa/" rel="noopener">survey by TIEKE</a>, 37% of non-profits were not using AI at all.',
     processTitle: 'Three ways to work with us. Start where you are now.',
     processLink: 'See the services in detail',
     audienceTitle: '',

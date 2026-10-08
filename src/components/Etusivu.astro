@@ -44,19 +44,6 @@ const cols = (n: number) => (n <= 4 ? n : 3);
 
 
 
-  <section class="section">
-    <div class="wrap">
-      <div class="section-head">
-        <p class="eyebrow reveal">{h.questionsEyebrow}</p>
-        <h2 class="reveal reveal-d1">{h.questionsTitle}</h2>
-      </div>
-      <ol class="questions">
-        {h.questions.map((q) => <li class="reveal">{q}</li>)}
-      </ol>
-      <p class="pains-note reveal" set:html={h.questionsNote} />
-    </div>
-  </section>
-
   <section class="section paper">
     <div class="wrap">
       <div class="section-head">
