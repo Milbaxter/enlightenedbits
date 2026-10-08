@@ -12,6 +12,8 @@ interface Props { t: Content; alternate: string }
 const { t, alternate } = Astro.props;
 const h = t.home;
 const num = (i: number) => String(i + 1).padStart(2, '0');
+// Up to four in a row; five or more wrap at three so the text stays readable.
+const cols = (n: number) => (n <= 4 ? n : 3);
 ---
 <Sivu t={t} title={h.title} description={h.description} current="home" alternate={alternate}>
   <Sukellus line={h.caption} cue={t.lang === 'fi' ? 'Vieritä' : 'Scroll'}>
@@ -61,7 +63,7 @@ const num = (i: number) => String(i + 1).padStart(2, '0');
         <p class="eyebrow reveal">{h.beliefsEyebrow}</p>
         <h2 class="reveal reveal-d1"><Fragment set:html={h.beliefsTitle} /></h2>
       </div>
-      <div class="principles" style={`--cols:${h.beliefs.length}`}>
+      <div class="principles" style={`--cols:${cols(h.beliefs.length)}`}>
         {h.beliefs.map((b, i) => (
           <article class:list={['principle reveal', `reveal-d${i}`]}>
             <h3>{b.title}</h3>
@@ -78,7 +80,7 @@ const num = (i: number) => String(i + 1).padStart(2, '0');
         <p class="eyebrow reveal">{h.principlesTitle}</p>
         <h2 class="reveal reveal-d1"><Fragment set:html={h.principlesLead} /></h2>
       </div>
-      <div class="principles" style={`--cols:${h.principles.length}`}>
+      <div class="principles" style={`--cols:${cols(h.principles.length)}`}>
         {h.principles.map((p, i) => (
           <article class:list={['principle reveal', `reveal-d${i}`]}>
             <span class="num">{num(i)}</span>
