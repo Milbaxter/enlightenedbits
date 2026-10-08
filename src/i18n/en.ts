@@ -94,7 +94,7 @@ export const en: Content = {
     until: '2026-10-31',
     eyebrow: 'Autumn offer for non-profits',
     title: 'Mapping at <em>half price</em> for non-profits.',
-    text: 'Non-profits, foundations and other public-benefit organisations get 50% off our Mapping service when they book it by 31 October 2026. Together we look at where your time really goes, where AI could free it up for what matters more, and where it has no place.',
+    text: 'We want to help organisations that have a real and meaningful impact. That is why we give this offer. Non-profits, foundations and other public-benefit organisations get 50% off our Mapping service when they book it by 31 October 2026. Together we find where AI can free your time for your mission, and where AI has no place.',
     note: 'Start with a free discovery call. The work itself can take place in November or later.',
   },
 
