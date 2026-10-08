@@ -92,9 +92,9 @@ export const en: Content = {
 
   offer: {
     until: '2026-10-31',
-    eyebrow: 'Autumn offer for non-profits',
-    title: 'Mapping at <em>half price</em> for non-profits.',
-    text: 'We want to help organisations that have a real and meaningful impact. That is why we give this offer. Non-profits, foundations and other public-benefit organisations get 50% off our Mapping service when they book it by 31 October 2026. Together we find where AI can free your time for your mission, and where AI has no place.',
+    eyebrow: 'Autumn offer',
+    title: 'Mapping at <em>half price</em>.',
+    text: 'We want to help organisations that have a real and meaningful impact. That is why we give this offer. Every organisation gets 50% off our Mapping service when it books by 31 October 2026. Together we find where AI can free your time for the work that matters most, and where AI has no place.',
     note: 'Start with a free discovery call. The work itself can take place in November or later.',
   },
 
@@ -111,7 +111,7 @@ export const en: Content = {
       title: 'Mapping',
       short: 'We map your organisation and find the lowest-hanging fruit for AI.',
       body: 'We look at where your time and money actually go. We find the tasks where AI gives the most value for the least effort, and the tasks where AI has no place. For each task, we define a clear goal and a test for success. We also check privacy, risks and costs.',
-      offer: '−50% for non-profits until 31 Oct',
+      offer: '−50% until 31 Oct',
       outcome: 'A prioritised list of AI opportunities, each with a goal, a test for success and an honest estimate of the value.',
     },
     {
