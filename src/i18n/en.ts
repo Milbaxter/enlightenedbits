@@ -17,12 +17,11 @@ export const en: Content = {
     title: 'Enlightened Bits – AI on your own terms',
     description:
       'AI consulting for companies, non-profits and the public sector. We help organisations use AI more skilfully: define the problem, give the AI good context, and measure real results.',
-    heroLines: ['AI on', '<em>your own terms.</em>'],
+    heroLines: ['Define the problem.', '<em>Let AI do the work.</em>'],
     caption: 'Your goals first.\nThen the AI.',
     lede:
-      'We help organisations use AI more skilfully: define the problem clearly, give the AI good context, and measure real results. Your data and your decisions stay with you.',
+      'We help organisations use AI with skill: clear goals, good context, and results you can measure in your business.',
     secondaryAction: 'How we work',
-    bandLeft: 'AI consulting for companies and communities',
     beliefsEyebrow: 'What we believe',
     beliefsTitle: 'Define the problem well. Then <em>AI</em> can do the work.',
     beliefs: [
