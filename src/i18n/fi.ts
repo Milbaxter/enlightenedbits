@@ -98,8 +98,6 @@ export const fi: Content = {
       short: 'Työpaja, jossa organisaatio päättää, mitä se tekoälyltä haluaa ja mitä ei.',
       body: 'Kokoamme yhteen johdon, työntekijät ja tarvittaessa jäsenet tai vapaaehtoiset. Aluksi käymme läpi, mitä tekoäly on ja mitä se ei ole. Sitten keskustelemme siitä, mitä pidätte tärkeänä, mihin pyritte ja mitä ette halua antaa koneen hoidettavaksi. Myös huolille ja peloille on tilaa.',
       outcome: 'Organisaation omat tekoälyperiaatteet ja kolme ensimmäistä käyttökohdetta. Lyhyesti, selkeästi ja yhdessä sovittuna.',
-      product: 'Suuntatyöpaja',
-      price: '1 500 € + alv',
     },
     {
       eyebrow: 'Vaihe 02',
@@ -165,7 +163,7 @@ export const fi: Content = {
     faq: [
       {
         q: 'Mitä yhteistyö maksaa?',
-        a: 'Ensimmäinen kartoituspuhelu on maksuton. Suuntatyöpaja maksaa 1 500 € + alv. Muut palvelut hinnoitellaan tarpeen mukaan kartoituspuhelun jälkeen.',
+        a: 'Ensimmäinen kartoituspuhelu on maksuton. Palvelut hinnoitellaan tarpeen mukaan kartoituspuhelun jälkeen.',
       },
       {
         q: 'Pitääkö meidän jo käyttää tekoälyä?',
@@ -185,7 +183,7 @@ export const fi: Content = {
       },
       {
         q: 'Voiko palveluista ostaa vain osan?',
-        a: 'Voi. Moni aloittaa pelkällä suuntatyöpajalla (1 500 € + alv) ja päättää sen jälkeen, jatketaanko yhdessä vai itse.',
+        a: 'Voi. Moni aloittaa pelkällä suuntatyöpajalla ja päättää sen jälkeen, jatketaanko yhdessä vai itse.',
       },
     ],
   },
