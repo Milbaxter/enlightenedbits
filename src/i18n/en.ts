@@ -77,7 +77,7 @@ export const en: Content = {
     ],
     questionsNote:
       'You are not alone. According to <a href="https://stat.fi/en/publication/cm1hnps701dbm07w59uo0jw6u" rel="noopener">Statistics Finland</a>, 38% of Finnish companies with ten or more employees used AI in 2025, but only 15% had written down shared practices for it. In a <a href="https://tieke.fi/kartoitimme-tekoalyn-vastuullinen-kayttoonotto-ja-somen-murros-pohdituttavat-jarjestoissa-arki-on-tasapainoilua-digitalisaation-kanssa/" rel="noopener">survey by TIEKE</a>, 37% of non-profits were not using AI at all.',
-    processTitle: 'Four steps. We start from where you are now.',
+    processTitle: 'Three ways to work with us. Start where you are now.',
     processLink: 'See the services in detail',
     audienceTitle: '',
     audienceLead: '',
@@ -100,33 +100,26 @@ export const en: Content = {
 
   process: [
     {
-      eyebrow: 'Step 01',
-      title: 'Direction',
-      short: 'A workshop where your organisation articulates its own values and goals for AI.',
-      body: 'We bring together leadership, staff and, where relevant, members or volunteers. We cover what AI is and what it isn’t, then talk about what you value, what you are aiming for, and what you don’t want to hand over to a machine. We also make room for the worries and fears AI raises.',
-      outcome: 'Your organisation’s own AI principles and your first three use cases: short, plain-spoken and made together.',
+      eyebrow: 'Offer 01',
+      title: 'Workshop',
+      short: 'A facilitated workshop. Learn the latest AI tools and decide together how your organisation wants to use AI.',
+      body: 'We bring together leadership and staff. We show the latest AI tools in practice, and you try them yourselves. Then we talk about how your organisation wants to use AI, what you want to keep in human hands, and what worries you.',
+      outcome: 'A shared understanding of what AI can do today, your own principles for AI, and your first ideas for where to use it.',
     },
     {
-      eyebrow: 'Step 02',
+      eyebrow: 'Offer 02',
       title: 'Mapping',
-      short: 'A look at everyday work: where the real benefits are and where the limits lie.',
-      body: 'We look at where your time actually goes. We identify the tasks where AI could free up time for what matters more, and the ones where it has no place. Along the way we assess privacy, risks and costs.',
+      short: 'We map your organisation and find the lowest-hanging fruit for AI.',
+      body: 'We look at where your time and money actually go. We find the tasks where AI gives the most value for the least effort, and the tasks where AI has no place. For each task, we define a clear goal and a test for success. We also check privacy, risks and costs.',
       offer: '−50% for non-profits until 31 Oct',
-      outcome: 'A prioritised list of use cases, the terms for each, and an honest estimate of the benefits.',
+      outcome: 'A prioritised list of AI opportunities, each with a goal, a test for success and an honest estimate of the value.',
     },
     {
-      eyebrow: 'Step 03',
-      title: 'Pilot',
-      short: 'One or two small pilots in real work, with real people.',
-      body: 'We build pilots so that your data and decisions stay with you, using open-source models on your own infrastructure where needed. We measure what we agreed mattered in the direction step.',
-      outcome: 'A working pilot, feedback from users, and a basis for deciding whether to continue, change course or stop.',
-    },
-    {
-      eyebrow: 'Step 04',
-      title: 'Adoption',
-      short: 'Skills, practices and follow-up, so the change lasts.',
-      body: 'We train people to use the tools with judgement and write down shared ground rules. We also agree how the principles will be revisited as the technology and your needs change.',
-      outcome: 'A capable team, agreed practices, and a light way to keep checking direction.',
+      eyebrow: 'Offer 03',
+      title: 'Build',
+      short: 'From prototype to full-stack production. We build it and we deploy it.',
+      body: 'We start with a fast prototype and test it with real people and real data. When it works, we build it into a full-stack system and deploy it to production. When necessary, we run open models on servers that you control. We measure results in your business, not in a demo.',
+      outcome: 'A working system in production, measured against the goals we agreed, and a team that knows how to use it.',
     },
   ],
 
@@ -153,7 +146,7 @@ export const en: Content = {
     outcomeLabel: 'Outcome',
     outcome: 'Your organisation’s context: a plain-language body of work that you own, and that works with any AI model, including one on your own server.',
     closer: 'Models change. The <em>context</em> stays with you.',
-    fit: 'Can be done as part of mapping and piloting, or as a service of its own.',
+    fit: 'Can be done as part of mapping and building, or as a service of its own.',
     homeLink: 'Read more about organisational context',
     anchor: 'context',
   },
@@ -161,10 +154,10 @@ export const en: Content = {
   approach: {
     title: 'How we work – Enlightened Bits',
     description:
-      'Four steps from values to practice: direction, mapping, pilot and adoption. You can start at any step.',
+      'Three offers: a workshop, a mapping of your organisation, and building from prototype to production. You can start with any of them.',
     heroLines: ['From values to practice,', '<em>at your own pace.</em>'],
     lede:
-      'Some organisations are still finding their direction, others have already run pilots and want to bring AI into everyday work. So you can start at any step, and each one leaves you with something of your own, even if you carry on by yourselves. Most start with a free discovery call and the direction workshop.',
+      'Some organisations are just starting with AI. Others already have a pilot and want to take it to production. So you can start with any offer, and each one gives you something of your own, even if you continue by yourselves. Most start with a free call and the workshop.',
     outcomeLabel: 'Outcome',
     faqTitle: 'Frequently asked',
     faq: [
@@ -190,7 +183,7 @@ export const en: Content = {
       },
       {
         q: 'Can we buy just part of it?',
-        a: 'Yes. Many start with the direction workshop alone and then decide whether to continue together or on their own.',
+        a: 'Yes. Many start with the workshop alone and then decide whether to continue together or on their own.',
       },
     ],
   },
