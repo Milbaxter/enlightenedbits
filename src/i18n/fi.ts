@@ -17,7 +17,7 @@ export const fi: Content = {
     title: 'Enlightened Bits – Tekoälyä omilla ehdoilla',
     description:
       'Tekoälykonsultointia yrityksille, järjestöille ja julkiselle sektorille. Autamme organisaatioita käyttämään tekoälyä taitavammin: määrittelemään ongelman, antamaan tekoälylle hyvän kontekstin ja mittaamaan todellisia tuloksia.',
-    heroLines: ['Kaikkien aikojen suurin vipuvoima.', '<em>Osaatteko käyttää sitä?</em>'],
+    heroLines: ['Aikamme voimakkain työkalu.', '<em>Osaatteko käyttää sitä?</em>'],
     caption: 'Ensin tavoitteet.\nSitten tekoäly.',
     lede:
       'Autamme organisaatioita käyttämään tekoälyä taitavasti: selkeät tavoitteet, hyvä konteksti ja tulokset, jotka voi mitata omassa toiminnassa.',
