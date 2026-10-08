@@ -50,10 +50,6 @@ export interface Content {
     principlesTitle: string;
     principlesLead: string;
     principles: { title: string; text: string }[];
-    questionsEyebrow: string;
-    questionsTitle: string;
-    questions: string[];
-    questionsNote: string;
     processTitle: string;
     processLink: string;
     audienceTitle: string;
