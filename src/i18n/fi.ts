@@ -17,7 +17,7 @@ export const fi: Content = {
     title: 'Enlightened Bits – Tekoälyä omilla ehdoilla',
     description:
       'Tekoälykonsultointia yrityksille, järjestöille ja julkiselle sektorille. Autamme organisaatioita käyttämään tekoälyä taitavammin: määrittelemään ongelman, antamaan tekoälylle hyvän kontekstin ja mittaamaan todellisia tuloksia.',
-    heroLines: ['Tehokkain työkalu, jonka ihmiskunta on koskaan tehnyt.', '<em>Osaatteko käyttää sitä?</em>'],
+    heroLines: ['Ihmiskunnan suurin vipuvoima.', '<em>Osaatteko käyttää sitä?</em>'],
     caption: 'Ensin tavoitteet.\nSitten tekoäly.',
     lede:
       'Autamme organisaatioita käyttämään tekoälyä taitavasti: selkeät tavoitteet, hyvä konteksti ja tulokset, jotka voi mitata omassa toiminnassa.',
@@ -42,7 +42,7 @@ export const fi: Content = {
         text: 'Puhu asiakkaiden kanssa ja ymmärrä ongelma ensin. Suurin osa ihmisen työstä kuuluu alkuun, jossa päätetään, mitä tehdään, ja loppuun, jossa testataan, onko tulos sitä, mitä haluttiin. Tekoäly tekee välissä olevan työn nopeasti.',
       },
       {
-        title: 'Agenttiharness on tehokkain työkalu, jonka ihmiskunta on koskaan tehnyt',
+        title: 'Agenttiharness on ihmiskunnan suurin vipuvoima',
         text: 'Mallin ympärille rakennetut työkalut ja kierrokset, esimerkiksi Claude Code, voivat parantaa tuloksia enemmän kuin parempi malli. Siksi käyttäjän taidolla on suuri merkitys. Kun opit käyttämään näitä työkaluja hyvin, voit tehdä 10 tai jopa 1000 kertaa enemmän.',
       },
     ],
