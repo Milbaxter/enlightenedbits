@@ -85,9 +85,9 @@ export const fi: Content = {
 
   offer: {
     until: '2026-10-31',
-    eyebrow: 'Syys–lokakuun tarjous yleishyödyllisille',
-    title: 'Kartoitus <em>puoleen hintaan</em> yleishyödyllisille yhteisöille.',
-    text: 'Järjestöt, säätiöt ja muut yleishyödylliset yhteisöt saavat Kartoituksesta 50 %:n alennuksen, kun tilaus tehdään viimeistään 31.10.2026. Kartoituksessa selvitämme yhdessä, mihin työaika kuluu, missä tekoäly voisi vapauttaa sitä tärkeämpään ja missä sille ei ole paikkaa.',
+    eyebrow: 'Syksyn tarjous',
+    title: 'Kartoitus <em>puoleen hintaan</em>.',
+    text: 'Haluamme auttaa organisaatioita, joilla on todellista ja merkityksellistä vaikutusta. Siksi teemme tämän tarjouksen. Kaikki organisaatiot saavat Kartoituksesta 50 %:n alennuksen, kun tilaus tehdään viimeistään 31.10.2026. Selvitämme yhdessä, missä tekoäly voi vapauttaa aikaa tärkeimpään työhön ja missä sille ei ole paikkaa.',
     note: 'Ensimmäinen askel on maksuton kartoituspuhelu. Itse työn voi ajoittaa myös marraskuulle tai myöhemmäksi.',
   },
 
@@ -104,7 +104,7 @@ export const fi: Content = {
       title: 'Kartoitus',
       short: 'Käymme arjen työn läpi ja selvitämme, missä tekoälystä on todellista hyötyä ja missä ei.',
       body: 'Selvitämme, mihin työaika oikeasti kuluu. Etsimme tehtävät, joissa tekoäly voisi vapauttaa aikaa tärkeämpään, ja ne, joihin se ei sovi. Samalla arvioimme tietosuojan, riskit ja kustannukset.',
-      offer: '−50 % yleishyödyllisille 31.10. asti',
+      offer: '−50 % 31.10. asti',
       outcome: 'Käyttökohteet tärkeysjärjestyksessä, kunkin edellytykset ja realistinen arvio hyödyistä.',
     },
     {
