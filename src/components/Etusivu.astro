@@ -107,7 +107,7 @@ const cols = (n: number) => (n <= 4 ? n : 3);
 
   <Konteksti t={t} />
 
-  <section class="section paper">
+  {h.audience.length > 0 && <section class="section paper">
     <div class="wrap">
       <div class="section-head">
         <p class="eyebrow reveal">{h.audienceTitle}</p>
@@ -122,7 +122,7 @@ const cols = (n: number) => (n <= 4 ? n : 3);
         ))}
       </div>
     </div>
-  </section>
+  </section>}
 
   <Kohtaus clip="yhteiso" class="why">
     <div class="scene-copy">

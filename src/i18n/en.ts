@@ -79,14 +79,9 @@ export const en: Content = {
       'You are not alone. According to <a href="https://stat.fi/en/publication/cm1hnps701dbm07w59uo0jw6u" rel="noopener">Statistics Finland</a>, 38% of Finnish companies with ten or more employees used AI in 2025, but only 15% had written down shared practices for it. In a <a href="https://tieke.fi/kartoitimme-tekoalyn-vastuullinen-kayttoonotto-ja-somen-murros-pohdituttavat-jarjestoissa-arki-on-tasapainoilua-digitalisaation-kanssa/" rel="noopener">survey by TIEKE</a>, 37% of non-profits were not using AI at all.',
     processTitle: 'Four steps. We start from where you are now.',
     processLink: 'See the services in detail',
-    audienceTitle: 'Who we work with',
-    audienceLead: 'For organisations whose <em>values</em> are not decoration.',
-    audience: [
-      { title: 'Companies', text: 'When AI has to deliver results without eating away at why you exist.' },
-      { title: 'Non-profits and foundations', text: 'When resources are tight and values are central.' },
-      { title: 'Municipalities and public bodies', text: 'When trust, privacy and equal treatment are non-negotiable.' },
-      { title: 'Schools and universities', text: 'When AI changes both teaching and learning.' },
-    ],
+    audienceTitle: '',
+    audienceLead: '',
+    audience: [],
     whyTitle: 'Our strength: we build with these tools every day.',
     whyText: [
       'We build AI agents, harnesses and machine learning systems. We know what today’s models can do and what they cannot do.',
