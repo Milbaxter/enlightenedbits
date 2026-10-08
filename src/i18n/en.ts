@@ -17,7 +17,7 @@ export const en: Content = {
     title: 'Enlightened Bits – AI on your own terms',
     description:
       'AI consulting for companies, non-profits and the public sector. We help organisations use AI more skilfully: define the problem, give the AI good context, and measure real results.',
-    heroLines: ['The highest-leverage tool humanity has ever created.', '<em>Do you know how to use it?</em>'],
+    heroLines: ['The highest-leverage tool ever invented.', '<em>Do you know how to use it?</em>'],
     caption: 'Your goals first.\nThen the AI.',
     lede:
       'We help organisations use AI with skill: clear goals, good context, and results you can measure in your business.',
