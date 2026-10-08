@@ -43,7 +43,7 @@ export const en: Content = {
         text: 'Talk to customers and understand the problem first. Most human work belongs at the start, where you decide what to do, and at the end, where you test if the result is what you wanted. AI does the work in between, fast.',
       },
       {
-        title: 'The harness gives the most leverage',
+        title: 'The agent harness is the highest-leverage tool humanity has ever made',
         text: 'The tools and loops around a model, for example Claude Code, can give more improvement than a better model. Thus the skill of the person who uses them matters a lot. When you learn these tools well, you can go from 1x to 10x to 1000x.',
       },
     ],
