@@ -43,7 +43,6 @@ export interface Content {
     caption: string;
     lede: string;
     secondaryAction: string;
-    bandLeft: string;
     beliefsEyebrow: string;
     beliefsTitle: string;
     beliefs: { title: string; text: string }[];

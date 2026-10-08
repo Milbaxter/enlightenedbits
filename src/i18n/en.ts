@@ -22,7 +22,6 @@ export const en: Content = {
     lede:
       'We help organisations use AI with skill: clear goals, good context, and results you can measure in your business.',
     secondaryAction: 'How we work',
-    bandLeft: 'AI consulting for companies and communities',
     beliefsEyebrow: 'What we believe',
     beliefsTitle: 'Define the problem well. Then <em>AI</em> can do the work.',
     beliefs: [

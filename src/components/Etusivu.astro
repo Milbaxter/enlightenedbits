@@ -18,7 +18,6 @@ const cols = (n: number) => (n <= 4 ? n : 3);
 <Sivu t={t} title={h.title} description={h.description} current="home" alternate={alternate}>
   <Sukellus line={h.caption} cue={t.lang === 'fi' ? 'Vieritä' : 'Scroll'}>
     <div class="scene-copy">
-      <p class="eyebrow reveal" style="color:rgb(239 236 230 / .75)">{h.bandLeft}</p>
       <h1 class="reveal reveal-d1"><Fragment set:html={h.heroLines[0]} /><br><Fragment set:html={h.heroLines[1]} /></h1>
       <p class="lead reveal reveal-d2">{h.lede}</p>
       <div class="actions reveal reveal-d3">

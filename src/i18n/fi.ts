@@ -22,7 +22,6 @@ export const fi: Content = {
     lede:
       'Autamme organisaatioita käyttämään tekoälyä taitavasti: selkeät tavoitteet, hyvä konteksti ja tulokset, jotka voi mitata omassa toiminnassa.',
     secondaryAction: 'Näin työskentelemme',
-    bandLeft: 'Tekoälykonsultointia yrityksille ja yhteisöille',
     beliefsEyebrow: 'Mihin uskomme',
     beliefsTitle: 'Määrittele ongelma hyvin. Sitten <em>tekoäly</em> voi tehdä työn.',
     beliefs: [
