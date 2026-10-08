@@ -63,14 +63,15 @@ const cols = (n: number) => (n <= 4 ? n : 3);
         <p class="eyebrow reveal">{h.beliefsEyebrow}</p>
         <h2 class="reveal reveal-d1"><Fragment set:html={h.beliefsTitle} /></h2>
       </div>
-      <div class="principles" style={`--cols:${cols(h.beliefs.length)}`}>
+      <ol class="beliefs">
         {h.beliefs.map((b, i) => (
-          <article class:list={['principle reveal', `reveal-d${i}`]}>
+          <li class="belief reveal">
+            <span class="belief-num">{num(i)}</span>
             <h3>{b.title}</h3>
             <p>{b.text}</p>
-          </article>
+          </li>
         ))}
-      </div>
+      </ol>
     </div>
   </section>
 
